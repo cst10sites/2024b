@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    
+    <title>Portfolio</title>
+  </head>
+
+    <div>
+    <div class="topnav">
+    <a href="index4.html">Home/News</a>
+    <div id="moreLinks">
+      <a href="index1.html">History</a>
+      <a href="index2.html">Season Analysis</a>
+      <a href="index3.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+  <div class="content">
+
+    <style>
+      
+      div.topnav { 
+
+  overflow: hidden; 
+  text-align: left;
+  background-color: rgba(10, 134, 61); 
+
+  position: relative; 
+
+} 
+
+  
+
+div.topnav #moreLinks { 
+
+  display: none; 
+} 
+
+  
+
+  
+
+div.topnav a { 
+
+  color: white; 
+  padding: 14px 16px; 
+  text-decoration: none; 
+  font-size: 17px; 
+  display: block; 
+} 
+
+  
+
+div.topnav a:hover { 
+
+  color: black; 
+
+  background-color: white; 
+
+} 
+
+  
+
+div.topnav a.icon { 
+
+  background: lightgrey; 
+
+  display: block; 
+
+  position: absolute; 
+
+  right: 0; 
+
+  top: 0; 
+
+} 
+
+p {
+  padding-right: 50%
+}
+
+div.content {
+  margin: 0px 100px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(0, 32, 91);
+            
+            justify-content: right;
+            align-items: right;
+            height: 100vh;
+        }
+        .quiz-container {
+            background-color: rgba(10, 134, 61);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answers {
+            list-style-type: none;
+            padding: 0;
+        }
+        .answers li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .answers li:hover {
+            background-color: #e9e9e9;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+
+
+    </style>
+
+<body>
+  <br>
+  <br>
+
+
+<div class="quiz-container">
+    <div class="question"></div>
+    <ul class="answers"></ul>
+    <button onclick="nextQuestion()" style="display:none;">Next</button>
+    <div class="result"></div>
+</div>
+
+<script>
+    const questions = [
+        {
+            question: "In what year was the Vancouver Canucks established?",
+            answers: ["1970", "1960", "1980", "1990"],
+            correct: "1970"
+        },
+        {
+            question: "How many regular season wins did the Canucks have?",
+            answers: ["52", "48", "46", "50"],
+            correct: "50"
+        },
+        {
+            question: "How many times did the Vancouver Canucks make it to the Stanley Cup Final?",
+            answers: ["4", "2", "3", "1"],
+            correct: "3"
+        },
+        {
+            question: "What was the Canucks' record in January 2024?",
+            answers: ["8-3-0", "10-1-2", "7-4-3", "6-5-1"],
+            correct: "10-1-2"
+        },
+        {
+            question: "Which year did the Canucks make their first appearance in the Stanley Cup Finals?",
+            answers: ["1982", "1994", "2011", "2001"],
+            correct: "1982"
+        },
+        {
+            question: "Who missed the Canucks' Game 7 against the Edmonton Oilers due to a blood clotting issue?",
+            answers: ["Filip Hronek", "Quinn Hughes", "Elias Pettersson", "Brock Boeser"],
+            correct: "Brock Boeser"
+        },
+        {
+            question: "What was the Canucks' penalty kill percentage in 2023/24?",
+            answers: ["76.7%", "79.1%", "71.6%", "77.3%"],
+            correct: "79.1%"
+        },
+        {
+            question: "What was the score of the Canucks vs. Sharks game on November 2?",
+            answers: ["3-2 Overtime Loss", "6-5 Loss", "7-4 Win", "10-1 Win"],
+            correct: "10-1 Win"
+        },
+        {
+            question: "Who did the Vancouver Canucks play in the first round of the playoffs this year?",
+            answers: ["Nashville Predators", "Edmonton Oilers", "Winnipeg Jets", "Dallas Stars"],
+            correct: "Nashville Predators"
+        },
+        {
+            question: "What place did the Canucks finish in the league this year?",
+            answers: ["1st", "6th", "3rd", "5th"],
+            correct: "6th"
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function showQuestion() {
+        if (currentQuestion < questions.length) {
+            document.querySelector('.question').textContent = questions[currentQuestion].question;
+            const answersList = document.querySelector('.answers');
+            answersList.innerHTML = '';
+            questions[currentQuestion].answers.forEach(answer => {
+                const li = document.createElement('li');
+                li.textContent = answer;
+                li.onclick = () => selectAnswer(answer);
+                answersList.appendChild(li);
+            });
+            document.querySelector('button').style.display = 'none';
+        } else {
+            showResult();
+        }
+    }
+
+    function selectAnswer(answer) {
+        if (answer === questions[currentQuestion].correct) {
+            score++;
+        }
+        document.querySelectorAll('.answers li').forEach(li => {
+            li.style.pointerEvents = 'none';
+            if (li.textContent === questions[currentQuestion].correct) {
+                li.style.backgroundColor = 'lightgreen';
+            } else if (li.textContent === answer) {
+                li.style.backgroundColor = 'lightcoral';
+            }
+        });
+        document.querySelector('button').style.display = 'block';
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        showQuestion();
+    }
+
+    function showResult() {
+        document.querySelector('.quiz-container').innerHTML = `<h2>Your Score: ${score}/${questions.length}!</h2>`;
+    }
+
+    showQuestion();
+
+    function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+</body>
+
+
+
+
+
+
+</html>

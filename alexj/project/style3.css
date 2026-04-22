@@ -1,0 +1,203 @@
+body{
+    color: white;
+    font-family: Arial;
+    text-align: justify;
+    margin: 0px 0px;
+    background-color: rgb(0, 32, 91);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2{
+  font-family: Verdana;
+}
+
+
+
+
+
+div.topnav { 
+
+  overflow: hidden; 
+  text-align: left;
+  background-color: rgba(10, 134, 61); 
+
+  position: relative; 
+
+} 
+
+  
+
+div.topnav #moreLinks { 
+
+  display: none; 
+} 
+
+  
+
+  
+
+div.topnav a { 
+
+  color: white; 
+  padding: 14px 16px; 
+  text-decoration: none; 
+  font-size: 17px; 
+  display: block; 
+} 
+
+  
+
+div.topnav a:hover { 
+
+  color: black; 
+
+  background-color: white; 
+
+} 
+
+  
+
+div.topnav a.icon { 
+
+  background: lightgrey; 
+
+  display: block; 
+
+  position: absolute; 
+
+  right: 0; 
+
+  top: 0; 
+
+} 
+
+
+
+
+
+table, th, td {
+
+  border: 2px solid white;
+
+}
+
+ 
+
+table {
+
+  border-collapse: collapse;
+  color: white;
+
+}
+
+th, td {
+
+  padding: 5px;
+
+  text-align: left;
+  color: white;
+
+}
+
+ 
+
+tbody tr:nth-child(odd) {
+
+
+  color: white;
+
+}
+
+
+
+
+
+
+
+
+/* Style buttons */
+.btn {
+  background-color: black;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  border-radius: 25px;
+      border-style: solid;
+  border-color: white;
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  position: relative;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(0, 32, 91);
+}
+
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  #myBtn{
+    background-color: black;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  border-radius: 25px;
+      border-style: solid;
+  border-color: white;
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  position: relative;
+  }
+
+  #myBtn: hover{
+    background-color: rgb(0, 32, 91);
+  }
+
+  /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}

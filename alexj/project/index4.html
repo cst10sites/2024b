@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+
+
+  </style>
+</head>
+<body>
+
+
+<!-- Add icon library -->
+
+
+<!-- Add font awesome icons to buttons  -->
+
+
+	<div>
+
+  
+  <div class="topnav">
+    <a href="index4.html">Home/News</a>
+    <div id="moreLinks">
+      <a href="index1.html">History</a>
+      <a href="index2.html">Season Analysis</a>
+      <a href="index3.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+  
+  
+  <div class="content">
+	<h1>Vancouver Canucks Home/News</h1>
+
+  <p>Welcome to the Home and News page of my Vancouver Canucks fanpage! Here, you will discover the latest Vancouver Canucks news, as well as the Canucks' official social media links at the bottom of the page. Use the "Back to top" button to scroll back up, and use the dropdown menu to navigate between pages.</p>
+
+  <h2>Canucks coach Rick Tocchet named 2023/24 Jack Adams winner</h2>
+  <img alt="" style="width: 35%;" src="ricktocchet.jpg">
+  <p>May 22, 2024</p>
+  <p>The National Hockey League has announced that Vancouver Canucks coach Rick Tocchet has won the Jack Adams Trophy as “the NHL coach adjudged to have contributed the most to his team’s success.” Tocchet, in his first full season as head coach, led the Canucks to a 50-23-9 (W/L/OTL) record, their best regular season record since 2011/12 and the team’s first Pacific Division title since the 2012/13 season.</p>
+  <hr>
+
+  <h2>Canucks make late third period push, season ends in Second Round against Oilers</h2>
+  <img alt="" style="width: 35%;" src="game7.jpg">
+  <p>May 20, 2024</p>
+  <p>The Vancouver Canucks' 2023/24 season ended on Monday night as they were defeated 3-2 by the Edmonton Oilers, despite making a late push and scoring 2 goals in the 3rd period. Canucks rookie goalie Artūrs Šilovs had a standout performance, robbing Leon Draisaitl of a goal early in the 1st period. <br><br>The Canucks failed to capitalize on a 4 minute Power Play at the end of the 1st period and at the beginning of the 2nd as they were outshot 1-0 by the Oilers despite having a man advantage for 4 minutes straight. The Oilers proceded to score 3 straight in the 2nd, with goals coming from Cody Ceci, Evan Bouchard, and Ryan Nugent-Hopkins (PP) to go 3-0 up heading into the 2nd intermission. <br><br>In the third, Conor Garland scored at 11:27 to get the Canucks on the board, and Filip Hronek scored his first goal of the playoffs with 4 minutes remaining from the point do make it a 1 goal game. The Canucks pulled the goalie to get the extra man advantage, but they failed to produce anything, with the final score being 3-2, and the Oilers taking the series win 4-3. <br><br>Post game, Canucks coach Rick Tocchet said: "Arty played his ass off for us, what a playoff for that kid,”, praising the Canucks rookie goaltender. <br><br>Brock Boeser was absent for Game 7, suffering a blood clotting issue. The Canucks battled until the end, with many players staying after the game to thank the fans one last time befor the start of next season.</p>
+  <img alt="" style="width: 35%;" src="1.jpg">
+  <hr>
+  
+  <h2>Brock Boeser to miss Game 7 due to blood clotting issue</h2>
+   <img alt="" style="width: 35%;" src="brockboeser.jpg">
+   <p>May 18, 2024</p>
+   <p>Brock Boeser is set to miss Monday's Game 7 of the Western Conference 2nd round against the Edmonton Oilers due to a non-life threatning blood clotting issue. Boeser, with 7 goals and 5 assists in 12 playoff games for the Canucks leads the Canucks in playoff goals and points. Boeser did not practice on Sunday after he played 18:40 in the Canucks' 5-1 loss in Game 6 on Saturday.</p>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Scroll To Top</button>
+   <hr>
+
+   <div style="margin: 0 auto">
+     <center><!--try to look for CSS equiv, no longer okay-->
+
+     <h3 style = "text-align: center">Canucks Official social media:</h3>
+
+    
+    
+
+    <button class="btn" href="https://www.instagram.com/canucks/"><a href="https://instagram.com/canucks"><i class="instagram.jpg">Instagram</i></a></button>
+    <button class="btn" href="https://www.youtube.com/canucks"><a href="https://www.youtube.com/canucks"><i class="youtube.jpg">YouTube</i></a></button>
+    <button class="btn" href="https://www.facebook.com/Canucks"><a href="https://www.facebook.com/Canucks"><i class="facebook.jpg">Facebook</i></a></button>
+    <button class="btn" href="https://www.snapchat.com/add/canucks"><a href="https://www.snapchat.com/add/canucks"><i class="snapchat.jpg"></i>Snapchat</a></button>
+    <button class="btn" href="https://x.com/Canucks?mx=2"><a href="https://x.com/Canucks?mx=2"><i class="x.jpg">X</i></a></button>
+    </center>
+
+    </div><!--center-->
+	</div>
+
+
+   <script>
+
+            // Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+<h3>DISCLAIMER: This website is only for school purposes and is not affiliated with the Vancouver Canucks in any way.</h3>
+<style>
+  h3{
+    text-decoration: none;
+    text-align: center;
+  }
+</style>
+</body>
+</html>
