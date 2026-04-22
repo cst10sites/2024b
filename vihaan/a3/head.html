@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--table.html-->
+<meta charset="UTF-8">
+<title>a3</title>
+<link rel="icon" type="image/x-icon" href="dizzy.ico">
+<!--Internal CSS moved to style.css-->
+<style>
+  h1, h2, p {
+    color: white;
+  }
+</style>
+<!--Attach style.css to this page-->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div>
+
+  <!-- navbar -->
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()"></a>
+  </div>
+  
+  <!--content-->
+  <div class="content">
+
+    <h1>Common HTML Tags Outside &lt;body&gt;</h1>
+    <table style="width: 50%;">
+      <!--tr table row, th table header w/ style attribute(first), td table data (others)-->
+      <tr><!--top row-->
+        <th style="width: 60%;">Tags</th>
+        <th style="width: 20%;">Definition</th>
+        <th style="width: 20%;">Example(s)</th>
+      </tr>
+
+      <tr>
+        <td>&lt;!DOCTYPE html&gt;</td>
+        <td>Sets document type</td>
+        <td>*No examples</td>
+      </tr>
+
+
+      <tr>
+        <td>&lt;html lang="en"&gt;</td>
+        <td>Sets website language</td>
+        <td>This page is set to "en" for English. This tag helps websits such as Google Translate know the default language for this page is English</td>
+      </tr>
+
+
+      <tr>
+        <td>&lt;meta charset="UTF-8"&gt;</td>
+        <td>Sets character in coding language</td>
+        <td>*No examples</td>
+      </tr>
+
+
+      <tr>
+        <td>&lt;title&gt;...&lt;/title&gt;</td>
+        <td>Title of the webpage</td>
+        <td>&lt;title&gt;a3&lt;/title&gt;</td>
+      </tr>
+
+      <tr>
+        <td>&lt;style&gt;...&lt;/style&gt;</td>
+        <td>Section that describes the internal CSS of the page</td>
+        <td>&lt;style&gt;font-family: Arial; Helvetica;&lt;/style&gt;</td>
+      </tr>
+
+      <tr>
+        <td>&lt;link rel="stylesheet" href="..."&gt;</td>
+        <td>Tag that points to an external CSS file</td>
+        <td>&lt;link rel="stylesheet" href="style.css"&gt;</td>
+      </tr>
+
+      <tr>
+        <td>&lt;link rel="icon" type="image/x-icon" href="..."&gt;</td>
+        <td>Tag that adds a favicon</td>
+        <td>&lt;link rel="icon" type="image/x-icon" href="dizzy.ico"&gt;</td>
+      </tr>
+
+
+     </table>
+
+
+
+
+  </div>
+
+<!--JavaScript will be explored later-->
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+
+</body>
+</html>

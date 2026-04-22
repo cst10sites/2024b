@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Quiz</title>
+</head>
+<body>
+	<h1>HTML Quiz</h1>
+	<form>
+	<label>What does HTML stand for?</label>
+    <br>
+    <input type="radio" name="group" id="correctAnswer">
+    <!--name="group" allow us to select ONE within "group"-->
+    <label>Hyper Text Markup Language</label>
+    <br>
+    <input type="radio" name="group">
+    <label>Home Tool Markup Language</label>
+    <br>
+    <input type="radio" name="group">
+    <label>Hyperlinks and Text Markup Language</label>
+    <br>
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset"></form>
+    <hr>
+	<h2>Cookie Clicker game</h2>
+<p>Click <a href="cookie.html">here</a> to play the game.</p>
+
+    <script>
+        function checkRadio() {
+        var correctAnsSelected = document.getElementById('correctAnswer').checked; // true or false
+
+        if (correctAnsSelected == true) {
+          alert("Correct!");
+        }
+        else {
+            alert("Wrong!");
+        }
+
+    }
+    </script>
+</body>
+</html>

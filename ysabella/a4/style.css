@@ -1,0 +1,29 @@
+body
+ {
+
+    padding-top: 30px;
+font-family: Arial, Helvetica;
+
+ 
+    width: 500px;
+    margin: auto;
+    text-align: center;
+
+ 
+  
+  background-image: url("background.jpg");
+    background-size: 100% auto; /* stretch bg to fit */     
+
+
+
+  }                        
+
+
+    body {
+  color: saddlebrown;
+}
+
+
+
+
+
