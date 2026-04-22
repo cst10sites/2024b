@@ -1,0 +1,42 @@
+<!--youth Americas cup-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<title>Youth & Women's America's Cup </title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="topnav">
+			<a href="index.html">America's cup history.</a>
+			<div id="moreLinks">
+				<a href="youth.html">Youth America's Cup</a>
+				<a href="boats.html">America's Cup classes</a>
+				<a href="winners.html">Past events and winners</a>
+			</div>
+			<a class="icon" onclick="showHideMenu()">...</a>
+		</div>
+		<div class="title">
+			<h1>America's Cup Racing</h1>
+			<h2>Youth and Women's America's cup</h2>
+		</div>
+		<div class="body">
+			<h3>The youth & women's Americas cup.</h3>
+			<p>The youth and women's America's cup is a premier sailing event, the youth sailing are 18 to 25 year old's. This is important because for the longest time the America cup has been primarily old men so this is an effort to get younger people and women into the event. In this event the youth will show their skills to the world and get chances to potential sponsors.</p>
+			<h3>The boats being sailed.</h3>
+			<p>There are 4 crew members per AC40 Yacht: 2 helms, 2 trimmer and a Automated ETNZ control unit supplied to give constant auto-pilot foiling. Strict One Design racing, limits team spending. Support boats are required to tow the boats on and off the dock. The battery bank to power on board systems will last a race day and allow sailors to focus on the sailing fundamentals. Shared data during year 1 and 2 ensures no team has a significant advantage over others. The boat is 200 kg, 11.8 meters long, has a 3.38 beam, and 3.5 meter draft. </p>
+			<img src="Ac-40.jpeg" alt="ac 40" style="width: 30%;">
+		</div>
+		<script>
+			function showHideMenu() {
+				var links = document.getElementById("moreLinks");
+				if (links.style.display == "block") {
+					links.style.display = "none"; // hide
+				} else {
+					links.style.display = "block"; // show
+				}
+			}
+		</script>
+	</body>
+</html>

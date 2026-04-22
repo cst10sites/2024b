@@ -1,0 +1,49 @@
+<!--history-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<title>America's Cup Racing</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="topnav">
+			<a href="index.html">America's cup history.</a>
+			<div id="moreLinks">
+				<a href="youth.html">Youth America's Cup</a>
+				<a href="boats.html">America's Cup classes</a>
+				<a href="winners.html">Past events and winners</a>
+			</div>
+			<a class="icon" onclick="showHideMenu()">...</a>
+		</div>
+		<div class="title">
+			<h1>America's Cup Racing</h1>
+			<h2>Americas Cup</h2>
+		</div>
+		<div class="body">
+			<h3>What is the Americas Cup</h3>
+			<p>The America's Cup is the oldest and most prestigious yacht race globally, dating back to 1851. It's all about two teams, the defender and the challenger, battling head-to-head in super advanced sailboats. These boats are high-tech machines, using cutting-edge designs and materials to sail faster and smoother than ever before. The races happen in different places worldwide, often drawing huge crowds because of the thrilling speed and close competition. Winning the America's Cup isn't just about sailing skills; it's also about big investments in technology and strategy, making it a symbol of innovation and excellence in sailing.</p>
+			<h2>Americas Cup History</h2>
+			<h3>The story of the Cup.</h3>
+			<div class="cup">
+				<p>The Cup was manufactured in 1848, the fourth oldest sporting trophy of any kind. The cup was first called the "RYS £100cup". The first race was in 1851 it was between the New York Yacht Club's America boat and the 15 yachts of the Royal Yacht Squadron, this is considered the first American Cup race. After numerous years, the remaining members of the America syndicate donated the cup to the New York Yacht Club and made them agree to some rules. The rules state that "the cup is donated upon the condition that it shall be preserved as a perpetual challenge cup for friendly competition between foreign countries.</p>
+			</div>
+			<img src="TheAmericaCup.jpg" alt="America's cup trophy" style="position: absolute; top: 1000px; left: 77%; width: 7.5%;">
+			<h3>Win Streak</h3>
+			<p>New York Yacht Club held the cup from 1857 until 1983 when they successfully defended the trophy 24 times over 132 years. The Australians finally beat the Americans in 1831 using the Australian's new keel design.</p>
+			<img src="America.jpg" alt="America" style="width: 20%;">
+			<img src="Australia2.jpg" alt="Australia II" style="width: 20%;">
+		</div>
+		<script>
+			function showHideMenu() {
+				var links = document.getElementById("moreLinks");
+				if (links.style.display == "block") {
+					links.style.display = "none"; // hide
+				} else {
+					links.style.display = "block"; // show
+				}
+			}
+		</script>
+	</body>
+</html>

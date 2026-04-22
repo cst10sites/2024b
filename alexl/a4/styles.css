@@ -1,0 +1,48 @@
+body {
+	font-family:Helvetica;
+	margin: 5% 10% 5% 10%;
+	background-color: antiquewhite;
+}
+h1 {
+	font-size: 4em;
+	text-align: center;
+	}
+div.cookie {
+	border-style: solid;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 10px;
+	border-style: solid;
+	place-self: center;
+}
+h2 {
+	text-align: center;
+}
+a.quizz {
+	background-color: rgba(255, 255, 245, 1.0);
+	padding: 10px 20px;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: darkblue;
+	text-decoration: none;
+	display: inline;
+	
+}
+a.quizz:hover {
+	background-color: white;
+	box-shadow: 2.5px 5px black;
+}
+div.test {
+	border-style: solid;
+	place-self: center;
+	width: 200px;
+	height: 100px;
+	padding: 10px 20px 40px 20px;
+}
+article {
+	width: 100%;
+	min-height: 20vh;
+	display: grid;
+}

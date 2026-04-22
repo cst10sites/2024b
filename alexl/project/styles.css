@@ -1,0 +1,75 @@
+body {
+	font-family:Calibri;
+	margin: 5% 10% 5% 3%;
+	background-image: url("americasCup.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+div.title {
+	padding: 5%;
+	background: rgba(220, 240, 240, 0.9);
+	border-style: double;
+	border-width: 4px;
+}
+div.body {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5%;
+	border-style: solid;
+}
+div.cup {
+	padding: 0% 12% 0% 0%;
+}
+h1 {
+	font-family:Rockwell;
+	font-size: 4em;
+	text-align: center;
+}
+h2 {
+	font-family:Rockwell;
+	font-size: 3em;
+	text-align: center;
+}
+h3 {
+	font-size: 2em;
+	text-align: center;
+}
+p{
+	font-size: 1.2em;
+}
+div.topnav {
+	overflow: hidden;
+	background-color: darkgrey;
+	position: relative;
+}
+div.topnav #moreLinks {
+	display: none;
+}
+div.topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+}
+div.topnav a:hover {
+	color: black;
+	background-color: lightgrey;
+}
+div.topnav a.icon {
+	background: lightgray;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+table, th {
+	border-collapse: collapse;
+  }
+  td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 1px 5px;
+	font-size: 1.2em;
+  }

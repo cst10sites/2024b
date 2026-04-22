@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!--create style.css and change to href="style.css"-->
+	</head>
+	<body>
+		<h1>HTML Quiz</h1>
+		<article>
+			<h2>Quiz</h2>
+			<div class="test">
+				<form>
+					<label> Where do you put the &lt;script&gt; tag</label>
+					<br>
+					<input type="radio" name="group">
+					<label>Beginning of body</label>
+					<br>
+					<input type="radio" name="group" id="correctAnswer">
+					<label>End of body</label>
+					<br>
+					<input type="radio" name="group">
+					<label>Head</label>
+					<br>
+					<input type="radio" name="group">
+					<label>Doesn't matter</label>
+					<br>
+					<input type="button" value="Submit" onclick="checkRadio();">
+					<input type="reset">
+				</form>
+				<p id="answer"></p>
+			</div>
+		</article>
+		<hr>
+		<div>
+			<p>Make your cookies now! </p>
+			<a href="index.html" class="quizz">Cookie</a>
+		</div>
+		<script>
+			function checkRadio() {
+				var correctAnsSelected = document.getElementById('correctAnswer').checked;
+				if (correctAnsSelected == true) {
+					document.getElementById('answer').innerHTML = ("Correct")
+				}
+				else {
+					document.getElementById('answer').innerHTML = ("Wrong")
+				}
+			}
+		</script>
+	</body>
+</html>

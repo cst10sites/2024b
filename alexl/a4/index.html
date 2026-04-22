@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!--create style.css and change to href="style.css"-->
+	</head>
+	<body>
+		<h1>Cookie Clicker</h1>
+		<article>
+			<h2>Click Fast and make cookies, the more you click the more cookies per second.</h2>
+			<div class="cookie">
+				<input alt="cookie" type="image" src="cookie.png" onclick="updateClicks()" style="width: 200px;">
+				<p id="clicks">Cookie # 0</p>
+				<p id="cpsDisplay"> CPS - 0</p>
+				<p id="clock">Time 0</p>
+				<button onclick="destroy()">Destroy cookies</button>
+			</div>
+		</article>
+		<hr>
+		<h2>HTML/CSS/JS Quiz</h2>
+		<p>Play the quiz now! </p>
+		<a href="quiz.html" class="quizz">Quiz</a>
+		<script>
+			// global variables
+			var nClicks = 0;
+			var startTime = new Date().getTime();
+
+			function updateClicks() {
+				if (nClicks == 0) {
+					nClicks++
+					startTime = new Date().getTime();
+					document.getElementById("clicks").innerHTML = "Cookie # " + (nClicks)
+				} else {
+					nClicks++
+					document.getElementById("clicks").innerHTML = "Cookie # " + (nClicks)
+				}
+			}
+			setInterval(updateCPS, 50);
+
+			function updateCPS() {
+				var currentTime = new Date();
+				var timeElapsed = (currentTime - startTime);
+				var cps = (nClicks / timeElapsed) * 1000
+				cps = cps.toFixed(2);
+				document.getElementById("cpsDisplay").innerHTML = "CPS - " + (cps)
+			}
+
+			function destroy() {
+				location.reload();
+			}
+			setInterval(clock, 50);
+
+			function clock() {
+				if (nClicks == 0) {
+					document.getElementById("clock").innerHTML = "Time 0";
+				} else {
+					var currentTime = new Date();
+					var timeElapsed = (currentTime - startTime) / 1000;
+					timeElapsed = timeElapsed.toFixed(2);
+					document.getElementById("clock").innerHTML = "Time " + timeElapsed;
+				}
+			}
+		</script>
+	</body>
+</html>

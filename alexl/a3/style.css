@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica;
+  margin: 5% 10% 5% 10%;
+  background-image: url("tecground.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+h6 {
+  text-align: center;
+}
+div.title {
+  padding: 25px;
+  background: rgba(220, 240, 240, 0.75);
+  border-style: double;
+  border-width: 4px;
+}
+div.body {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  border-style: solid;
+
+}
+table, th {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 1px 5px;
+}
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+tr:nth-child(odd) {
+  background-color: #FAFAFA;
+}
+a.btn {
+  background-color: rgba(255, 255, 245, 1.0);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: darkblue;
+  text-decoration: none;
+  display: inline;
+}
+a.btn:hover {
+  background-color: white;
+  box-shadow: 2.5px 5px black;
+}
