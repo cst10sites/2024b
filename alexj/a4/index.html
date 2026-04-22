@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<h2>Cookie Clicker</h2>
+<h4>Click the cookie as fast as you can and see your click speed in clicks per second</h4>
+<button onclick="reset1();">Reset</button>
+<input type="image" alt="cookie" src="cookie.jpg" onclick="updateCPS();">
+<p id="cpsDisplay"></p>
+<p id="totalClicks"></p>
+<p id="timeElapsed"></p>
+
+
+<hr>
+<h2>HTML/CSS/JS Quiz</h2>
+<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+
+<script>
+// global variables
+var nClicks = 0;
+var startTime = new Date().getTime();
+
+function updateCPS() {
+	if (nClicks == 0) {
+		// first click
+		reset = (startTime)
+		nClicks = nClicks +1;
+	}
+	else {
+		// subsequent clicks:
+		var currentTime = new Date();
+		var timeElapsed = (currentTime - startTime) / 1000;
+		var cps = nClicks / timeElapsed
+		var totalClicks = nClicks 
+		cps = cps.toFixed(2)
+		//    BUT timeElapsed be measured in seconds (not milliseconds)
+	document.getElementById("cpsDisplay").innerHTML = "CPS: " + cps;
+		nClicks = nClicks + 1
+		document.getElementById("totalClicks").innerHTML = "Total Clicks: " + totalClicks;
+		document.getElementById	("timeElapsed").innerHTML = "Time Elapsed: " + timeElapsed;
+	}
+
+}
+
+setInterval(updateTime, 10);
+function updateTime() {
+if (nClicks	>=1) {
+	var currentTime	= new Date();
+	var timeElapsed	= (currentTime - startTime)/ 1000;
+	let time1 = timeElapsed.toFixed(1);
+	document.getElementById	("timeElapsed").innerHTML = time1;
+	document.getElementById	("timeElapsed").innerHTML = "Time: " + timeElapsed.toFixed(1) + " seconds";
+
+
+}
+}
+function reset1() {
+		location.reload();
+}
+
+</script>
+</body>
+</html>

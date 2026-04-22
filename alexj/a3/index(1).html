@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 3</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+  body{
+    color:black;
+    margin: 50px 100px;
+    font-family: Arial;
+  }
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="../a3/head.html">Common HTML tags outside &lt;body&gt;</a>
+     
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  
+<div class="content">
+  
+<h1>HTML/CSS Guide</h1>
+<h2>Common HTML Tags inside &lt;body&gt;</h2>
+<h1>Table</h1>
+<table style="width: 100%;">
+      <tr>
+        <th style="width: 45%;">Term</th>
+        <th style="width: 70%;">Definition</th>
+        <th style="width: 80%;">Example</th>
+      </tr>
+
+      <tr>
+        <td>&lt;img src="link" alt="pic"&gt;</td>
+        <td>Image</td>
+        <td><img src="https://th.bing.com/th/id/OIP.7X7EVqGPHDPUFwLVQ_cwEgHaEK?rs=1&pid=ImgDetMain" alt="bayern munich" style="width : 250px;"></td>
+      </tr>
+
+
+      <tr>
+        <td>&lt;a href="link"&gt;...&lt;/a&gt;</td>
+        <td>Hyperlink to another page</td>
+        <td>Click<a href="https://www.youtube.com/"> here</a> to go to YouTube</td>
+      </tr>
+
+      <tr>
+        <td>&lt;p&gt;&lt;/p&gt;</td>
+        <td>A paragraph text</td>
+        <td><p>This is a paragraph</p>
+
+        	<p>This is another paragraph</p></td>
+      </tr>
+
+      <tr>
+        <td><p>&lt;h1&gt;...&lt;h1&gt;<p>
+       
+
+         <p>&lt;h2&gt;...&h2&gt;</p>
+
+         <p>...</p>
+
+    <p>&lt;h6&gt;...&lt;h6&gt;</p></td>
+        <td>Different sizes of headings. h1 is the largest size and h6 is the smallest size.</td>
+        <td><h1>h1 heading</h1>
+        	<h2>h2 heading</h2>
+        	<h6>h6 heading</h6></td>
+      </tr>
+
+      <tr>
+      <td><p>&lt;ol&gt;</p>
+      	<p>&lt;li&gt;...&lt;li&gt;</p></td>
+      	<td>Ordered lists and unordered lists</td>
+      	 <td>
+          <ol>
+            <li>Ordered list</li>
+            <li>Ordered list</li>
+          </ol>
+        <br>
+      	 <ul>
+      		<li>Unordered list</li>
+      		<li>Unordered list</li>
+      	 </ul>
+      </td>
+  </tr>
+
+      <tr>
+        <td>&lt;em&gt;&lt;/em&gt;</td>
+        <td>Used to express emphasis</td>
+        <td><em>Emphasis</em></td>
+      </tr>
+
+      <tr>
+        <td>&lt;strong&gt;&lt;/strong&gt;</td>
+        <td>Used to make text bold</td>
+        <td><strong>This makes text bold</strong></td>
+      </tr>
+
+      <tr>
+        <td>&lt;iframe src=""&gt;&lt;/iframe&gt;</td>
+        <td>Allows you to embed a video inside your webpage.</td>
+        <td><iframe width="560" height="315" src="https://www.youtube.com/embed/ly36kn0ug4k?si=x2pcUzOBJLk0eLD1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+      </tr>
+
+      <tr>
+        <td><p>&frac(num);</p></td>
+        <td>Fraction</td>
+        <td>&frac12;, &frac13;, &frac34;</td>
+      </tr>
+
+      <tr>
+        <td>&lt;span&gt;&lt;/span&gt;</td>
+        <td>Used to mark up part of a text</td>
+        <td><p>My mother has <span style="color:blue">blue</span> eyes.</p>
+      </td>
+
+      <tr>
+        <td>&lt;br&gt;, &lt;hr&gt;</td>
+        <td>Line break and horizontal ruler</td>
+        <td>No example for line break 
+          <hr></td>
+
+
+    </table>
+
+  </div>
+
+
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+
+</body>
+</html>

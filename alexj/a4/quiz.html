@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Quiz!</title>
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="stylecopy.css">
+
+</head>
+<body>
+    <h1>HTML Quiz </h1>
+<div style="font-size:175%;">
+<form>
+    <label>What does CSS stand for?</label>
+    <br>
+    <br>
+    <input type="radio" name="group" id="correctAnswer">
+    <!--name="group" allow us to select ONE within "group"-->
+    <label>Cascading Style Sheets</label>
+    <br>
+    <br>
+    <input type="radio" name="group">
+    <label>Cascading Sheet Style</label>
+    <br>
+    <br>
+    <input type="radio" name="group">
+
+    <label>Comprimised Studio Sounds</label>
+    <br>
+    <br>
+    <input type="radio" name="group">
+ 
+    <label>Common Sound Systems</label>
+    <br>
+    <br>
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset">
+</form>
+</div>
+<br>
+<div style="font-size:125%;">
+<form>
+    <label>What does HTML stand for?</label>
+    <select id="tableTagOption">
+        <option value="html1">Hyperlink Tool Markup Language</option>
+        <option value="html2">Hyper Text Markup Language</option>
+        <option value="html3">Hoola Tube Mac Letter</option>
+        <option value="html4">Hook Tuba Magic Loop</option>
+    </select>
+    <br>
+    <input type="button" value="Submit" onclick="checkTable();">
+    <input type="reset">
+</form>
+</div>
+
+
+<hr>
+<p style="font-size:125%;">Click <a href="index.html">here</a> to play the cookie clicker!</p>
+    <script>
+        function checkRadio() {
+    var correctAnswerSelected = document.getElementById("correctAnswer").checked;
+    if (correctAnswerSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("Wrong, try again next time!");
+    }
+}
+function checkTable() {
+    var checkTable = document.getElementById("tableTagOption").value;
+    if (checkTable == "html1" || checkTable == "html4" || checkTable == "html3") {
+        alert("incorrect answer, try again");
+    }
+    else {
+        var checkTable = document.getElementById("tableTagOption").value;
+        alert("Correct answer! HTML stands for Hyper Text Markup Language!");
+   
+    }
+}
+    </script>
+</body>
+</html>
