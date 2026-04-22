@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica;
+            margin: 0px 100px;
+            background-image: url("https://i.pinimg.com/originals/73/36/35/7336357a0bc62990a97b11cd60c80642.jpg");
+            background-size: 100% auto; /* stretch bg to fit */
+        }
+    </style>
+</head>
+<body>
+    <h2>Cookie Clicker</h2>
+    <button><input type="image" src="https://helloartsy.com/wp-content/uploads/kids/sweets/how-to-draw-a-cookie/how-to-draw-a-cookie-step-6.jpg" onclick="updateCPS();" width="200 px"></button>
+    <p id="cpsDisplay"></p>
+    <p id="ovcookies"></p>
+    <p id="timeElapsed"></p>
+    <hr>
+    <h2>HTML/CSS/JS Quiz</h2>
+    <p>Click <a href="tets.html">here</a> to play the quiz.</p>
+
+    <script>
+        // global variables
+        var nClicks = 0;
+        var startTime = new Date().getTime();
+
+        function updateCPS() {
+            if (nClicks == 0) { 
+                startTime = new Date().getTime();
+                nClicks += 1;
+            } else {
+                var currentTime =  new Date().getTime();
+                var timeElapsed = (currentTime - startTime) / 1000;
+                var cps = nClicks / timeElapsed;
+                document.getElementById("cpsDisplay").innerHTML = "cps:" + cps;
+                document.getElementById("ovcookies").innerHTML = "nClicks:" + nClicks;
+                document.getElementById("timeElapsed").innerHTML = "time passed:" + timeElapsed;
+            }
+        }
+    </script>
+</body>
+</html>

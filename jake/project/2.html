@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body, html {
+      height: 100%;
+    }
+
+    .parallax {
+      background-image: url('https://img.freepik.com/premium-photo/aidriven-financial-analysis-predicting-market-wallpaper_987764-15779.jpg?w=900');
+      height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media only screen and (max-device-width: 1366px) {
+      .parallax {
+        background-attachment: scroll;
+      }
+    }
+
+    table, th, td {
+      border: 2px solid darkslategrey;
+    }
+
+    div.topnav {
+      overflow: hidden;
+      background-color: black;
+      position: relative;
+    }
+
+    div.topnav #moreLinks {
+      display: none; /* Hidden by default */
+    }
+
+    div.topnav a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+
+    div.topnav a:hover {
+      color: black;
+      background-color: lightgrey;
+    }
+
+    div.topnav a.icon {
+      background: black;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    div.content {
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks"> <!-- Set display to none initially -->
+      <a href="index.html">Home</a>
+
+      <a href="2.html">Budgeting and Expenses</a>
+      <a href="3.html">Investment Strategies</a>
+      <a href="4.html">Tests</a>
+      
+      <a href="6.html">lifstyle</a>
+
+     
+    
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  <div class="parallax"></div>
+
+  <div style="height:1000px;background-color:lightcyan;font-size:36px">
+    <h1>Expenses and Budgeting</h1>
+    <div class="content">
+      <h1>Table</h1>
+      <table style="width: 50%;">
+        <tr>
+          <th style="width: 60%;">Category</th>
+          <th style="width: 40%;">Monthly Amount</th>
+        </tr>
+        <tr>
+          <td>Social Security</td>
+          <td>$2500</td>
+        </tr>
+        <tr>
+          <td>Pension</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td>Retirement Account Withdrawals</td>
+          <td>$2000</td>
+        </tr>
+        <tr>
+          <td>Retirement Income</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td>Total Monthly Income</td>
+          <td>$6500</td>
+        </tr>
+      </table>
+
+      <h1>Essential Expenses</h1>
+      <table style="width: 50%;">
+        <tr>
+          <th style="width: 60%;">Expenses</th>
+          <th style="width: 40%;">Monthly Amount</th>
+        </tr>
+        <tr>
+          <td>Housing (mortgage/rent, utilities)</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Healthcare (Medicare/insurance, out of pocket)</td>
+          <td>$800</td>
+        </tr>
+        <tr>
+          <td>Groceries</td>
+          <td>$600</td>
+        </tr>
+        <tr>
+          <td>Transportation (car payment, insurance, fuel)</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td>Insurance (home, auto, life)</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Taxes</td>
+          <td>$400</td>
+        </tr>
+        <tr>
+          <td>Total Essential Expenses</td>
+          <td>$3800</td>
+        </tr>
+      </table>
+
+      <h1>Discretionary Expenses</h1>
+      <table style="width: 50%;">
+        <tr>
+          <th style="width: 60%;">Discretionary Expenses</th>
+          <th style="width: 40%;">Monthly Amount</th>
+        </tr>
+        <tr>
+          <td>Travel</td>
+          <td>$600</td>
+        </tr>
+        <tr>
+          <td>Entertainment (dining out, hobbies)</td>
+          <td>$400</td>
+        </tr>
+        <tr>
+          <td>Gifts and Donations</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>Total Discretionary Expenses</td>
+          <td>$1300</td>
+        </tr>
+      </table>
+
+      <h1>One-Time Expenses (Annualized)</h1>
+      <table style="width: 50%;">
+        <tr>
+          <th style="width: 60%;">One-Time Expenses (Annualized)</th>
+          <th style="width: 40%;">Monthly Amount</th>
+        </tr>
+        <tr>
+          <td>House Improvements</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Major Purchases</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Total One-Time Expenses</td>
+          <td>$400</td>
+        </tr>
+      </table>
+
+      <h1>Emergency Fund Contribution</h1>
+      <table style="width: 50%;">
+        <tr>
+          <th style="width: 60%;">Category</th>
+          <th style="width: 40%;">Monthly Amount</th>
+        </tr>
+        <tr>
+          <td>Emergency Fund Contribution</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Total Monthly Expenses</td>
+          <td>$5700</td>
+        </tr>
+        <tr>
+          <td>Surplus/Deficit (Income - Expenses)</td>
+          <td>$800 surplus</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showHideMenu() {
+      var moreLinks = document.getElementById("moreLinks");
+      if (moreLinks.style.display === "block") {
+        moreLinks.style.display = "none";
+      } else {
+        moreLinks.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

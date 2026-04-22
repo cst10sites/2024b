@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Arial, Helvetica;
+            margin: 0px 100px;
+            background-image: url("https://dyebikr0297u5.cloudfront.net/top_augmented_reality_companies_2023_58896813cf.jpg");
+            background-size: 100% auto; /* stretch bg to fit */
+            color: white;
+        }
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: white;
+        }
+        table,
+        th,
+        td {
+            border: 2px solid darkcyan;
+        }
+        div.topnav {
+            overflow: hidden;
+            background-color: darkgrey;
+            position: relative;
+        }
+        div.topnav #moreLinks {
+            display: none; /* Hidden by default */
+        }
+        div.topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+        div.topnav a:hover {
+            color: black;
+            background-color: lightgrey;
+        }
+        div.topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        div.content {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+     <script>
+        function checkRadio() {
+            var correctAnsSelected = document.getElementById('correctAnswer').checked; // true or false
+            if (correctAnsSelected) {
+                alert("Thanks");
+            } else {
+                alert("thanks");
+            }
+            
+        }
+
+        function checkSeuss() {
+            var ham = document.getElementById("ham").checked;
+            var milk = document.getElementById("milk").checked;
+            var curry = document.getElementById("curry").checked;
+            var eggs = document.getElementById("eggs").checked;
+
+            
+            alert("Thanks!");
+        }
+
+        function showUserPassword() {
+            // Placeholder function
+            alert("Function not implemented yet.");
+            alert("Thanks!");
+        }
+
+        function showHideMenu() {
+            var moreLinks = document.getElementById("moreLinks");
+            if (moreLinks.style.display === "block") {
+                moreLinks.style.display = "none";
+            } else {
+                moreLinks.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <div id="moreLinks" style="display: none;">
+            <a href="../sainte/2.html">Budgeting and Expenses</a>
+            <a href="../sainte/3.html">Investment Strategies</a>
+            <a href="../sainte/4.html">Quiz</a>
+            <a href="../sainte/home.html">lifestyle</a>
+        </div>
+        <a class="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+    <h3>Here are questions that may help you figure out your budget</h3>
+
+    <h3>Text Input</h3>
+    <form>
+        <label>What is your income</label><br>
+        <textarea id="w3review" name="w3review" rows="4" cols="50">Multiline fields use the textarea tag.</textarea>
+        <br>
+        <input type="button" value="Submit" onclick="showUserPassword();">
+        <input type="reset"><br>
+    </form>
+
+    <form>
+        <label>What are your financial goals</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <label>Buying a Car</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Saving for a Vacation</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Building an Emergency Fund</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+
+    <form>
+        <label>Select your favorite language</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <label>HTML</label>
+        <br>
+        <input type="radio" name="group">
+        <label>CSS</label>
+        <br>
+        <input type="radio" name="group">
+        <label>JavaScript</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+
+    <form>
+        <label>What are your financial goals</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <label>Buying a Car</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Saving for a Vacation</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Building an Emergency Fund</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+
+    <form>
+        <label>What are your financial goals</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <label>Buying a Car</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Saving for a Vacation</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Building an Emergency Fund</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+</body>
+</html>

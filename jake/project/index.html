@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>My Retirement Plan</title>
+<style>
+/* Apply border to table elements */
+table,
+th,
+td {
+  border: 2px solid darkcyan;
+}
+
+body {
+  font-size: 1.25em;
+  font-family: Arial, Helvetica;
+  margin: 0px 100px;
+  background-image: url("https://wallpaperaccess.com/full/1632216.jpg");
+  background-size: cover; /* stretch bg to fit */
+  color: whitesmoke;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Add a semi-transparent background to the text containers */
+.container, .content, .main-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+/* Styling for the navigation bar */
+div.topnav {
+  overflow: hidden;
+  background-color: darkgrey;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* Hidden by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Additional Styles */
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+@keyframes color-animation {
+  0% {color: var(--color-1)}
+  32% {color: var(--color-1)}
+  33% {color: var(--color-2)}
+  65% {color: var(--color-2)}
+  66% {color: var(--color-3)}
+  99% {color: var(--color-3)}
+  100% {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 100vh;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+
+/* Styling for the footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: darkgrey;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+</style>
+<script>
+function showHideMenu() {
+  var moreLinks = document.getElementById("moreLinks");
+  if (moreLinks.style.display === "block") {
+    moreLinks.style.display = "none";
+  } else {
+    moreLinks.style.display = "block";
+  }
+}
+</script>
+</head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="2.html">Budgeting and Expenses</a>
+      <a href="3.html">Investment Strategies</a>
+      <a href="4.html">Tests</a>
+      
+      <a href="6.html">lifetsyle</a>
+
+      
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  <div class="container">
+    <h2 class="title">
+      <span class="title-word title-word-1">My</span>
+      <span class="title-word title-word-2">Retirement</span>
+      <span class="title-word title-word-3">Plan</span>
+    </h2>
+    <p>The purpose of this website is to tell you about my future retirement plan. This website will include my budgeting and expenses, a lifestyle bucket list, investment strategies, and finally a quiz that may help you find your own retirement plan.</p>
+    <p>This is made for student purposes. Don't take it seriously.</p>
+  </div>
+
+  <header>
+    <h1>Your own Retirement Plan</h1>
+    <nav>
+      <ul>
+       
+        
+        <li><a href="https://www.forbes.com/advisor/retirement/best-retirement-plans/#:~:text=Best%20Individual%20Retirement%20Plans%201%20Traditional%20IRA%20Anyone,contract%20that%20can%20supplement%20your%20retirement%20savings.%20">Resources</a></li>
+       
+        <li><a href="https://www.cambridgeassociates.com/private-clients-family-offices/">contact a professional</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Secure Your Future with Our Retirement Plans</h1>
+      <p>Flexible, reliable, and tailored retirement solutions just for you. In the quiz</p>
+      
+    </div>
+  </section>
+
+  <section id="plans" class="main-content">s
+    <h2>Plan Options</h2>
+    <div>
+      <h3>Our Retirement Plans</h3>
+      <ul>
+        <li>Traditional IRA</li>
+        <li>Roth IRA</li>
+        <li>401(k) Plans</li>
+        <li>Annuities</li>
+      </ul>
+    </div>
+    <a href="5.html" class="cta-btn">Learn More About Our Plans</a>
+  </section>
+
+  <section id="testimonials" class="main-content">
+    <h2>Testimonials</h2>
+    <div class="testimonial">
+      <p>"Switching to this retirement plan was the best decision for my future!" - Jane D.</p>
+    </div>
+    <div class="testimonial">
+      <p>"The flexibility and security provided are exactly what I needed." - John S.</p>
+    </div>
+    <div class="testimonial">
+      <p>"Excellent customer service and comprehensive plan options." - Emily R.</p>
+    </div>
+  </section>                          
+
+  <section id="resources" class="main-content">
+    <h2>Resources</h2>
+    <h3>Latest Articles on Retirement Planning</h3>
+    <ul>
+      <li>Top 5 Tips for Maximizing Your Retirement Savings</li>
+      <li>Understanding the Benefits of Roth IRAs</li>
+      <li>How to Choose the Right 401(k) Plan</li>
+    </ul>
+    <a href="https://www.savvynewcanadians.com/retirement-planning-canada/ " class="cta-btn">Read More Articles</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Your Retirement Plan. All rights reserved.</p>
+  </footer>
+</body>
+</html>
