@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--table.html-->
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <!--Internal CSS moved to style.css-->
+    <style></style>
+    <!--Attach style.css to this page-->
+    <link rel="stylesheet" href="styles.css">
+    <div>
+      <!-- navbar -->
+      <div class="topnav">
+        <a href="index.html">Common HTML Tags inside &lt;body&gt;</a>
+        <div id="moreLinks">
+          <a href="../a3/head.html">Common HTML Tags outside &lt;body&gt;</a>
+        </div>
+        <a class="icon" onclick="showHideMenu()">...</a>
+      </div>
+      <h1>HTML/CSS Defenitions and examples</h1>
+      <h2>Common HTML Tags inside &lt;body&gt;</h2>
+      <table style="width: 100%;">
+        <!--tr table row, th table header w/ style attribute (first), td table data (others)-->
+        <tr>
+          <th style="width: 33.3333333333%;">&lt;body&gt; Tags</th>
+          <th style="width: 33.3333333333%;">Definition</th>
+          <th style="width: 33.3333333333%;">Example(s)</th>
+        </tr>
+        <tr>
+          <!--1-->
+          <td>&lt;a href="link"&gt;…&lt;/a&gt;</td>
+          <!--2-->
+          <td>Hyperlink to another page, which means if you click on it, it will send you to another page.</td>
+          <!--3-->
+          <td>Click <a href="https://www.dell.com/en-ca/shop/software/ar/4020/audio-music?appliedRefinements=2696,2693,40206,40208,285"> this example link</a>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;&lt;/p&gt;</td>
+          <td>The &lt;p&gt; tag defines a paragraph.</td>
+          <td>
+            <p>This is an example of a paragraph</p>
+            <p>This is another paragraph</p>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;ol&gt; <br> &lt;li&gt;…&lt;/li&gt; <br> &lt;/ol&gt; </td>
+          <!--2-->
+          <td>The &lt;ol&gt; tag defines an ordered list. An ordered list can be numerical or alphabetical. &lt;li&gt; is numerical.</td>
+          <!--3-->
+          <td>
+            <ol>
+              <li>It is</li>
+              <li>a list.</li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;h1&gt;...&lt;/h1&gt; <br> ...all the way to... <br> &lt;h6&gt;...&lt;/h6&gt; </td>
+          <!--2-->
+          <td> The &lt;header&gt; element represents a container for introductory content or a set of navigational links. </td>
+          <!--3-->
+          <td>
+            <h1>h1</h1>
+            <h2>h2</h2> ... <h6>h6</h6>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;span&gt;…&lt;/span&gt; </td>
+          <!--2-->
+          <td> The &lt;span&gt; tag is an inline container used to mark up a part of a text, or a part of a document. <br>
+            <br> The &lt;span&gt; tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+          </td>
+          <!--3-->
+          <td>
+            <p>The sky is <span style="color:blue">blue</span>. </p>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;img src="link" alt="pic"&gt; </td>
+          <!--2-->
+          <td> The &lt;img&gt; tag is used to embed an image in an HTML page. </td>
+          <!--3-->
+          <td>
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS8Pebtpt1F_lvX4DcNmCCj0AB9iui1uC-9d_zLEYoo_2QwP5phtuUFGRcM" alt="Oscar Isaac" width="50">
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;br&gt; and &lt;hr&gt; </td>
+          <!--2-->
+          <td> The &lt;hr&gt; tag defines a thematic break in an HTML page (e.g. a shift of topic). <br>
+            <br> The &lt;br&gt; tag inserts a single line break.
+          </td>
+          <!--3-->
+          <td> &lt;br&gt; <br>
+            <br> &lt;hr&gt;
+            <hr>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;div&gt;&lt;/div&gt; </td>
+          <!--2-->
+          <td> The &lt;div&gt; tag defines a division or a section in an HTML document. </td>
+          <!--3-->
+          <td>
+            <div class="myDiv">
+              <h2>This is a heading in a div element</h2>
+              <p>This is some text in a div element.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;table&gt; </td>
+          <!--2-->
+          <td> An HTML table consists of one &lt;table&gt; element and one or more &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; elements. </td>
+          <!--3-->
+          <td> For example: The table you're looking at right now </td>
+        </tr>
+        <tr>
+          <!--1-->
+          <td> &lt;iframe&gt; </td>
+          <!--2-->
+          <td> The &lt;iframe&gt; tag specifies an inline frame. <br>
+            <br> An inline frame is used to embed another document within the current HTML document.
+          </td>
+          <!--3-->
+          <td>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d298.4525035064555!2d-123.16966051461705!3d49.26279590655426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673abf439c537%3A0x11f712c3a3f0aec9!2s2622%20MacKenzie%20St%2C%20Vancouver%2C%20BC%20V6K%204A1!5e0!3m2!1sen!2sca!4v1714074232607!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--JavaScript will be explored later-->
+    <script>
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none"; // hide
+        } else {
+          links.style.display = "block"; // show
+        }
+      }
+    </script>
+    </body>
+</html>

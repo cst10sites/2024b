@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png"> 
+</head>
+<body>
+    <div>
+
+        <!-- navbar -->
+        <div class="topnav">
+          <a href="index.html">Home</a>
+          <div id="moreLinks">
+            <a target="blank" href="../a1/index.html">Assignment 1</a>
+            <a target="blank" href="../a2/index.html">Assignment 2</a>
+            <a href="../a3/index.html">Assignment 3</a>
+            <a target="blank" href="../Lesson1/index.html">Lesson 1</a>
+            <a target="blank" href="../Lesson2/index.html">Lesson 2</a>
+            <a target="blank" href="../Lesson3/index.html">Lesson 3</a>
+            <a target="blank" href="../Lesson4/index.html">Lesson 4</a>
+            <a href="../a3/head.html">Common HTML Tags Outside &lt;body&gt;</a>
+          </div>
+          <a class="icon" onclick="showHideMenu()">...</a>
+        </div>
+        
+        <!--content-->
+        <div class="content">
+            <p style="text-align:center"><a href="../a3/head.html">Common HTML Tags <strong>Outside</strong> &lt;body&gt;.</a></p>
+            <h1 style="text-align:center; color: #0a4480;">HTML/CSS Guide</h1>
+            <h2 style="text-align:center;">Common HTML tags inside &lt;body&gt; </h2>
+            <table style="width: 65%">
+                <!--tr = table row, th = table header (first row), td = table data (other)-->
+                <tr><!--top row-->
+                    <th style="width: 50%"><strong>&lt;body&gt; Tags</strong></th>
+                    <th style="width: 20%"><strong>Definition</strong></th>
+                    <th style="width: 20%"><strong>Examples (If Applicable)</strong></th>
+                </tr> 
+                <tr>
+                    <td>&lt;p&gt; and &lt;/p&gt;</td>
+                    <td>This tag lets you write a paragraph on the page.</td>
+                    <td>This is a paragraph</p> 
+                        <br> <p>This is a different paragraph.</p></td>
+                </tr>
+                <tr>
+                    <td>&lt;strong&gt; and &lt;em&gt;</td>
+                    <td>Can change the way text looks on the page, by either making it emphasised or more visible.</td>
+                    <td><strong>This text is Strongly Emphasised (Bold).</strong>
+                    <br> <em>This text is Emphasised (Italic).</em></td>
+                </tr>
+                <tr>
+                    <td>&lt;img alt="pic" src="link"&gt;</td>
+                    <td>Lets you attach an image onto the page.</td>
+                    <td><img alt="catwine" style="width: 100px" src="catwine.png"></td>
+                </tr>  
+                <tr>
+                    <td>&lt;sup&gt; and &lt;sub&gt;</td>
+                    <td>Superscript makes a small type of text that is located above normal text, and Subscript does the opposite, making small text that sits below.</td>
+                    <td><sup>Superscript</sup> is useful for things like exponents.
+                    <br> <sub>Subscript</sub> is useful for writing chemical formulas.</td>
+                </tr>  
+                <tr>
+                    <td>&lt;iframe src="link"&gt;
+                        <br>&lt;/iframe&gt;
+                    </td>
+                    <td>These tags let you insert a link to a YouTube video via iframe.</td>
+                    <td><iframe width="460" height="215" src="https://www.youtube.com/embed/xuCn8ux2gbs?si=KAUJtTeF_YuuVX44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </td>
+                </tr>    
+                <tr>
+                    <td>&lt;br&gt; and &lt;hr&gt;</td>
+                    <td>&lt;hr&gt; is a horizontal ruler or line, and &lt;br&gt; is a line break, which is just like pressing Enter.</td>
+                    <td>This is a Horizontal Ruler.<hr>This is a <br> Line Break.</td>
+                </tr>  
+                <tr>
+                    <td>&lt;h1&gt; through &lt;h6&gt;</td>
+                    <td>&lt;h1&gt; is a Heading, and everything below that to &lt;h6&gt; are all subheadings that get smaller respectively.</td>
+                    <td><h1>Heading H1</h1> <br> <h2>Subheading H2</h2> <br> <h3>Subheading H3</h3> <br> <h4>Subheading H4</h4> <br> <h5>Subheading H5</h5> <br> <h6>Subheading H6</h6></td>
+                </tr>  
+                <tr>
+                    <td>&lt;a href="link"&gt; &lt;/a&gt;</td>
+                    <td>Lets you make a Hyperlink to another page.</td>
+                    <td>Click <a target="blank" href="https://docs.google.com/document/d/1zaYvTtjbjgyXjCGHutT0IejUWai50SsWdEW9hHq3McE/edit">here</a> for more!</td>
+                </tr>  
+                <tr>
+                    <td>&lt;span&gt; and &lt;/span&gt;</td>
+                    <td>The &lt;span&gt; tag is used to mark up a part of text without creating a new line of content using inline CSS.</td>
+                    <td>The span tag/inline CSS has been used <span style="color: orangered">on this part of text.</span></td>
+                </tr>  
+                <tr>
+                    <td>&lt;ol&gt; <br> &nbsp; &nbsp; &lt;li&gt; <br> <br> &nbsp; &nbsp; &lt;/li&gt; <br> &lt;/ol&gt;</td>
+                    <td>Can create a list in your document.</td>
+                    <td>
+                        <ol> The list goes on...
+                            <li> Number one.
+                            </li>
+                            <li> Number two.
+                            </li>
+                            <li> Number three.
+                            </li>
+                    </ol>
+                </td>
+                </tr>  
+            </table>
+        </div>
+    </div>
+    <script>
+        function showHideMenu() {
+          var links = document.getElementById("moreLinks");
+          if (links.style.display == "block") {
+            links.style.display = "none"; // hide
+          } else {
+            links.style.display = "block"; // show
+          }
+        }
+        </script>
+</body>
+</html>

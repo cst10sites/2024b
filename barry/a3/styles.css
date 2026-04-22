@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, Helvetica;
+  margin: 0px 100px;
+  background: url('background.png');
+  background-size: 100% auto; /* stretch bg to fit */
+}
+img{
+  width:300px;
+}
+h1{
+  font-size: 50px;
+}
+table{
+  width: 100%;
+}
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+a.btn {
+      /* <a class="btn" ...> */
+      background-color: coral;
+      padding: 8px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.5em;
+    }
+
+    a.btn:hover {
+      background-color: papayawhip;
+      color: Black;
+      box-shadow: 5px 10px black;
+    }
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.5);

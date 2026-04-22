@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div>
+
+        <!-- navbar -->
+        <div class="topnav">
+          <a href="index.html">Home</a>
+          <div id="moreLinks">
+            <a target="blank" href="../a1/index.html">Assignment 1</a>
+            <a target="blank" href="../a2/index.html">Assignment 2</a>
+            <a href="../a3/index.html">Assignment 3</a>
+            <a target="blank" href="../Lesson1/index.html">Lesson 1</a>
+            <a target="blank" href="../Lesson2/index.html">Lesson 2</a>
+            <a target="blank" href="../Lesson3/index.html">Lesson 3</a>
+            <a target="blank" href="../Lesson4/index.html">Lesson 4</a>
+            <a href="../a3/head.html">Common HTML Tags Outside &lt;body&gt;</a>
+          </div>
+          <a class="icon" onclick="showHideMenu()">...</a>
+        </div>
+        
+        <!--content-->
+        <div class="content">
+            <h1 style="text-align:center; color: #0a4480;">HTML Guide</h1>
+            <h2 style="text-align:center;">Common HTML tags outside &lt;body&gt; </h2>
+            <table style="width: 65%">
+                <!--tr = table row, th = table header (first row), td = table data (other)-->
+                <tr><!--top row-->
+                    <th style="width: 50%"><strong>&lt;head&gt; Tags</strong></th>
+                    <th style="width: 20%"><strong>Definition</strong></th>
+                    <th style="width: 20%"><strong>Examples (If Applicable)</strong></th>
+                </tr> 
+                <tr>
+                    <td>&lt;!doctype html&gt;</td>
+                    <td>&lt;!doctype html&gt; is a declaration that tells the web browser what version of HTML your document is written in.</td>
+                    <td><img alt="doc" style="width: 150px;" src="doc.png"> <br> &lt;!doctype html&gt; is the very first line of this webpage!</td>
+                </tr>
+                <tr>
+                    <td>&lt;html lang="en"&gt;</td>
+                    <td>This line sets the language for the entire page, which helps other websites like Google Translate know the page's default language.</td>
+                    <td>If you where to look into this page's code the default language is set to "en" which is short for English.</td>
+                </tr>
+                <tr>
+                    <td>&lt;meta charset="UTF-8"&gt;</td>
+                    <td>This tag is used to indicate the web page's character encoding. In order to see the correct content, this tag's function is used to let the browser know what character encoding is used in your document.</td>
+                    <td>If you looked into this webpage's code you would find this exact tag located in the 5th line.</td>
+                </tr>
+                <tr>
+                    <td>&lt;title&gt; and &lt;/title&gt;</td>
+                    <td>This tag gives the tab in which your webpage is open its title. </td>
+                    <td>    <img alt="title" style="width:150px;" src="title.png">
+                        If you look at the tab in which this page is open, you will see that the page's title is "Assignment 3".</td>
+                </tr>
+                <tr>
+                    <td>&lt;style&gt; and &lt;/style&gt;</td>
+                    <td>These tags define a section within the document in which the Internal CSS is located.</td>
+                    <td>These lines would set the page's background color to black. <br> <br> <strong>&lt;style&gt; <br> &nbsp; &nbsp; body { <br> &nbsp; &nbsp; &nbsp; background-color: black; <br> &nbsp; &nbsp; } <br> &lt;/style&gt;</strong></td>
+                </tr>
+                <tr>
+                    <td>&lt;link rel="css" href="file.css"&gt;</td>
+                    <td>These tags point to an extrenal CSS file that can adjust the way your document looks without having to incorporate CSS into the main document itself which may reduce complexity and improve organisation.</td>
+                    <td>This page and all others used on this website use a common CSS stylesheet to describe the way they look, in this case it applies all of the necessary information to create the navigation bar, colors and background.</td>
+                </tr>
+                <tr>
+                    <td>&lt;link rel="icon" type="image/x-icon" href="icon.png"&gt;</td>
+                    <td>This tag can be used to add a Favicon to your webpage, which is basically an image on the browser's tab that can add a bit of personality or recognition to the page.</td>
+                    <td><img alt="favicon" style="width:100px;" src="favicon.png"> <br> This webpage has its own favicon, and it's a small .png warning sign that can be found next to the title.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function showHideMenu() {
+          var links = document.getElementById("moreLinks");
+          if (links.style.display == "block") {
+            links.style.display = "none"; // hide
+          } else {
+            links.style.display = "block"; // show
+          }
+        }
+        </script>
+</body>
+</html>

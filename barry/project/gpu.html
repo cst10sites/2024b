@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU</title>
+    <style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="GPU.ico">
+</head>
+<body>
+    <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="cpu.html">CPU</a>
+      <a href="gpu.html">GPU</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+    <div class="content">
+        <h1>Introduction to Graphics Processing Unit (GPU)</h1>
+        <h2>History of GPU</h2>
+        <p>With the continuous improvement of computer performance, people realized that graphs could also be disaplay on the computer. But CPU was not good at the processing of graphs. So grapics processing units were designed.</p>
+        <h2>How GPU works?</h2>
+        <p>The GPU decides how to use the pixels on the screen to create the image and sends it to the monitor through a cable. A GPU has specific hardware capabilities that are intended to map well to the way that various 3D engines execute their code, such as geometry, texture, memory, and shaders.</p>
+
+        <h2>How to choose a desktop GPU:</h2>
+        <p>The most well-known brands of GPU are <em>Nvidia</em> and <em>AMD</em>. In 2024, Nvidia's latest graph card is 40 series. There are 4060, 4070, 4080, and 4090. The 4060 is the weakest and 4090 is the strongest one. The stronger your GPU is, the better image quality you can get (espeacially in video games).</p>
+        <div class="imageCenter">
+        <img src="https://th.bing.com/th/id/OIP.eUVaLEWjqtzEOt4u0QP0rAAAAA?rs=1&pid=ImgDetMain" alt="jpg">
+        </div>
+        <h2>GPU with AI</h2>
+        <p>GPUs are an essential part of a modern artificial intelligence infrastructure. It can dramatically speed up computational processes for deep learning. GPUs are ideal for AI applications because they perform vast numbers of parallel matrix multiplications, which are necessary for neural networks to function.</p>
+        
+
+        <h2>Conclusion</h2>
+        <p>GPU is designed for graphic processing. It decides how to use the pixels on the screen.</p>
+    </div>
+    <script>
+    function showHideMenu() {
+    var links = document.getElementById("moreLinks");
+    if (links.style.display == "block") {
+        links.style.display = "none";
+    }
+    else {
+        links.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>

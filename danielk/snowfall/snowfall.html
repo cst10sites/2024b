@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Snowfall Assignment</title>
+        <style>
+            canvas {
+                position: absolute;
+                background: black;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="fullCanvas"></canvas>
+        <script>
+            var canvas = document.getElementById("fullCanvas");
+            var draw = canvas.getContext("2d");
+            var mouse = {x: null, y: null}
+            var circleArray = [];
+            // [] is an empty array
+            var nCircles = prompt("How many circles do you want to display?", 1000);
+
+            function fullSize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener("resize", function(){
+                fullSize();
+            });
+
+            fullSize();
+
+            function showTitle() {
+                draw.beginPath();
+                draw.fillStyle = "#5f9fdf";
+                draw.font = "40px Arial";
+                draw.fillText("Circle Amount: " + circleArray.length, 50, 50);
+                draw.fill();
+            }
+
+            class Circle {
+                //define properties
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = 5;         
+                    this.speedY = (Math.random() * 10) + 1;
+                    this.speedX = 0;
+                    this.alpha = 1;
+                }
+                // methods
+                drawCircle() {
+                    draw.beginPath();
+                    draw.fillStyle = "white";
+                    draw.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+                    draw.fill();
+                }
+                moveCircle() {
+                    this.x = this.x + this.speedX;
+                    this.y = this.y + this.speedY;
+                    this.size = 0.99 * this.size;
+                    this.alpha = 0.99 * this.alpha;                  
+
+                    // Wrap Algorithm
+                    if (this.x < 0) {this.x = canvas.width;}
+                    if (this.x > canvas.width) {this.x = 0;}
+                    if (this.y < 0) {this.y = canvas.height;}
+                    if (this.y > canvas.height) {this.y = 0, this.x = Math.random() * canvas.width;}
+                
+                }
+                detectCollison() {
+                    var dx = Math.abs(mouse.x - this.x);
+                    var dy = Math.abs(mouse.y - this.y); 
+                    
+                    if (dx < this.size && dy < this.size) {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+                        this.speedX = 5 - 10 * Math.random();
+                        this.speedY = 5 - 10 * Math.random();
+                        this.size = 0.95 * this.size;
+                        score = score + 10;
+                    }
+                }
+
+            }
+
+            function createInitialCircles() {
+                for (var k = 0; k < nCircles; k++) {
+                    circleArray.push(new Circle());
+                }
+            }
+
+            function animate() {
+                draw.clearRect(0, 0, canvas.width, canvas.height);
+                showTitle();
+                for(var k = 0; k < circleArray.length; k++) {
+                    circleArray[k].drawCircle();
+                    circleArray[k].moveCircle();
+                    if (circleArray[k].alpha < 0.1) {
+                        circleArray.splice(k, 1);
+                    }
+                }
+                mouse.x = undefined;
+                mouse.y = undefined;
+                requestAnimationFrame(animate);
+            }
+
+            createInitialCircles();
+            animate();
+
+            canvas.addEventListener("mousemove", function(event) {
+                if (event.buttons == 1) {
+                    mouse.x = event.x;
+                    mouse.y = event.y;
+                    console.log(mouse);
+
+                    circleArray.push(new Circle());
+                    var last = circleArray.length - 1;
+                    circleArray[last].x = mouse.x;
+                    circleArray[last].y = mouse.y;
+                }
+            });
+
+        </script>
+    </body>
+</html>

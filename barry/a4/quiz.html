@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="quiz.ico">
+</head>
+<body>
+
+<h2>HTML/CSS Quiz</h2>
+<div class="center">
+<form>
+<label>Which tag below is in the head?</label>
+    
+    <br>
+    <input type="radio" name="group">
+    <label>&lt;form&gt;...&lt;/form&gt;</label>
+    <br>
+    <input type="radio" name="group" id="correctAnswer">
+    <label>&lt;title&gt;...&lt;/title&gt;</label>
+    <br>
+    <input type="radio" name="group">
+    <label>&lt;h1&gt;...&lt;/h1&gt;</label>
+    <br>
+    <input type="radio" name="group">
+    <label>&lt;p&gt;...&lt;/p&gt;</label>
+    <br> 
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset">
+</form>
+</div>
+<hr>
+<h2>Cookie Clicker</h2>
+<div class="center">
+<p>Click <a href="index.html">here</a> to play the cookie clicker.</p>
+</div>
+<script>
+	function checkRadio() {
+    var correctAnsSelected = document.getElementById('correctAnswer').checked; // true or false
+
+    if (correctAnsSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("It is a HTML tag but not in the head. Please try again.");
+    }
+
+}
+</script>
+</body>
+</html>

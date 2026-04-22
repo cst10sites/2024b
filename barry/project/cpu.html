@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU</title>
+    <style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="CPU.ico">
+</head>
+<body>
+   <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="cpu.html">CPU</a>
+      <a href="gpu.html">GPU</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+    <div class="content">
+        <h1>Introduction to Central Processing Unit (CPU)</h1>
+        <p>The Central Processing Unit (CPU) is the "brain" of a computer. It is a crucial component responsible for executing instructions and performing calculations required to run software applications.</p>
+        <div class="imageCenter">
+            <img src="https://purepng.com/public/uploads/large/purepng.com-cpu-processorelectronicscpuprocessor-941524672527kysg5.png" alt="png">
+        </div>
+        <h2>History of CPU</h2>
+        <p>Early CPUs were custom designs used as part of a larger and sometimes distinctive computer. However, this method of designing custom CPUs for a particular application has largely given way to the development of multi-purpose processors produced in large quantities. This standardization began in the era of discrete transistor mainframes and minicomputers, and has rapidly accelerated with the popularization of the integrated circuit (IC). The IC has allowed increasingly complex CPUs to be designed and manufactured to tolerances on the order of nanometers. Both the miniaturization and standardization of CPUs have increased the presence of digital devices in modern life far beyond the limited application of dedicated computing machines. Modern microprocessors appear in electronic devices ranging from automobiles to cellphones, and sometimes even in toys. (Wikipedia)</p>
+        
+        <h2>Types of CPUs:</h2>
+        <p>CPU technology has evolved over the years, leading to different types of CPUs catering to various computing needs. Some common types include:</p>
+        <ul>
+            <li><strong>Desktop CPUs:</strong> Designed for desktop computers. The most common brand is <em>intel</em> and <em>AMD</em>.</li>
+            <li><strong>Server CPUs:</strong> Optimized for server environments, focusing on reliability, scalability, and multi-core processing. They were more expensive than the desktop CPU.</li>
+            <li><strong>Mobile CPUs:</strong> Found in smartphones, tablets, and laptops, emphasizing energy efficiency and thermal management.</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>The Central Processing Unit (CPU) plays a critical role in the functioning of a computer system. It is the "brain" of the computer.</p>
+    </div>
+    <script>
+    function showHideMenu() {
+    var links = document.getElementById("moreLinks");
+    if (links.style.display == "block") {
+        links.style.display = "none";
+    } 
+    else {
+        links.style.display = "block";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<style>
+			body {
+    			background-color:bisque;
+				margin: 0px 100px;
+				font-family: Arial;
+			}
+			div.imagebox {
+				text-align: center;
+			}
+			div.obliterate {
+				text-align: center;
+			}
+			h1 {
+				color: #94310d
+			}
+			h2 {
+				color: #94310d
+			}
+			h4 {
+				color: #94310d
+			}
+			p {
+				color: #94310d
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align:center">Cookie Clicker</h1>
+		<h4 style="text-align:center">Click the Cookie!</h4>
+		<div class="imagebox">
+			<input alt="cookie" style="width: 300px;" type="image" src="cookie.png" onclick="runCPS();">
+		</div>
+		<p id="timeDisplay" style="text-align: center;"></p>
+		<p id="cpsDisplay" style="text-align: center;"></p>
+		<p id="clickDisplay" style="text-align: center;"></p>
+		<div class="obliterate">
+			<button onclick="obliterate();">obliterate cookies</button>
+		</div>
+		
+		<br>
+		<hr>
+		<h2 style="text-align: center;">HTML/CSS/JS Quiz</h2>
+		<p style="text-align: center;">Click <a href="quiz.html">here</a> to play the quiz.</p>
+
+		<script>
+			var nClicks = 0;
+			var startTime = new Date().getTime();
+			function runCPS() {
+				if (nClicks == 0) {
+        			startTime = new Date();
+        			nClicks = nClicks + 1;
+					document.getElementById("clickDisplay").innerHTML = "You have " + nClicks + " Cookie!";
+				}
+				else {
+					nClicks = nClicks + 1;
+					document.getElementById("clickDisplay").innerHTML = "You have " + nClicks + " Cookies!";
+				}
+			}
+			setInterval(updateCPS, 10)
+			function updateCPS() {
+				var currentTime = new Date();
+        		var timeElapsed = (currentTime - startTime) / 1000;
+				var cps = nClicks / timeElapsed;
+				cps = cps.toFixed(2);
+				document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: " + cps;
+			}
+			setInterval(updateTime, 50);
+			function updateTime() {
+    			if (nClicks > 0) {
+    				var currentTime = new Date();
+    				var timeElapsed = (currentTime - startTime) / 1000;
+					timeElapsed = timeElapsed.toFixed(2);
+    				document.getElementById("timeDisplay").innerHTML = "Time: " + timeElapsed;
+    			}
+				else {
+					document.getElementById("timeDisplay").innerHTML = "Time: " + "0.00"
+				}
+			}
+			function obliterate() {
+				location.reload();
+			}
+		</script>
+	</body>
+</html>

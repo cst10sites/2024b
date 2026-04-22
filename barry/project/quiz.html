@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="quiz.ico">
+</head>
+<body>
+	<div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="cpu.html">CPU</a>
+      <a href="gpu.html">GPU</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+  <div class="content">
+  	<h1>Quiz</h1>
+  	<form>
+    <label>Which component in a PC is designed for graphic processing?</label>
+    
+    <br><br>
+    <input type="radio" name="group">
+    <label>CPU</label>
+    <br><br>
+    <input type="radio" name="group" id="rightAnswer">
+    <label>GPU</label>
+    <br><br>
+    <input type="radio" name="group">
+    <label>Motherboard</label>
+    <br><br>
+    <input type="radio" name="group">
+    <label>Case</label>
+    <br><br>
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset">
+</form>
+<br><br>
+<form>
+    <label>What does RAM stand for?</label>
+    
+    <br><br>
+    <input type="radio" name="group">
+    <label>Random Available Memory</label>
+    <br><br>
+    <input type="radio" name="group" id="correctAnswer">
+    <label>Random Access Memory</label>
+    <br><br>
+    <input type="radio" name="group">
+    <label>Recognizable Access Memory</label>
+    <br><br>
+    <input type="radio" name="group">
+    <label>Recognizable Available Memory</label>
+    <br><br>
+    <input type="button" value="Submit" onclick="checkRadio2();">
+    <input type="reset">
+</form>
+  </div>
+  <script>
+
+    function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } 
+  else {
+    links.style.display = "block"; // show
+  }
+}
+  	function checkRadio() {
+    var correctAnsSelected = document.getElementById('rightAnswer').checked; 
+
+    if (correctAnsSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("Nice but try again");
+    }
+
+}
+function checkRadio2() {
+    var correctAnsSelected = document.getElementById('correctAnswer').checked; 
+
+    if (correctAnsSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("Nice but try again");
+    }
+
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+	    <title>HTML/CSS/JS Quiz</title>
+        <style>
+            body {
+    			background-color:bisque;
+				margin: 0px 100px;
+				font-family: Arial;
+			}
+			div.ans {
+				text-align: center;
+			}
+			div.disp {
+				text-align: center;
+			}
+			p {
+				color: #94310d;
+			}
+            label {
+                font-size: 2 em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = ans>
+            <form>
+                <br>
+                <br>
+                <br>
+                <strong><label style="color:#94310d;">Which of these HTML tags are deprecated?</label></strong>
+                <br>
+                <br>
+                <input type="checkbox" id="horzRuler">
+                <label>&lt;hr&gt;</label>
+                <br>
+                <input type="checkbox" id="spacer">
+                <label>&lt;spacer&gt;</label>
+                <br>
+                <input type="checkbox" id="bold">
+                <label>&lt;strong&gt;</label>
+                <br>
+                <input type="checkbox" id="attribute">
+                <label>&lt;a&gt;</label>
+                <br>
+                <br>
+                <input type="button" value="Submit" onclick="checkAns();">
+                <button onclick="obliterate();">Reset</button>
+            </form>
+        </div>
+        
+        <div class="disp">
+            <p id="ansDisplay"></p>
+
+            <strong><p style="text-align: center;">Click <a href="index.html">here</a> to play Cookie Clicker!</p></strong>
+        </div>
+
+        <script>
+            function checkAns() {
+                var horzRuler = document.getElementById("horzRuler").checked;
+                var dSpacer = document.getElementById("spacer").checked;
+                var dBold = document.getElementById("bold").checked;
+                var attribute = document.getElementById("attribute").checked;
+
+                if (dSpacer == true) {
+                    document.getElementById("ansDisplay").innerHTML = "Correct! That tag is deprecated!"
+                }
+                else {
+                    document.getElementById("ansDisplay").innerHTML = "That tags is not deprecated!"
+                }
+            }
+            function obliterate() {
+                location.reload;
+            }
+        </script>
+    </body>
+</html>

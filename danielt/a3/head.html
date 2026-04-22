@@ -1,0 +1,94 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link rel="icon" type="image/x-icon" href="dizzy.ico">
+      <!--table.html-->
+      <meta charset="UTF-8">
+      <title>Assignment 3</title>
+      <!--Internal CSS moved to style.css-->
+      <style></style>
+      <!--Attach style.css to this page-->
+      <link rel="stylesheet" href="styles.css">
+      <div>
+        <!-- navbar -->
+        <div class="topnav">
+          <a href="index.html">Common HTML Tags inside &lt;body&gt;</a>
+          <div id="moreLinks"></div>
+        </div>
+        <h1>HTML/CSS Defenitions and examples</h1>
+        <h2>Common HTML Tags inside &lt;body&gt;</h2>
+        <table style="width: 100%;">
+          <!--tr table row, th table header w/ style attribute (first), td table data (others)-->
+          <tr>
+            <th style="width: 33.3333333333%;">&lt;body&gt; Tags</th>
+            <th style="width: 33.3333333333%;">Definition</th>
+            <th style="width: 33.3333333333%;">Example(s)</th>
+          </tr>
+          <tr>
+            <!--1-->
+            <td>&lt;!DOCTYPE html&gt;</td>
+            <!--2-->
+            <td>All HTML documents must start with a &lt;!DOCTYPE&gt; declaration. <br> The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect. </td>
+            <!--3-->
+            <td>No Possible Example</td>
+          </tr>
+          <tr>
+            <td>&lt;html lang="en"&gt;</td>
+            <td>The lang attribute specifies the language of the element's content.</td>
+            <td>This page is set to “en” for English. This tag helps websites such as Google Translate know the default language for this page is English.</td>
+          </tr>
+          <tr>
+            <!--1-->
+            <td> &lt;meta charset="UTF-8"&gt; </td>
+            <!--2-->
+            <td>The charset attribute specifies the character encoding for the HTML document.</td>
+            <!--3-->
+            <td> No Possible Example </td>
+          </tr>
+          <tr>
+            <!--1-->
+            <td> &lt;title&gt;...&lt;/title&gt; </td>
+            <!--2-->
+            <td> The &lt;title&gt; tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. </td>
+            <!--3-->
+            <td>
+              <img src="Screenshot2024-04-26133539.png" alt="screenshot of title">
+            </td>
+          </tr>
+          <tr>
+            <!--1-->
+            <td> &lt;style&gt;…&lt;/style&gt; </td>
+            <!--2-->
+            <td> The &lt;style&gt; tag is the section that describes the internal CSS of the page </td>
+            <!--3-->
+            <td style="background-color: black;">
+              <p style="background-color: white;">style="background-color: black;"</p>
+            </td>
+          </tr>
+          <tr>
+            <!--1-->
+            <td> &lt;link rel="icon" type="image/x-icon" href="dizzy.ico"&gt; </td>
+            <!--2-->
+            <td>
+              <p>Tag that adds a favicon</p>
+            </td>
+            <!--3-->
+            <td>
+              <img src="Screenshot2024-05-02135846.png" alt="screenshot">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--JavaScript will be explored later-->
+      <script>
+        function showHideMenu() {
+          var links = document.getElementById("moreLinks");
+          if (links.style.display == "block") {
+            links.style.display = "none"; // hide
+          } else {
+            links.style.display = "block"; // show
+          }
+        }
+      </script>
+      </body>
+  </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="PC.ico">
+</head>
+<body>
+    <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="cpu.html">CPU</a>
+      <a href="gpu.html">GPU</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+    
+
+    <div class="content">
+        <h1>Introduction to Personal Computer Hardware</h1>
+        <h2>What is Computer Hardware?</h2>
+        <p>Computer hardware refers to the physical components that make up a computer system. These components can be classified into different categories based on their functions.</p>
+        <div class="imageCenter">
+        <img alt="png" src="https://rog.asus.com/websites/global/products/g2Pl47nZaToiPUKg/img/pic_FLEXIBLE_GRAPHICS_a.png">
+    </div>
+        <h2>Basic Components of a Personal Computer</h2>
+        <p>1. <strong>Central Processing Unit (CPU):</strong> CPU is the brain of the computer. The CPU executes instructions and performs calculations.</p>
+
+        <p>2. <strong>Random Access Memory (RAM):</strong> RAM temporarily stores data and program instructions that the CPU needs to access quickly.</p>
+
+        <p>3. <strong>Storage Devices:</strong> This includes hard disk drives (HDDs), solid-state drives (SSDs), and other storage media used to store data permanently.</p>
+
+        <p>4. <strong>Motherboard:</strong> The motherboard is the main circuit board that connects and allows communication between various hardware components.</p>
+
+        <p>5. <strong>Power Supply Unit (PSU):</strong> The PSU converts electrical power from an outlet into usable power for the computer components.</p>
+
+        <p>6. <strong>Graphics Processing Unit (GPU):</strong> GPU is designed for graphic processing. It decides how to use the pixels on the screen.</p>
+
+        <p>7. <strong>Input and Output Devices:</strong> These include devices such as keyboards, mice, monitors, and speakers, which allow users to interact with the computer.</p>
+        <h2>How to build a PC</h2>
+        <p><strong>1.</strong>Install the power supply (PSU) in the case.</p>
+        <p><strong>2.</strong>Install the processor (CPU) and the cooler on the motherboard.</p>
+        <p><strong>3.</strong>Install the RAM (system memory) on the motherboard.</p>
+        <p><strong>4.</strong>Install the SSD (solid state drive) in the case.</p>
+        <p><strong>5.</strong>Test the system by connecting the monitor, keyboard, and mouse and turning on the power.</p>
+
+        <h2>Conclusion</h2>
+        <p>A personal computer is made up by different components. These components work together to perform various tasks and execute programs, enabling users to accomplish a wide range of activities.</p>
+        
+    </div>
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } 
+  else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+</body>
+</html>

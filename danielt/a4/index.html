@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <h1>HTML Quiz</h1>
+    <form>
+        <label>How do you inser a line break?</label>
+        <br>
+        <!--Need to add multiple id for JavaScript to work-->
+        <!--choice 1-->
+        <input type="checkbox" id="head">
+        <label>&lt;head&gt;</label>
+        <br>
+        <!--choice 2-->
+        <input type="checkbox" id="title">
+        <label>&lt;title&gt;</label>
+        <br>
+        <!--choice 3-->
+        <input type="checkbox" id="br">
+        <label>&lt;br&gt;</label>
+        <br>
+        <!--choice 4-->
+        <input type="checkbox" id="idk">
+        <label>I don't know</label>
+        <br>
+        <!--button onclick="checkSeuss();">Answer</button-->
+        <!--input type="button" is recommended for forms because button resets-->
+        <input type="button" value="Submit" onclick="checkQuiz();">
+        <input type="reset">
+    </form>
+    <br>
+    <form>
+        <label>What does HTML stand for?</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <!--name="group" allow us to select ONE within "group"-->
+        <label>HyperText Markup Language</label>
+        <br>
+        <input type="radio" name="group">
+        <label>HyperText Marking Language</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Hyper Mark Legacy</label>
+        <br>
+        <input type="radio" name="group">
+        <label>None of the above</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+
+    <!---JavaScript-->
+    <script>
+        // Example 4: checkbox
+        function checkQuiz() {
+            var head = document.getElementById("head").checked; //T or F
+            var title = document.getElementById("title").checked; //T or F
+            var br = document.getElementById("br").checked; //T or F
+            var idk = document.getElementById("idk").checked; //T or F
+        
+            if (br == true && idk == false && head == false && title == false) {
+                alert("Correct!");
+            }
+            else {
+                alert("Incorrect!");
+            }
+        
+        }
+        
+        function checkRadio() {
+            var correctAnsSelected = document.getElementById('correctAnswer').checked; //true or false
+        
+            if (correctAnsSelected == true) {
+                alert("Correct!");
+            }
+            else {
+                alert("Incorrect!");
+            }
+        }
+    </script>
+    <br>
+    <hr style="color: brown;">
+    <h2>Cookie Clicker</h2>
+    <p>Click <a href="cookieclicker.html">here</a> for the cookie clicker game!</p>
+</body>
+
+</html>

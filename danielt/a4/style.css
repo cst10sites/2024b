@@ -1,0 +1,14 @@
+body {
+     background-color: beige;
+     margin: 50px 80px;
+     font-family: Courier;
+     color: brown;
+}
+ input[type=button], input[type=reset] {
+     padding: 5px;
+     font-family: Courier;
+     color: brown;
+     border-width: 5px;
+     border-radius: 15px;
+     font-weight: bold;
+}
