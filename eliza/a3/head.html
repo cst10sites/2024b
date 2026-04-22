@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS Guide</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>
+      <!--content-->
+      <div class="content">
+        <h1>HTML/CSS Guide</h1>
+        <h2>Common HTML Tags outside &lt; body &gt; </h2>
+        <a href="index.html" class="btn">Inside  &lt;body&gt; tags </a>
+        <br>
+        <br>
+        <table>
+          <tr>
+            <th style="width: 25%">Tags</th>
+            <th style="width: 35%">Definition</th>
+            <th style="width: 40%">Examples</th>
+          </tr>
+          <tr>
+            <td>&lt;Title&gt;&lt;/Title&gt;</td>
+            <td>The title tag defines the title fo the document it is shown at the top of the screen</td>
+            <td>
+              <img src="Title.png" alt="Title">
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;!DOCTYPE html&gt;</td>
+            <td>It defines what kind of document it is</td>
+            <td>N/A </td>
+          </tr>
+          <tr>
+            <td>&lt;meta charset="UTF-8"&gt;</td>
+            <td>It sets what kind of caracters can be used</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>&lt;link rel="icon" type="image/x-icon" href="/images/favicon/icon"&gt;</td>
+            <td>this puts a small image next to the title</td>
+            <td>
+              <img src="Favicon.png" alt="favicon">
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;link rel="stylesheet" href="mystyle.css"&gt;</td>
+            <td>Tag that points to an external CSS file</td>
+            <td>&lt;link rel="stylesheet" href="mystyle.css"&gt;</td>
+          </tr>
+          <tr>
+            <td>&lt;stype&gt;&lt;/style&gt;</td>
+            <td>It defines the inner CSS of the page</td>
+            <td>
+              <img src="InternalCSS.png" alt="InternalCSS">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!--JavaScript will be explored later-->
+    <script>
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none"; // hide
+        } else {
+          links.style.display = "block"; // show
+        }
+      }
+    </script>
+  </body>
+</html>

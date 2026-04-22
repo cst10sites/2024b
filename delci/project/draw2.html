@@ -1,0 +1,146 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Try Magic</title>
+<link rel="icon" type="image/x-icon" href="wand.ico">
+<style>
+    canvas { position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+ }
+
+ .goBackButton{
+ background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  position: absolute;
+  top: 70px;
+  left: 10px; 
+  padding: 5px 10px; /* More padding for a better look */
+  margin: 2px;
+  font-size: 1.1em;
+  font-weight: bold; /* Bold text */
+  border: 2px solid #333333; /* Dark border */
+  border-radius: 10px;}
+
+
+ .resetButton{
+ background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  position: absolute;
+  top: 70px;
+  left: 110px; 
+  padding: 5px 10px; /* More padding for a better look */
+  margin: 2px;
+  font-size: 1.1em;
+  font-weight: bold; /* Bold text */
+  border: 2px solid #333333; /* Dark border */
+  border-radius: 10px;}
+</style>
+</head>
+<body>
+<canvas id="fullCanvas" ></canvas>
+<button class="goBackButton" onclick="window.location.href='page2.html'">Go Back</button>
+<button class="resetButton" onclick="reset()">Reset</button>
+
+
+<script>
+    // 
+    var canvas = document.getElementById('fullCanvas');
+    var draw = canvas.getContext('2d');
+
+    // 
+    var mouseArray = [];
+
+
+     function fullsize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+ }
+
+ window.addEventListener("resize", function() {
+  fullsize();
+ });
+
+ fullsize();
+
+// Show Title (text) on Canvas
+ function showTitle() {
+  draw.beginPath();
+  draw.fillStyle = "#EDFF00";
+  draw.font = "30px Arial";
+  var level = Math.round(mouseArray.length / 15);
+
+
+  draw.fillText("This is level " + level + " spell", 10, 50);
+  draw.fill();
+ }//end of showTitle
+
+  
+    canvas.addEventListener('mousemove', function(event) {
+        //current mouse spot 
+        var mouseX = event.x 
+        var mouseY = event.y 
+
+
+        if (event.buttons == 1){
+        //save the mouse location in the array
+
+        mouseArray.push({ x: mouseX, y: mouseY, alpha: 1 });
+        
+
+        // draw a line in a new lication
+         
+        drawLine();
+         showTitle();
+    
+     
+       }
+       
+    });// end of canvas.addEventListener
+   
+
+    // draw line in canvas
+
+    function drawLine() {
+         var alpha = 1;
+         var color = 360 * Math.random();
+        // reset canvas
+        draw.clearRect(0, 0, canvas.width, canvas.height);
+
+        // draw line by the saved coordinate
+        draw.beginPath();
+        for (var i = 0; i < mouseArray.length; i++) {
+            var pos = mouseArray[i];
+          
+            draw.lineTo(pos.x, pos.y);
+        }
+        draw.strokeStyle = draw.fillStyle = "hsla(" + 64 + ", 100%, 50%, " + alpha + ")" ;
+        draw.lineWidth = 3;
+        draw.stroke();
+ 
+        // alpha = 0.98 * alpha;
+      //  if (mouseArray[i].alpha < 0.1) {
+       // mouseArray.splice(i, 1);
+      
+  //  }//change alpha
+
+
+
+  }// end of drawline
+
+  function reset() {
+  
+  draw.clearRect(0, 0, canvas.width, canvas.height);
+ mouseArray.splice(0,mouseArray.length);
+   }
+
+
+  
+</script>
+
+</body>
+</html>
+
+

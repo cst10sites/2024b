@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Magic Spells</title>
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Aclonica' rel="stylesheet">
+</head>
+<body>
+
+	<h1 class="lala">Magic Spells</h1>
+
+
+	<!-- make drop down menu-->
+
+<div id="navbar">
+	 <a class="active" href="index.html">Home</a>
+  <a href="page1.html">Author& Acters</a>
+    <a href="page2.html">Magic Spells</a>
+    <a href="page3.html">House Sorting Quiz</a>
+    <a href="page4.html">Quiz</a>
+    <a href="page5.html">Book Series</a>
+</div>
+<div class="content">
+	
+<!--background 
+	no underline on links-->
+
+	
+	<div class="goDraw">
+		<h3>Try your own magic spells!</h3>
+		<p>Have you ever wanted to learn magic after watching Harry Potter?<br> Well, great! Today is your day! Click the button below to cast a spell.</p>
+		<button class="button" onclick="location.href='draw.html';">Try dot magic</button> 
+		<button class="button" onclick="location.href='draw2.html';">Try line magic</button>
+	</div>
+	 
+    <hr>
+	<p>Click <a target ="blank" href="https://www.wizardingworld.com/" rel="wizarding world.com" >here</a> to check more about Wizarding World</p>
+
+	<br>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+	
+
+
+</body>
+</html>

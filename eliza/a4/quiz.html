@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<h1 align="center">Quiz</h1>
+	<center>
+	<body>
+	
+		<form>
+			<label><h2>What does HTML stand for<h2></label>
+			<br>
+			<input type="radio" name="group" id="correctAnswer">
+			<label>HyperText Markup Language</label>
+			<br>
+			<br>
+			<input type="radio" name="group">
+			<label>Hyperlinks Text Markup Language</label>
+			<br>
+			<br>
+			<input type="radio" name="group">
+			<label>Hyper Turtle Making Lasagna</label>
+			<br>
+			<br>
+			<input type="radio" name="group">
+			<label>Hyper Text Makup Language</label>
+			<br>
+			<br>
+			<input type="button" value="Submit" onclick="checkRadio();">
+			<input type="reset">
+			<button><a href="index.html" class="quizz">Cookie</a></button>
+		</form>
+	</body>
+</center>
+		<p id="Ans"></p>
+		<script>
+
+
+			function checkRadio() {
+				var correctAnsSelected = document.getElementById('correctAnswer').checked; // true or false
+				if (correctAnsSelected == true) {
+					document.getElementById("Ans").innerHTML = ("correct");
+				} else {
+					document.getElementById("Ans").innerHTML = ("wrong");
+				}
+			}
+		</script>
+	</html>
+</div> 

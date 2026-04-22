@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML/CSS Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <!--content-->
+    <div class="content">
+      <h1>HTML/CSS Guide</h1>
+      <h2>Common HTML Tags inside &lt;body&gt;</h2>
+      <a href="head.html" class="btn">outside &lt;body&gt; tags</a>
+      <br>
+      <br>
+      <table>
+        <tr>
+          <th style="width: 25%">Tags</th>
+          <th style="width: 35%">Definition</th>
+          <th style="width: 40%">Examples</th>
+        </tr>
+        <tr>
+          <td>&lt;img src="link" alt="pic"&gt;</td>
+          <td>This puts in an image</td>
+          <td><img src="dog.jfif" alt="dog"></td>
+        </tr>
+        <tr>
+          <td>&lt;h1&gt;...&lt;/h1&gt;<br>&lt;h6&gt;&lt;/h6&gt;</td>
+          <td>The different text sizes</td>
+          <td><h1>h1</h1><br><h6>h6</h6></td>
+        </tr>
+        <tr>
+          <td>&lt;span&gt;&lt;/span&gt;</td>
+          <td>It makes inline css</td>
+          <td>This is not inline CSS but...<span style="color:blue">this is</span></td>
+        </tr>
+        <tr>
+          <td>&lt;div&gt;&lt;/div&gt;</td>
+          <td>It defines a division or section in the document</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>&lt;button&gt;&lt;/button&gt;</td>
+          <td>This makes a button</td>
+          <td><button>Button</button></td>
+        </tr>
+        <tr>
+          <td>&lt;ol&gt;&lt;/ol&gt;</td>
+          <td>This tag makes an ordered list</td>
+          <td><ol><li>This</li><li>is</li><li>an</li><li>ordered</li><li>list</li></ol></td>
+        </tr>
+        <tr>
+          <td>&lt;ul&gt;&lt;/ul&gt;</td>
+          <td>This tag makes an unordered list</td>
+          <td><ul><li>This</li><li>is</li><li>an</li><li>unordered</li><li>list</li></ul></td>
+        </tr>
+        <tr>
+          <td>&lt;hr&gt;&lt;/hr&gt;</td>
+          <td>This makes a break in the text</td>
+          <td>This makes a break in the text<hr>This makes a break in the text</td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;&lt;/p&gt;</td>
+          <td>This is a paragraph tag</td>
+          <td><p>This is in a paragraph tag</p></td>
+        </tr>
+        <tr>
+          <td>&lt;a href="link"&gt;&lt;/a&gt;</td>
+          <td>This hyperlinks to another page</td>
+          <td><a href="https://th.bing.com/th/id/R.d57f04bf3e526ed393e2c5159fa1a793?rik=o7kPHl7DFI4uLQ&riu=http%3a%2f%2faphotoeditor.com%2fwp-content%2fuploads%2f2012%2f03%2f2.jpg&ehk=4mrEtRhE0lui7%2flUUa4W6pAzdgIUCe%2b4XgGeZZHXaa0%3d&risl=&pid=ImgRaw&r=0&adlt=strict">This is a Hyperlink</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+    <script>
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none"; // hide
+        } else {
+          links.style.display = "block"; // show
+        }
+      }
+    </script>
+  </body>
+</html>

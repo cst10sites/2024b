@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Try Magic</title>
+<link rel="icon" type="image/x-icon" href="wand.ico">
+<style>
+ canvas {
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+ }
+ .goBackButton{
+ background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  position: absolute;
+  top: 70px;
+  left: 10px; 
+  padding: 5px 10px; /* More padding for a better look */
+  margin: 2px;
+  font-size: 1.1em;
+  font-weight: bold; /* Bold text */
+  border: 2px solid #333333; /* Dark border */
+  border-radius: 10px;}
+</style>
+</head>
+<body>
+<canvas id="fullCanvas"></canvas>
+<button class="goBackButton" onclick="window.location.href='page2.html'">Go Back</button>
+
+<script>
+ // Set-up for Canvas
+ var canvas = document.getElementById("fullCanvas");
+ var draw = canvas.getContext("2d");
+ var mouse = {x: undefined, y: undefined};
+ var circleArray = [];
+ // circleArray will allow us to store multiple Circle objects
+ // [] is empty array
+
+ 
+
+ // Resize to fullscreen
+ function fullsize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+ }
+
+ window.addEventListener("resize", function() {
+  fullsize();
+ });
+
+ fullsize();
+
+ // Show Title (text) on Canvas
+ function showTitle() {
+  draw.beginPath();
+  draw.fillStyle = "white";
+  draw.font = "30px Arial";
+
+  var level = Math.round(circleArray.length / 10);
+
+
+  draw.fillText("This is level " + level + " spell", 10, 50);
+  draw.fill();
+ }
+
+ // showTitle();
+
+ class Circle {
+    // constructor: define properties (starting position x,y)
+    constructor() {
+        this.x = Math.random() * canvas.width;  // mouse.x;
+        this.y = Math.random() * canvas.height;
+        this.size = 25 - 15 * Math.random();
+        this.speedX = 0.1 - 0.2 * Math.random(); // -2 to 2
+        this.speedY = 0.1 - 0.2 * Math.random();
+
+        this.color = 360 * Math.random(); // 0 to 360
+        this.alpha = 1;
+
+    }
+
+    // methods: functions but inside a class
+    drawCircle() {
+      draw.beginPath();
+      draw.fillStyle = "hsla(" + this.color + ", 100%, 50%, " + this.alpha + ")";
+      draw.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+      draw.fill();
+    }
+
+    moveCircle() {
+      this.x = this.x + this.speedX;
+      this.y = this.y + this.speedY;
+      this.size = 0.99 * this.size;
+      this.alpha = 0.98 * this.alpha;
+
+      /* Bounce Algorithm */
+      if (this.x < 0 || this.x > canvas.width) {
+       this.speedX = -this.speedX
+      }
+      if (this.y < 0 || this.y > canvas.height) {
+       this.speedY = -this.speedY
+      }
+    } // end of moveCircle()
+
+ } // end of Circle
+ 
+
+ function animate() {
+  draw.clearRect(0, 0, canvas.width, canvas.height);
+  showTitle();
+  for (var k = 0; k < circleArray.length; k++) {
+    circleArray[k].drawCircle();
+    circleArray[k].moveCircle();
+
+    if (circleArray[k].alpha < 0.1) {
+        circleArray.splice(k, 1); // 1 is number of circles to delete, k 는 k 부터 n개 지움. (k,2)이면 k를 포함해 2개 지우기
+    }
+
+  }
+
+  mouse.x = undefined;
+  mouse.y = undefined;
+
+  requestAnimationFrame(animate);
+ }
+
+ animate();
+
+//내가 생성?
+
+ canvas.addEventListener("mousemove", function(event) {
+  if (event.buttons == 1) {
+   mouse.x = event.x;
+   mouse.y = event.y;
+
+//==0은 아무키도 아닐때
+//==1 왼쪽 마우스키
+//2는 휠인가
+//3은 오른쪽이고? 
+   circleArray.push(new Circle());
+   var last = circleArray.length - 1; //  circleArray.length는 배열 circleArray에 포함된 요소의 개수를 나타내고, circleArray 자체는 그 요소들이 들어 있는 배열입니다. 각 요소는 배열의 인덱스로 접근할 수 있습니다. 그리고  circleArray.length는 1 부터 시작하고 circleArray 는 0 부터 시작한다.
+   circleArray[last].x = mouse.x; 
+   circleArray[last].y = mouse.y; 
+  }
+ });
+
+
+
+
+</script>
+</body>
+</html>
+
+

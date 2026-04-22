@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--create style.css and change to href="style.css"-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<h1>Cookie Clicker</h1>
+
+<div>
+
+<p>
+	Click the cookie as fast as you can to test your CPS!
+</p>
+<button onclick="reset()">Start Again</button>
+<br> <br>
+<!--	<input type="image" src="https://w7.pngwing.com/pngs/420/178/png-transparent-cookie-drawing-illustration-yellow-flower-cookies-food-decorative-flower.png" width="20%" onclick="updateCPS();">-->
+<div class="background"><input type="image" src="https://img.lovepik.com/element/40136/0263.png_1200.png" alt="cookie" width="300" onclick="updateCPS();">
+<p id="cpsDisplay"></p>
+<p id="cpsCalculate"></p>
+<p id="timeElapsed"></p>
+
+</div>
+
+</div>
+
+<hr>
+<h2>HTML/CSS/JS Quiz</h2>
+<p>Click <a href="index.html">here</a> to play the quiz.</p>
+
+<script>
+// global variables
+var nClicks = 0;
+var startTime = new Date().getTime();
+
+function updateCPS() {
+	if (nClicks == 0) {
+		// first click
+		// 1. reset startTime
+		// 2. increase nClicks by 1
+
+		startTime = new Date().getTime(); 	// no var is needed: see GLOBAL variables
+		nClicks = nClicks + 1;
+
+	}
+	else {
+		// subsequent clicks:
+		// 1. create variable currentTime
+		// 2. create variable timeElapsed and subtract start and currentTime
+		// 3. calculate CPS = nClicks ÷ timeElapsed 
+		//    BUT timeElapsed be measured in seconds (not milliseconds)
+		// 4. display CPS using id
+		// 5. increase nClicks by 1
+	
+		var currentTime = new Date().getTime();
+		var timeElapsed = (currentTime - startTime) / 1000;
+		document.getElementById("cpsCalculate").innerHTML = "Clicks per second: " + nClicks / timeElapsed;
+
+		nClicks = nClicks + 1;	//increment by 1nClicks
+		
+	}
+
+	document.getElementById("cpsDisplay").innerHTML = "Total Clicks:" + nClicks
+
+	document.getElementById("timeElapsed").innerHTML = "Time Elapsed: " + timeElapsed
+
+}
+
+
+
+
+function reset(){
+	location.reload();
+}
+
+
+</script>
+</body>
+</html>

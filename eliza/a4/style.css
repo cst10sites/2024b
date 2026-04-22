@@ -1,0 +1,38 @@
+body{
+	background-color: lightskyblue;
+	text-align: center;
+	
+}
+
+div {
+	align-content: center;
+	font-family: arial;
+}
+
+
+
+p {
+  font-family: arial;
+  align-content: center;
+}
+
+h1 {
+	    font-size: 75px;
+	    font-family: arial;
+}
+
+br {
+	background-color: white;
+}
+
+img {
+	size: 500px;
+}
+
+center{
+	font-family: arial;
+	font-size: 15px;
+}
+
+
+

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="stylee.css">
+<!--create style.css and change to href="style.css"-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+
+<div><h2>HTML/CSS Quiz</h2></div>
+<form>
+	  <label>1. What does HTML stands for? </label><br>
+    <input type="text" id="answer" onkeydown="return event.key != 'Enter';"><br>
+    <input type="button" value="Submit" onclick="showUserPassword();">
+    <input type="reset"><br> 
+<!--ask at least one question related to HTML/CSS/JS-->
+</form>
+<br>s
+<br>
+<br>
+
+<form>
+    <label>2. What codes are inside the &lt;head&gt;? ( <em>select all</em> )</label>
+    <br>
+    <!--Need to add multiple id for JavaScript to work-->
+    <!--choice 1-->
+    <input type="checkbox" id="a">
+    <label>&lt;html lang="en"&gt;</label>
+    <br>
+    <!--choice 2-->
+    <input type="checkbox" id="b">
+    <label>&lt;meta charset="UTF-8"&gt;</label>
+    <br>
+    <!--choice 3-->
+    <input type="checkbox" id="c">
+    <label>&lt;title&gt; ... &lt;/title&gt;</label>
+    <br>
+    <!--choice 4-->
+    <input type="checkbox" id="d">
+    <label>&lt;p&gt; ... &lt;/p&gt;</label>
+    <br>
+    <!--button onclick="checkSeuss();">Answer</button-->
+    <!--input type="button" is recommended for forms because button resets-->
+    <input type="button" value="OK" onclick="checkAnswer();">
+    <input type="reset">
+   <!-- <button id="seeAnswer"> ??? -->
+</form>
+
+<hr>
+
+   <h2>Cookie Clicker</h2>
+<!--possibly replace quiz.html with index.html-->
+<p>Click <a href="cookie.html">here</a> to play the cookie clicker.</p>
+
+
+
+<script>
+
+   function checkAnswer() {
+    var a = document.getElementById("a").checked; //T or F
+    var b = document.getElementById("b").checked;
+    var c = document.getElementById("c").checked;
+    var d = document.getElementById("d").checked;
+    // all var for id?
+
+    if ( b== true && c== true && a == false && d ==false){
+        alert("You are correct!");
+    }
+    else {
+        alert('Try again...')
+    }
+
+
+
+}
+
+
+
+
+
+	function showUserPassword() {
+    var answer = document.getElementById('answer').value;
+    // get value from text input
+    // get value from password input
+    // \n means new line
+
+    answer = answer.toLowerCase();
+    answer = answer.replace(/\s/g,'');
+
+    if (answer == "hypertextmarkuplanguage")  {
+
+       alert("hyper text markup language" + " is correct!");
+    }
+    else {
+        alert(answer + " is wrong!");
+        alert("Try again...");
+    }
+
+}
+</script>
+</body>
+</html>

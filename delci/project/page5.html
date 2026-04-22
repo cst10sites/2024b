@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Book Series</title>
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  	<h1 class="lala">Book Series</h1>
+
+	<!-- make drop down menu-->
+
+<div id="navbar">
+   <a class="active" href="index.html">Home</a>
+  <a href="page1.html">Author& Acters</a>
+    <a href="page2.html">Draw Spells</a>
+    <a href="page3.html">House Sorting Quiz</a>
+    <a href="page4.html">Quiz</a>
+    <a href="page5.html">Book Series</a>
+</div>
+<div class="content">
+ 
+	
+<!--background 
+	no underline on links-->
+
+	
+	
+
+	 <h3>The Harry Potter series</h3>
+<p>Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.</p><hr><br>
+<table style="width:100%">
+  <tr>
+    <th>Book</th>
+    <th>The Harry Potter series</th>
+    <th>Year</th>
+  </tr>
+  <tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg" alt="book2" height="130"></td>
+    <td>The Harry potter volume 1<br>
+	 	The Philosopher's stone</td>
+    <td>1997</td>
+  </tr>
+  <tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg" alt="book1" height="130">
+	 			</td>
+    <td>The Harry potter volume 2 <br>	Harry Potter and the Chamber of Secrets 
+	 	The Philosopher's stone</td>
+    <td>1998</td>
+  </tr>
+
+  <tr>
+    <td>
+	 	<img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg" alt="book3" height="130"></td>
+    <td>The Harry potter volume 3<br>
+	Harry Potter and the Goblet of Fire</td>
+    <td>2000</td>
+  </tr>
+
+  <tr>
+    <td>	<img src="https://upload.wikimedia.org/wikipedia/en/b/b6/Harry_Potter_and_the_Goblet_of_Fire_cover.png" alt="book4" height="130"></td>
+    <td>The Harry potter volume 4<br>
+	 	Harry Potter and the Order of the Phoenix </td>
+    <td>2003</td>
+  </tr>
+
+  <tr>
+    <td> <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg" alt="book5" height="130"></td>
+    <td>The Harry potter volume 5<br>
+	 	Harry Potter and the Order of the Phoenix </td>
+    <td>2003</td>
+  </tr>
+
+  <tr>
+    <td>
+	 	<img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Harry_Potter_and_the_Half-Blood_Prince_cover.png" alt="book6" height="130"></td>
+    <td>The Harry potter volume 6<br>
+	 	Harry Potter and the Half-Blood Prince </td>
+    <td>2005</td>
+  </tr>
+
+ 
+    <tr>
+      <td>
+	 	<img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" alt="book7" height="130"></td>
+    <td>The Harry potter volume 7<br>
+	 	Harry Potter and the Deathly Hallows</td>
+    <td>2007</td>
+  </tr>
+
+</table>
+
+	 
+    <hr>
+	<p>Click <a target ="blank" href="https://www.wizardingworld.com/" rel="wizarding world.com" >here</a> to check more about Wizarding World</p>
+
+	<br>
+
+	
+</div>
+
+<script>
+window.onscroll = function() { myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

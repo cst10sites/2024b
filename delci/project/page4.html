@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Quiz</title>
+	<link rel="stylesheet" type="text/css" href="style.css"> 
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+
+<h1 class="lala">Quiz</h1>
+
+	<!-- make drop down menu-->
+
+<div id="navbar">
+     <a class="active" href="index.html">Home</a>
+  <a href="page1.html">Author& Acters</a>
+    <a href="page2.html">Magic Spells</a>
+    <a href="page3.html">House Sorting Quiz</a>
+    <a href="page4.html">Quiz</a>
+    <a href="page5.html">Book Series</a>
+</div>
+<div class="content">
+    <h3>The ultimate Harry Potter World Quiz</h3>
+	<p id="start!!!">Put your wizarding knowledge to the test with fun quizzes for all levels!<br>
+
+        <input type="button" value="Start the quiz" onclick="start()" id="starts">
+    </p>
+
+<!--Example 1-->
+<form id="q1" style="display:none;" onkeydown="return event.key != 'Enter';">
+<!--onkeydown: 키보드 이벤트 처리, 'event.key': 사용자가 누른 키 이름을 나타내는 속성, ! 는 다르다, return: 이벤트 핸들러 내에서 사용, 이벤트 핸들러가 호출되도 계속해서 기본 동작과 함수 실행을 중지시키고 값을 반환 -->
+
+<h4>1.Write Harry Potter's full name</h4>
+
+    <input type="text" id="answer1"><br>
+    <!--no input for textarea-->
+    <input type="button" value="Next" onclick="checkAnswer1()">
+    <p id="feedback1"></p>
+    <br>
+    <input type="reset"><br> <!--This is a special type of button that resets all values in the form that it belongs to--> 
+</form>
+
+
+
+   
+
+<form id="q2" style="display: none;">
+
+<h4>2. Who replied "Always..." to Dumbledore in the deathly hollows 2?</h4>
+<!--Example 2-->
+    
+     <select id="answer2" >
+        <option value="Dumbledore">Lord Voldemort</option>
+        <option value="Snape">Professor Snape</option>
+        <option value="Potter">Harry Potter</option>
+        <option value="Weasley">Ron Weasley</option>
+    </select>
+    <br>
+    <input type="button" value="Next" onclick="checkAnswer2()">
+       <input type="reset"><br>
+   
+   
+    <p id="feedback2"></p>
+
+</form>
+
+<form id="q3" style="display:none;">
+
+<h4>3.What is the name of the magic school that Harry attends?</h4>
+<!--Example 3-->
+
+   
+    <!-- reminder: need id and value attributes for JavaScript-->
+    <select id="answer3">
+        <option value="Kitsilano">Kitsilano Secondary</option>
+        <option value="Drumstrang">Drumstrang</option>
+        <option value="Beauxbatons">Beauxbatons</option>
+         <option value="Hogwarts">Hogwarts</option>
+        
+    </select>
+    <br>
+   <input type="button" value="Next" onclick="checkAnswer3()">
+
+    <p id="feedback3"></p>
+    <input type="reset">
+</form>
+
+
+
+
+<!--Example 4-->
+<form id="q4" style ="display:none;">
+    <h4>4.Which ones from these are hocrux from these objects?</h4>
+    <br>
+    
+    <!--choice 2-->
+    <input type="checkbox" id="diary">
+    <label> <img src="https://m.media-amazon.com/images/I/81mOq9E+EuL.jpg" alt="Tom riddle's Diary" width="150"> </label>
+    <br>
+    <br>
+    <!--Need to add multiple id for JavaScript to work-->
+
+    <!--choice 1-->
+    <input type="checkbox" id="wand">
+    <label for ="wand"><img src="https://inst-2.cdn.shockers.de/hs_cdn/out/pictures/master/product/1/horrorshop_com-albus_dumbledore_zauberstab-harry_potter_elderstab-noble_collection_wand-26966.jpg" alt="The Elder wand" width="150"></label>
+    <br>
+    <!--choice 3-->
+    <input type="checkbox" id="ring">
+    <label> <img src="https://s-media-cache-ak0.pinimg.com/564x/9b/f7/4d/9bf74d663f70debddea5d19b595f85b5.jpg" alt="Salazar Slytherin's locket" width="150"></label>
+    <br><br>
+    <!--choice 4-->
+    <input type="checkbox" id="locket">
+    <label>
+        <img src="https://i.pinimg.com/originals/98/ff/16/98ff16fc274cf149d9f0e3dcd105e387.jpg" alt="Marvolo Gaunt's ring" width="150">
+    </label>
+    <br>
+    
+    <input type="button" value="Next" onclick="checkAnswer4()">
+     <p id="feedback4"></p>
+    <input type="reset">
+</form>
+
+
+<!--Example 5-->
+<form id="q5" style="display:none;" onkeydown="return event.key != 'Enter';">
+    <h4>5.Write Harry's enemy who is in Slytherine and is in same grade.</h4>
+
+    <input type="text" id="answer5"><br>
+    <!--no input for textarea-->
+    <input type="button" value="Next" onclick="checkAnswer5()">
+    <p id="feedback5"></p>
+    <br>
+    <input type="reset"><br> <!--This is a special type of button that resets all values in the form that it belongs to--> 
+</form>
+
+
+<!--Example 2-->
+<form id="q6" style="display: none;">
+   <h4>6.Why did Snape kill Dumbledore?</h4>
+ 
+    <input type="radio" name="group" id="answer6">
+    <!--name="group" allow us to select ONE within "group"-->
+    <label>Dumbledore told him to kill him.</label>
+    <br>
+    <input type="radio" name="group">
+    <label>The Lord Voldemort assigned him to kill Dumbledore. </label>
+    <br>
+    <input type="radio" name="group">
+    <label>Snape did not want him to be in Hogwarts</label>
+    <br>
+     <input type="radio" name="group">
+    <label>Harry Potter wanted Dumbledore's ring, and asked Snape if he can kill Dumbledore.</label>
+    <input type="button" value="See Result" onclick="checkAnswer6()">
+    <p id="feedback6"></p>
+    <input type="reset">
+</form>
+
+
+    
+    <p id="result"  style="display:none; text-align: center;"  ></p>
+    <p id="youGood" style="display:none; text-align: center;" ></p>
+
+
+
+ <hr>
+    <p>Click <a target ="blank" href="https://www.wizardingworld.com/" rel="wizarding world.com" >here</a> to check more about  Wizarding World</p>
+</div>
+    <br>
+<script src="page4.js"></script>
+<!---JavaScript-->
+
+
+</body>
+</html>

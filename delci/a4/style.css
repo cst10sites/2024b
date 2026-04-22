@@ -1,0 +1,32 @@
+/*style.css*/
+
+body{
+	font-family: Helvetica;
+	margin: 70px 100px;
+	background-color:lavender;
+	color:burlywood;
+	
+}
+
+h1{
+	color:sandybrown;
+	font-family:Times;
+	text-align: center;
+}
+
+h2{
+	color:sandybrown;
+	font-family:Times;
+
+}
+
+div{
+	text-align: center;
+}
+
+div.background{
+	background-color: white;
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
+

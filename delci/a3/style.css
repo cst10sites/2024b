@@ -1,0 +1,88 @@
+
+/* style.css */
+
+body {
+  font-family: Helvetica;
+  margin: 0px 100px;
+  background-image: url("https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?cs=srgb&dl=pexels-minan1398-813269.jpg&fm=jpg");
+  background-size: 100% auto; /* stretch bg to fit 
+  https://th.bing.com/th/id/OIP.P-LgxT_9FkADRP_L0-gaMQHaEo?w=280&h=180&c=7&r=0&o=5&pid=1.7*/
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color:gray;
+  position: relative;
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.content {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.85);}
+
+  div.banana { width:30%;  
+  display:inline-block;
+border-radius: 20px;
+ text-align: center;
+}
+  /* background-color: white; */
+
+table{
+  border-collapse:collapse;  
+  
+
+}
+
+table, th, td {
+  border: 2px solid green;
+}
+
+
+
+
+
+th,td{
+  padding:5px;
+  text-align:left;
+}
+th{
+  background:darkolivegreen;
+  color:white;
+
+}
+
+ a:visited {
+            color: purple;
+        }
+
+  a:hover {
+color: yellow;
+}
+
+
+  a.btn {
+            /* <a class="btn" ...> */
+            background-color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            border-style: solid;
+            border-color: gray;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.5em;
+            background-color: #04AA6D;
+            text-align: center;
+            margin: 4px 2px;
+            cursor: pointer;}

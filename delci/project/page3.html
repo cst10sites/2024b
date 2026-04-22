@@ -1,0 +1,292 @@
+         
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Sorting Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <h1 class="lala">House Sorting Quiz</h1>
+
+   
+<div id="navbar">
+     <a class="active" href="index.html">Home</a>
+  <a href="page1.html">Author& Acters</a>
+    <a href="page2.html">Magic Spells</a>
+    <a href="page3.html">House Sorting Quiz</a>
+    <a href="page4.html">Quiz</a>
+    <a href="page5.html">Book Series</a>
+</div>
+<div class="content">
+    <h3>Better House Sorting Quiz compared to the official one!</h3>
+       <div id="q0"> <p>If you are included one of these, try this test!</p>
+          <ul>
+                <li>Want to find out what house you are in?</li>
+                <li>Have you ever felt that the official Harry Potter sorting quiz is inaccurate?</li>
+                <li>I have no idea what sorting quiz is.</li> </ul>
+         
+
+       <button type="button" onclick="next('q0', 'q1')">Start</button>
+   </div>
+        <form id="quizForm">
+            <div id="q1" style="display: none;">
+                <label>1. Who is your favorite Harry Potter character?</label><br>
+                <input type="radio" name="q1" value="s"><label>Professor Snape</label><br>
+                <input type="radio" name="q1" value="h"><label>Cedric Diggory</label><br>
+                <input type="radio" name="q1" value="g"><label>Harry Potter</label><br>
+                <input type="radio" name="q1" value="r"><label>Luna Lovegood</label><br>
+                <button type="button" onclick="next('q1', 'q2')">Next</button>
+            </div>
+
+            
+            
+            <div style="display: none;" id="q2">
+                <label>2. Your friend is locked in a tower! What will you do?</label><br>
+                <input type="radio" name="q2" value="g"><label>Go to save my friend</label><br>
+                <input type="radio" name="q2" value="r"><label>Go and report to a teacher or an adult</label><br>
+                <input type="radio" name="q2" value="s"><label>Wait until my friend comes back</label><br>
+                <input type="radio" name="q2" value="h"><label>Feel deprssed</label><br>
+                <button type="button" onclick="next('q2', 'q3')">Next</button>
+            </div>
+
+             
+
+            <div style="display: none;" id="q3">
+                <label>3. You see a friend who didn't bring school supplies for that day. What will you do?</label><br>
+                <input type="radio" name="q3" value="g"><label>Go and share your supplies</label><br>
+                <input type="radio" name="q3" value="h"><label>Give your supplies</label><br>
+                <input type="radio" name="q3" value="s"><label>Ignore and pretend you didn't see</label><br>
+                <input type="radio" name="q3" value="r"><label>Ask other friends if they have some to share</label><br>
+                <button type="button" onclick="next('q3', 'q4')">Next</button>
+            </div>
+
+           
+
+            <div style="display: none;" id="q4">
+                <label>4. You forgot to do your homework. You will...</label><br>
+                <input type="radio" name="q4" value="h"><label>Tell your teacher that you forgot to do your homework</label><br>
+                <input type="radio" name="q4" value="s"><label>Hope that your teacher had forgotten about the homework</label><br>
+                <input type="radio" name="q4" value="g"><label>Lie that your owl ate your homework</label><br>
+                <input type="radio" name="q4" value="r"><label>Do it as fast as you can before your teacher checks your homework</label><br>
+                <button type="button" onclick="next('q4', 'q5')">Next</button>
+            </div>
+
+             
+
+            <div style="display: none;" id="q5">
+                <label>5. It is dark and you find a mystery place that seems like no one had discovered. You will...</label><br>
+                <input type="radio" name="q5" value="g"><label>Go and explore right away</label><br>
+                <input type="radio" name="q5" value="h"><label>Pack equipment and visit there when it's bright</label><br>
+                <input type="radio" name="q5" value="s"><label>Bring your companion and explore there on that day</label><br>
+                <input type="radio" name="q5" value="r"><label>Search on internet or ask to the villagers</label><br>
+                <button type="button" onclick="next('q5', 'q6')">Next</button>
+
+             
+            </div>
+
+            <div style="display: none;" id="q6">
+                <label>6. You find a chest full of diamonds which the government was looking for more than 3 centuries. You will...</label><br>
+                <input type="radio" name="q6" value="s"><label>Take them to your house or your bank</label><br>
+                <input type="radio" name="q6" value="h"><label>Report to the government and get rewards.</label><br>
+                <input type="radio" name="q6" value="r"><label>Sell them in black market or marketplace</label><br>
+                <input type="radio" name="q6" value="g"><label>Just leave them just like before. </label><br>
+                <button type="button" onclick="next('q6', 'q7')">Next</button>
+            </div>
+
+             
+
+            <div style="display: none;" id="q7">
+                <label>7. You earned $1000 from your first job! What are you going to do with it?</label><br>
+                <input type="radio" name="q7" value="r"><label>Invest on stocks</label><br>
+                <input type="radio" name="q7" value="s"><label>Save it in my bank account</label><br>
+                <input type="radio" name="q7" value="g"><label>Use it to buy some products I want</label><br>
+                <input type="radio" name="q7" value="h"><label>Use it to buy gifts for my family to celebrate my first salary</label><br>
+                <button type="button" onclick="next('q7', 'q8')">Next</button>
+            </div>
+
+            
+
+            <div style="display: none;" id="q8">
+                <label>8. You usually get a perfect score when you take a test. You would say to a friend...</label><br>
+                <input type="radio" name="q8" value="h"><label>Umm..., Yes?</label><br>
+                <input type="radio" name="q8" value="r"><label>Normally</label><br>
+                <input type="radio" name="q8" value="g"><label>Of course I get good marks!</label><br>
+                <input type="radio" name="q8" value="s"><label>Isn't that obvious?</label><br>
+                <button type="button" onclick="next('q8', 'q9')">Next</button>
+            </div>
+
+            
+            <div style="display: none;" id="q9">
+                <label>9. You are assigned to do a project. How would you do it?</label><br>
+                <input type="radio" name="q9" value="s"><label>I prefer doing it on my own!</label><br>
+                <input type="radio" name="q9" value="h"><label>I prefer doing it with my group</label><br>
+                <input type="radio" name="q9" value="g"><label>It depends on the group</label><br>
+                <input type="radio" name="q9" value="r"><label>I don't care</label><br>
+                 <button type="button" onclick="next('q9','q10')">Next</button>
+            </div>
+
+           
+
+            <div style="display: none;" id="q10">
+                <label>10. You love  bananas and someone offers you one. Your reply is...</label><br>
+                <input type="radio" name="q10" value="h"><label>Oh, thank you!</label><br>
+                <input type="radio" name="q10" value="r"><label>No thank you, I'm full</label><br>
+                <input type="radio" name="q10" value="s"><label>Just walk away</label><br>
+                <input type="radio" name="q10" value="g"><label>Oh, sorry. I don't take food from st.</label><br>
+                  <button type="button" onclick="next('q10','q11')">Next</button>
+            </div>
+
+               <div style="display: none;" id="q11">
+                <label>11. You see a friend whom you haven't met for 5 years passing by. How will you react?</label><br>
+                <input type="radio" name="q11" value="h"><label>Walk closer and ask how she/he is doing</label><br>
+                <input type="radio" name="q11" value="r"><label>Think if you should say hi or not. </label><br>
+                <input type="radio" name="q11" value="s"><label>Wait if your friend knowtices you, and if she/he does not, walk away.</label><br>
+                <input type="radio" name="q11" value="g"><label>Walk closer and try being knowticed.</label><br>
+                 <button type="button" onclick="next('q11','q12')">Next</button>
+            </div>
+
+              <div style="display: none;" id="q12">
+                <label>12.My favorite founder of Hogwarts is...</label><br>
+                <input type="radio" name="q12" value="g"><label>Godric Gryffindor</label><br>
+                <input type="radio" name="q12" value="r"><label>Rowena Ravenclaw</label><br>
+                <input type="radio" name="q12" value="h"><label>Helga Hufflepuff</label><br>
+                <input type="radio" name="q12" value="s"><label>Salazar Slytherin</label><br>
+                  <button type="button" onclick="next('q12','q13')">Next</button>
+            </div>
+
+        
+             <div style="display: none;" id="q13">
+                <label>13.In my opinion, Hogwarts is...</label><br>
+                <input type="radio" name="q13" value="g"><label>A place to learn magic</label><br>
+                <input type="radio" name="q13" value="r"><label>Where I can mentally grow</label><br>
+                <input type="radio" name="q13" value="s"><label>An oppurtunity to success.</label><br>
+                <input type="radio" name="q13" value="s"><label>A place where we can meet friends and socialize</label><br>
+                  <button type="button" onclick="next('q13','q14')">Next</button>
+            </div>
+          
+
+              <div style="display: none;" id="q14">
+                <label>14.How often do you fight with our siblings?(If you have)</label><br>
+                <input type="radio" name="q14" value="s"><label>Every day</label><br>
+                <input type="radio" name="q14" value="g"><label>Once a week</label><br>
+                <input type="radio" name="q14" value="r"><label>Once a month</label><br>
+                <input type="radio" name="q14" value="h"><label>Never</label><br>
+                  <button type="button" onclick="next('q14','q15')">Next</button>
+              </div>
+
+
+                 <div style="display: none;" id="q15">
+                <label>15. My favorite deathly hollows symbol is...</label><br>
+                <input type="radio" name="q15" value="r"><label>The Cloak of Invisibility</label><br>
+                <input type="radio" name="q15" value="s"><label>The Elder wand</label><br>
+                <input type="radio" name="q15" value="h"><label>The Resurrection Stone</label><br>
+                <input type="radio" name="q15" value="g"><label>None of the above</label><br>
+                 <button type="button" onclick="calculateResult()">Find my house</button>
+            </div>
+
+              <p style="display:none;" id="result"></p>
+             
+        </form>
+   
+
+    <hr>
+    <p>Click <a target="_blank" href="https://www.wizardingworld.com/" rel="wizarding world.com">here</a> to check more about Wizarding World</p>
+     </div>
+
+
+
+<script>
+
+      
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add( "sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+	function next(current, next) {
+    document.getElementById(current).style.display = "none";
+    document.getElementById(next).style.display = "block";
+	}
+
+	 function calculateResult() {
+            var form = document.getElementById('quizForm');
+
+            var houseCounts = {g: 0, h: 0, r: 0, s: 0};
+              document.getElementById("q15").style.display = "none";
+
+            for (var i = 0; i < form.elements.length; i++) {
+                if (form.elements[i].checked) {
+                    houseCounts[form.elements[i].value]++;
+                }//form.element 는  내의 모든 폼 요소를 포함하는 배열입니다. 이 배열을 반복하여 각 요소가 체크되어 있는지 확인하고, 체크된 경우 해당 하우스의 점수를 증가시킵니다.
+            }
+
+              var houseNames = {
+                g: 'Gryffindor',
+                h: 'Hufflepuff',
+                r: 'Ravenclaw',
+                s: 'Slytherin'
+            };
+
+                             var maxHouse = Object.keys(houseCounts).reduce(function(a, b) {
+                     if (houseCounts[a] > houseCounts[b]) {
+                    return a;
+                  } else {
+                    return b;
+                  }
+                 });//Object.keys(houseCounts)는 houseCounts 객체의 키(g, h, r, s)를 배열로 반환합니다. reduce 함수를 사용하여 가장 높은 점수를 가진 하우스를 찾습니다.
+
+    
+           var houseTraits = {
+                g: ' Griffinder House is known for the bravery, chivalry, and nerve of their students. <br><br> Notable wizards from Gryffindor are ... <ul><li>Harry Potter</li> <li>Hermione Granger </li> <li>Ronald (Ron) Weasley<li> <li> Neveille Longbittom<li><li> And Ginny Weasley</li>',
+
+                 h: 'Hufflepuffs are true and kind and always willing to help. <br><br> Notable wizards from Hufflepuff are... <ul><li>Nymph Tonks</li><li>Newt Scamander</li><li>Cedric Diggory</li><li>And Professor Sprout</li></ul>',
+               
+                r: ' Ravenclaws are known for their intelligence, wisdom, and creativity. <br><br> Notable wizards from Ravenclaw are <ul><li>Abigail Potter</li><li>Luna Lovegood</li><li>Cho Chang</li><li>And Professor Flitwick </li></ul>',
+
+                s: ' Slyderines value cunning and ambition. All students must be pure blood parentage. <br><br>  Notable wizards from Slytherin are... <ul><li>Draco Malfoy</li><li>Voldmort(Tom Riddle)</li><li>Professor Snape</li><li>Narcissa Malfoy</li><li>And Bellatrix LesStrange</li></ul>',
+            };
+
+            var housePic = {
+        g: '<img width="20%" src="https://m.media-amazon.com/images/I/71makxUWzCL._AC_UF894,1000_QL80_.jpg" alt="Gryffindor">',
+        h: '<img width="20%" src="https://i.ebayimg.com/images/g/THIAAOSw9kxZ3Ndd/s-l1200.jpg" alt="Hufflepuff">',
+        r: '<img width="40%" src="https://logos-world.net/wp-content/uploads/2022/11/Ravenclaw-Emblem.png" alt="Ravenclaw">',
+        s: '<img width="30%" src="https://1000logos.net/wp-content/uploads/2023/05/Slytherin-Logo.png"" alt="Slytherin">'
+    };
+
+
+            document.getElementById('result').style.display = "block";
+    
+            document.getElementById('result').innerHTML = 'You belong to ' + '<strong>'  + houseNames[maxHouse] + '</strong>' + "<br><br>" + housePic[maxHouse] + "<br>" + houseTraits[maxHouse] ;
+              
+        }
+
+     
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+        </script>
+</body>
+</html>
