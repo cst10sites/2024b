@@ -1,0 +1,10 @@
+body {
+	background-color: rgba(144, 60, 29, 0.45);
+	text-align: center;
+	font-size: 130%;
+}
+
+h1 {
+	color: brown;
+	text-decoration-line: underline;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iPhone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="1.png">
+</head>
+<body>
+  <!-- navbar -->
+  <div class="topnav">
+    <a href="index.html">Introduction</a>
+    <div id="moreLinks">
+      <a href="index2.html">History</a>
+      <a href="index3.html">Apple Vs. Competitors</a>
+      <a href="index4.html">WWDC24</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+<div class="start">
+<h1>iPhone</h1>
+
+
+<!-- The video -->
+<div class="video">
+<img src="iPhone.gif">
+</div>
+
+<p>The purpose of this website is to educate people on what iPhone is, how it revolutionized phones to this day, and future ideas, and how iPhone is the superior brand.</p>
+
+<h2>iPhone, sleek and innovative</h2>
+<br>
+<h3>How the iPhone was introduced</h3>
+<p>An electronic device so influential to this day, to the point where people can't imagine their lives without it, iPhone. A mobile phone used to call people, send emails, listen to music, and entertainment, iPhone. A device so compact, small, and minimal that it could go anywhere, iPhone. A device with simple, but user-friendly to all, iPhone.</p>
+
+<div class="video2">
+<img style="width: 100%; height: 100%;"src="vey.gif">
+</div>
+<p>Being introduced by Apple on January 9, 2007, and unveiled by Steve Jobs. It's innovative multi-touch interface, sleek design, and integrating various functions from previous devices, set a new standard on how we interact with phones. Since the launch of the iPhone, it has since changed how smartphones are produced.</p>
+<h2>How iPhone has evolved</h2>
+<p>Over the years, to today, Apple has made remarkable features, and continues to evolve and revolutionize their devices to this day. Features such as, facial recognition (Face ID), Removing the Touch ID, and moving towards a buttonless device.</p>
+
+<br>
+
+<div class="info">
+<figure>
+    <img src="https://cdn.britannica.com/35/141335-050-3129677C/iPhone-4-2010.jpg?w=300">
+    <figcaption>iPhone 4, released in 2010. It was the first ever iPhone to feature a front-facing camera. It was also the first iPhone to support FaceTime calls. </figcaption>
+
+</figure>
+</div>
+<br>
+<br>
+<div class="javas">
+  <h3>Years since the Original iPhone release</h3>
+  <p id="timeSince"></p>
+</div>
+
+
+<!--JavaScript will be explored later-->
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+function calculateTimeSinceRelease() {
+            // Current date and time
+            const currentDate = new Date();
+
+            // First iPhone release date (June 29, 2007)
+            const releaseDate = new Date('2007-06-29T00:00:00');
+
+            // Calculate the difference in milliseconds
+            const timeDifference = currentDate - releaseDate;
+
+            // Calculate years, days, hours, minutes, and seconds
+            const years = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 365.25));
+            const days = Math.floor((timeDifference % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById('timeSince').textContent = `It has been ${years} years, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds since the first iPhone was released.`;
+
+}
+
+// Call the function to calculate and display the time initially
+        calculateTimeSinceRelease();
+
+// Update the calculation every second (1000 milliseconds)
+        setInterval(calculateTimeSinceRelease, 1000);
+
+</script>
+
+
+</div>
+
+
+</body>

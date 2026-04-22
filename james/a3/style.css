@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, Helvetica;
+  margin: 0px 100px;
+  background-image: url("https://www.rd.com/wp-content/uploads/2019/12/skiis-scaled.jpg");
+  background-size: 100% auto; /* stretch bg to fit */
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color: dodgerblue;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: grey;
+  background-color: lightblue;
+}
+
+div.topnav a.icon {
+  background: darkgrey;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(161, 244, 244, .5);
+  
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background: skyblue;
+  color: white;
+}

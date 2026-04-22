@@ -1,0 +1,126 @@
+body {
+	font-family: cursive;
+    margin: 0px 75px;
+    background-image: url("https://wallpapercave.com/wp/wp6843286.jpg");
+    background-size: 255%;
+
+}
+div.topnav {
+  margin: 0px 75px;
+  overflow: hidden;
+  background-color: darkgrey;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* Container for the image and overlay text */
+.image-container1 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+/* Style the image */
+.image-container1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style the overlay text */
+.overlay1 {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    height: 10%; /* Adjust text color */
+    color: black;
+    background-color: #FF5959; /* Background with opacity */
+    padding: 60px 0px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem; /* Adjust text size */
+    font-family: cursive;
+    z-index: 2;
+}
+
+#myBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: "white";
+    background-color: #5C93FF;
+    /*gray color*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#myBtn:hover {
+    background-color: #696969;
+    /* dark gray for hovering*/
+}
+
+#myBtn:active {
+    transform: scale(0.95);
+}
+
+.butt {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.imgi {
+    width: 50%;
+    height: 50%;
+}
+
+.gradient {
+    background: linear-gradient(to bottom, black, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+.centered-image {
+    max-width: 100%; /* Ensures the image doesn't overflow the container */
+    height: auto;   /* Maintains the aspect ratio */
+}
+
+.reg {
+    color: black;
+}
