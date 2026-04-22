@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>Cookie Clicker</h2>
+<input type="image" src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/154a0c46491117.58ccb7bb92924.png" onclick="updateCPS();" width="150" height="150" alt="cookie">
+<p id="cpsDisplay"></p>
+
+<hr>
+<h2>HTML/CSS Quiz</h2>
+<p>Click <a href="index.html">here</a> to play the quiz.</p>
+
+<script>
+var nClicks = 0;
+var startTime = new Date()
+
+function updateCPS() {
+	if (nClicks == 0) {
+		startTime = new Date();
+		nClicks = nClicks + 1;
+	}
+	else {
+		var currentTime = new Date();
+		var timeElapsed = (currentTime - startTime) / 1000;
+		var cpsDisplay = nClicks / timeElapsed
+
+		document.getElementById("cpsDisplay").innerHTML =
+			"Clicks per second: " + cpsDisplay;
+		nClicks = nClicks + 1;
+	}
+
+}
+</script>
+</body>
+</html>
+

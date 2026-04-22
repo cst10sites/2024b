@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h2>HTML/CSS Quiz</h2>
+<form>
+    <label>Which programming language should you use to make a website look nice?</label>
+    <br>
+    <input type="radio" name="group">
+    <label>Javascript</label>
+    <br>
+    <input type="radio" name="group">
+    <label>HTML</label>
+    <br>
+    <input type="radio" name="group" id="correctAnswer">
+    <label>CSS</label>
+    <br>
+    <input type="radio" name="group">
+    <label>None of the above</label>
+    <br>
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset">
+</form>
+
+<br>
+
+<form>
+    <label>Which of these can be used to create a list? Select all that apply.</label>
+    <br>
+    <input type="checkbox" id="em">
+    <label>&lt;em&gt;</label>
+    <br>
+    <input type="checkbox" id="ol">
+    <label>&lt;ol&gt;</label>
+    <br>
+    <input type="checkbox" id="p">
+    <label>&lt;p&gt;</label>
+    <br>
+    <input type="checkbox" id="ul">
+    <label>&lt;ul&gt;</label>
+    <br>
+    <input type="button" value= "Submit" onclick="checkTwo();">
+    <input type="reset">
+</form>
+
+<br>
+
+<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play the cookie clicker!</p>
+
+<script>
+
+function checkRadio() {
+    var correctAnsSelected = document.getElementById('correctAnswer').checked;
+    if (correctAnsSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("Incorrect, try again :(");
+    }
+
+}
+
+function checkTwo() {
+    var em = document.getElementById("em").checked;
+    var ol = document.getElementById("ol").checked;
+    var p = document.getElementById("p").checked;
+    var ul = document.getElementById("ul").checked;
+
+    if (ol == true && ul == true && em == false && p == false){
+        alert("Correct!");
+    }
+    else {
+        alert("Incorrect, try again :(");
+    }
+}
+
+
+</script>
+</body>
+</html>

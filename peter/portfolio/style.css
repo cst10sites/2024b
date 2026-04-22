@@ -1,0 +1,108 @@
+div.square {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: black;
+  border: 3px solid white;
+  padding: 18px;
+  margin: 25px;
+  background-color: rgb(225, 225, 225, 0.7);
+  font-family: OCR A Std, monospace;
+  font-size: 1.1em;
+}
+
+body {
+  background-image: url("https://i.pinimg.com/736x/3e/5c/a2/3e5ca2be31de4e7d702ae7c4ab443725.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+a {
+  color: darkblue;
+}
+
+
+div.topnav {
+  overflow: hidden;
+  background-color: darkblue;
+  opacity: 0.7;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; 
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: white;
+  background-color: mediumblue;
+}
+
+div.topnav a.icon {
+  background: darkblue;
+  opacity: 0.7;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+table,
+th,
+td {
+  border: 2px solid white;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 7px;
+  text-align: center;
+}
+
+th {
+  background: rgb(225, 225, 225, 0.7);
+}
+
+
+div.caption {
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+
+div.caption1 {
+  font-size: 0.8em;
+  text-decoration: underline;
+  }
+
+div.logo {
+  padding: 15px;
+}
+
+
+div.dalekbutton1 {
+  position: fixed;
+  right: 50px;
+  top: 570px;
+}
+
+
+div.quote {
+  font-size: 1.6em;
+}
+

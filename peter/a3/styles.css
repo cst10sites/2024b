@@ -1,0 +1,40 @@
+table,
+th,
+td {
+  border: 2px solid white;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 7px;
+  text-align: center;
+}
+
+th {
+  background: rgb(225, 225, 225, 0.7);
+}
+
+a.btn {
+  background-color: rgb(225, 225, 225, 0.7);
+  padding: 8px 25px;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  color: white;
+}
+
+
+body {
+  background-image: url("https://static8.depositphotos.com/1560516/1038/v/450/depositphotos_10382176-stock-illustration-night-sky.jpg");
+  background-size: 100% auto;
+  color: white;
+  font-family: "Trebuchet MS";
+}

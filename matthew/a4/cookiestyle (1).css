@@ -1,0 +1,10 @@
+body {
+	background-color: lightyellow;
+	color: black;
+	margin: 25px 125px;
+}
+p:hover {
+	color: grey;
+}
+a:hover {
+	color: cyan;

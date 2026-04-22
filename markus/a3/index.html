@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Assignment 4</title>
+
+</head>
+<body>
+
+<h1>Basic HTML body tags</h1>
+    <table style="width: 50%;">
+      <!--tr table row, th table header w/ style attribute(first), td table data (others)-->
+      <tr><!--top row-->
+        <th style="width: 60%;">Body tags</th>
+        <th style="width: 20%;">Definition</th>
+        <th style="width: 20%;">Example(s)</th>
+      </tr>
+
+      <tr>
+        <td>&lt;img src="link" alt="pic"&gt;</td>
+        <td>image</td>
+        <td><img src="https://th.bing.com/th/id/OIP.aL7rVJ9wz-aqILfjBPHWawHaKo?w=189&h=272&c=7&r=0&o=5&pid=1.7" alt="nacho libre" width="75px" height="75px"></td>
+      </tr>
+
+
+      <tr>
+        <td>&lt;a href="link".../a&gt;</td>
+        <td>Hyperlink to another page</td>
+        <td><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></td>
+      </tr>
+
+      <tr>
+        <td>&lt;p&gt;&lt;/p&gt;</td>
+        <td>tag to write a paragraph</td>
+        <td>This is a paragpraph. This is another paragraph.</td>
+      </tr>
+
+      <tr>
+        <td>&lt;h1&gt;&lt;h6&gt;</td>
+        <td>Headings (numbers change font size)</td>
+        <td><h2>this is a heading</h2>
+        	<h3>This is another heading</h3></td>
+      </tr>
+
+      <tr>
+      	<td>&lt;ol&gt;&lt;li&gt;</td>
+      	<td>ordered lists</td>
+      	<td><ol><li>unordered item 1<li>
+      		<li>unordered item 2</li></ol></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;br&gt; and &lt;hr&gt;</td>
+      	<td>Line breaks </td>
+      	<td><hr></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;ul&gt;</td>
+      	<td>bullet points</td>
+      	<td><li>This is a bullet point</li></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;em&gt;</td>
+      	<td>Emphasises certain words in a paragraph</td>
+      	<td>This is an <em>emphasis</em></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;u&gt;</td>
+      	<td>set text underline</td>
+      	<td><u>this is a text underline</u></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;strong&gt;</td>
+      	<td>Makes words bold</td>
+      	<td><strong>This is bold</strong></td>
+       </tr>
+
+       <tr>
+      	<td>&lt;span&gt;</td>
+      	<td>used to mark up part of a text or document.</td>
+      	<td>My mother has <span style="color:green;">green</span> eyes.</td>
+       </tr>
+
+       <tr>
+      	<td>&lt;iframe&gt;</td>
+      	<td>displays a webpage within a webpage</td>
+      	<td><iframe width="560" height="315" src="https://www.youtube.com/embed/Zt3YS1kWShI?si=qpkiiuZspQAQczxx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+       </tr>
+
+<style>
+  body {
+  font-family: Arial, Helvetica;
+  margin: 0px 100px;
+  background-image: url("https://st.depositphotos.com/1033077/2688/i/450/depositphotos_26882895-stock-photo-green-field-with-spring-wild.jpg");
+  background-size: 100% auto; /* stretch bg to fit */
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color: darkgrey;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: red;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.6);
+  /* background-color: white; */
+  
+}
+
+
+table,{
+border-collapse: collapse;
+background: rgba(,0,0,200,0,.4);
+} 
+
+
+th, td{
+  padding: 5px;
+  border: 2px solid blue;
+  text-align: left;
+  background: rgba(0,0,200,0.4);
+} 
+
+tbody tr:nth-child(odd) {
+  background: clear;
+  color: #ffff;
+}
+
+
+
+</style>
+
+</body>
+</html>

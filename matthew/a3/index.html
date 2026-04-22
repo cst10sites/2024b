@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <div id="moreLinks">
+          <a href="../a3/head.html"> Common HTML Tags outside &lt;body&gt;</a>
+        </div>
+        <a class="icon" onclick="showHideMenu()">...</a>
+      </div>
+      <div class="content">
+        <h1>HTML/CSS Guide</h1>
+        <h2>
+          <a href="index.html">HTML Tags inside &lt;body&gt;</a>
+        </h2>
+        <p>Click <a href="head.html">here</a> to see other common HTML Tags outside &lt;body&gt; </p>
+        <h1>Table</h1>
+        <table style="width: 100%;">
+          <tr>
+          <th style="width: 20%;">
+            <strong>&lt;body&gt;Tags </strong>
+          </th>
+          <th style="width: 20%;">
+            <strong>Definition</strong>
+          </th>
+          <th style="width: 20%;">
+            <strong>Example(s)</strong>
+          </th>
+          </tr>
+          <tr>
+            <td>&lt;h1&gt;...&lt;h1/&gt; <br> ... <br> &lt;h6&gt;...&lt;h6/&gt; </td>
+            <td>Heading</td>
+            <td>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;a href="link"&gt; … &lt;/a&gt; </td>
+            <td>Hyperlink</td>
+            <td>
+              <a href="https://docs.google.com/document/d/1zaYvTtjbjgyXjCGHutT0IejUWai50SsWdEW9hHq3McE/edit"> https://docs.google.com/document/d/1zaYvTtjbjgyXjCGHutT0IejUWai50SsWdEW9hHq3McE/edit</a>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;p&gt;&lt;/p&gt; </td>
+            <td>Paragraph</td>
+            <td>
+              <p>this is a paragraph</p>
+              <p>this is another paragraph</p>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;ol&gt; <br> &lt;lt&gt;...&lt;/lt&gt; .&lt;/ol&gt; </td>
+            <td>Ordered list</td>
+            <td>
+              <ol>
+                <li>The List goes on</li>
+                <li>...</li>
+                <li>...</li>
+              </ol>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;hr&gt;</td>
+            <td>Horizontal rule</td>
+            <td>
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;img src="link" style="width: size;" alt="pic"&gt;</td>
+            <td>Image</td>
+            <td>
+              <img src="https://www.napolike.it/wp-content/uploads/2021/08/Kfc-e1628234136527.png" style="width: 40%;" alt="png">
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;strong&gt;...&lt;/strong&gt;</td>
+            <td>Define important text in a document</td>
+            <td>
+              <strong>Strong</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;em&gt;...&lt;/em&gt;</td>
+            <td>Emphasize important text in a document</td>
+            <td>
+              <em>Emphasized</em>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;ul&gt; <br> &lt;lt&gt;...&lt;/lt&gt; &lt;/ul&gt; </td>
+            <td>Unordered list</td>
+            <td>
+              <ul>
+                <li>The lists goes on</li>
+                <li>...</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;br&gt;</td>
+            <td>line break</td>
+            <td>
+              <br>Line Break <br>
+              <br>another line break <br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none"; // hide
+        } else {
+          links.style.display = "block"; // show
+        }
+      }
+    </script>
+  </body>
+</html>

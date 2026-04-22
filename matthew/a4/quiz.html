@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment4</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="quizstyle.css">
+</head>
+<body>
+<h1>Quiz</h1>
+</form>
+<form>
+    <label>Which one of these is the right abbrivation for HTML? </label>
+    <select id="carOption">
+        <option value="Home Tool Markup Language">Home Tool Markup Language</option>
+        <option value="Hyperlinks and Text Markup Languages">Hyperlinks and Text Markup Languages</option>
+        <option value="Hyper Text Markup Language">Hyper Text Markup Language</option>
+    </select>
+    <br>
+    <input type="button" value="OK" onclick="checkAnswer();">
+    <p id="carDisplay">2023&copy;</p>
+</form>
+<p>Or, click <a href="index.html">Here</a> to check out our amazing game</p>
+</body>
+<script>
+    function checkAnswer() {
+    var htmL = document.getElementById("carOption").value;
+    document.getElementById("carDisplay").innerHTML = "The right answer is not " + htmL + ".";
+
+    if (htmL == "Hyper Text Markup Language" ) {
+        alert("The right answer is " + htmL + "!");
+    }
+    
+
+}
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="">
+<!--create style.css and change to href="style.css"-->
+</head>
+<body>
+
+<h2>HTML/CSS Quiz</h2>
+<form>
+    
+
+<form>
+    <label>Where is the correct place to insert a JavaScript?</label>
+    <br>
+    <!--Need to add multiple id for JavaScript to work-->
+    <!--choice 1-->
+    <input type="checkbox" id="Head">
+    <label>The &lt;Head section&gt;</label>
+    <br>
+    <!--choice 2-->
+    <input type="checkbox" id="Style">
+    <label>The &lt;Style&gt; section</label>
+    <br>
+    <!--choice 3-->
+    <input type="checkbox" id="CSS">
+    <label>The &lt;CSS&gt; section</label>
+    <br>
+    <!--choice 4-->
+    <input type="checkbox" id="body">
+    <label>The &lt;body&gt; section</label>
+    <br>
+    <!--button onclick="checkSeuss();">Answer</button-->
+    <!--input type="button" is recommended for forms because button resets-->
+    <input type="button" value="Ok" onclick="checkSeuss();">
+    <input type="reset">
+</form>
+
+
+
+<hr>
+<h2>Cookie Clicker</h2>
+<!--possibly replace quiz.html with index.html-->
+<p>Click <a href="cookie.html">here</a> to play the cookie clicker.</p>
+
+<script>
+	function checkSeuss() {
+    var Head = document.getElementById("Head").checked; // T or F
+    var Style = document.getElementById("Style").checked;
+    var CSS = document.getElementById("CSS").checked;
+    var body = document.getElementById("body").checked;
+
+    if (Head == true && body == true) {
+
+        alert("Your Correct!");
+    }
+    else {
+
+        alert("Retake Mr. Kams class");
+    }
+}
+</script>
+</body>
+</html>

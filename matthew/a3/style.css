@@ -1,0 +1,53 @@
+body {
+font-family : Arial, Helvetica;
+margin : 0 100px;
+color : ghostwhite;
+background-image : url("https://usonahome.com/images/product/medium/13124.jpg");
+background-size : 100% auto;
+background-repeat : no-repeat;
+background-attachment : fixed;
+}
+div.topnav {
+overflow : hidden;
+background-color : darkgrey;
+position : relative;
+}
+div.topnav #moreLinks {
+display : none;
+color : darkgrey;
+}
+div.topnav a {
+color : black;
+padding : 14px 16px;
+text-decoration : none;
+font-size : 17px;
+display : block;
+}
+div.topnav a:hover {
+color : darkgrey;
+background-color : lightgray;
+}
+div.topnav a.icon {
+background : black;
+display : block;
+position : absolute;
+right : 0;
+top : 0;
+}
+div.content {
+padding : 25px;
+background : rgb(0, 0, 0, 0.5);
+}
+table, th td {
+border : black 10px;
+}
+table, th, td {
+border : black solid 6px;
+}
+th, td {
+padding : 5px;
+text-align : left;
+}
+tr {
+background : rgb(0, 225, 225, 0.5);
+}

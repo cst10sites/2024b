@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="cookiestyle (1).css">
+		<link rel="icon" type="image/x-icon" href="dizzy.ico">
+	</head>
+	<body>
+		<h2>Cookie Clicker Game</h2>
+		<input type="image" alt=cookie src="r2.png" style="width: 200px;" onclick="updateCPS();">
+		<button onclick="window.location.reload();">Reset</button>
+		<p> Clicks per second: <span id="cpsDisplay"></span>
+		</p>
+		<p> Time elapsed: <span id="timeDisplay"></span></p>
+		<p> Clicks: <span id="clickDisplay"></span>
+		</p>
+		<hr>
+		<h2>HTML/CSS/JS Quiz</h2>
+		<p>Click <a href="quiz.html">here</a> to try out the quiz. </p>
+		<script>
+			
+			var nClicks = 0;
+			var startTime = new Date().getTime();
+
+			function updateCPS() {
+				if (nClicks == 0) {
+					startTime = new Date().getTime();
+					nClicks++;
+				} else {
+					var currentTime = new Date();
+					var timeElapsed = (currentTime - startTime) / 1000;
+					nClicks++;
+					document.getElementById("clickDisplay").innerHTML = nClicks;
+				}
+			}
+			setInterval(updateTime, 1);
+
+			function updateTime() {
+				if (nClicks >= 1) {
+					var currentTime = new Date();
+					var timeElapsed = (currentTime - startTime) / 1000;
+					let timee = timeElapsed.toFixed(1);
+					var cps = nClicks / timeElapsed;
+					let cpss = cps.toFixed(2);
+					document.getElementById("timeDisplay").innerHTML = timee;
+					document.getElementById("cpsDisplay").innerHTML = cpss;
+				}
+			}
+		</script>
+	</body>
+</html>

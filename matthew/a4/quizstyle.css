@@ -1,0 +1,14 @@
+body {
+	background-color: lightyellow;
+	color: black;
+	margin: 50px 125px;
+}
+label:hover {
+	color: black;
+}
+a:hover {
+	color: cyan;
+}
+p:hover {
+	color: black;
+}

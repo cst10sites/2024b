@@ -1,0 +1,13 @@
+body {
+	font-family: "Trebuchet MS";
+	background-color: aliceblue;
+	font-size: 1.2em;
+	color: blue;
+	border: 2px solid blue;
+	padding: 15px;
+	margin: 10px;
+}
+
+h2 {
+	text-decoration: underline;
+}
