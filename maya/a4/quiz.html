@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>HTML/CSS Quiz</h2>
+<form>
+    <label>What does HTML stand for?</label>
+    <br>
+    <input type="radio" name="group">
+    <label>How To Make Letters</label>
+    <br>
+    <input type="radio" name="group" id="correctAnswer">
+    <label>Hyper Text Markup Language</label>
+    <br>
+    <input type="radio" name="group">
+    <label>Hyperlinks Tools Markers and Latin</label>
+    <br>
+    <input type="radio" name="group">
+    <label>Hyper-text Markup Language</label>
+    <br>
+    <input type="button" value="Submit" onclick="checkRadio();">
+    <input type="reset">
+</form>
+
+<br>
+
+<form>
+    <label>What is HTML used for? Check all that apply.</label>
+    <br>
+    <input type="checkbox" id="Structure">
+    <label>To structure a web page</label>
+    <br>
+    <input type="checkbox" id="Internet">
+    <label>To hack the internet</label>
+    <br>
+    <input type="checkbox" id="Content">
+    <label>To structure the content of a web page</label>
+    <br>
+    <input type="checkbox" id="Money">
+    <label>To make money</label>
+    <br>
+    <input type="button" value= "Submit" onclick="checkTwo();">
+    <input type="reset">
+</form>
+
+<br>
+
+<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play cookie clicker!</p>
+
+<script>
+
+function checkRadio() {
+    var correctAnsSelected = document.getElementById('correctAnswer').checked;
+    if (correctAnsSelected == true) {
+        alert("Correct!");
+    }
+    else {
+        alert("So close, try again!");
+    }
+
+}
+
+function checkTwo() {
+    var Structure = document.getElementById("Structure").checked;
+    var Content = document.getElementById("Content").checked;
+    var Games = document.getElementById("Internet").checked;
+    var App = document.getElementById("Money").checked;
+
+    if (Structure == true && Content == true && App == false && Games == false){
+        alert("Correct!");
+    }
+    else {
+        alert("Nope!");
+    }
+}
+
+</script>
+<script src="https://www.drv.tw/inc/wd.js?s=mrkam-student-websites"></script>
+</body>
+</html>

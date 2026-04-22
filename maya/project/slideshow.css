@@ -1,0 +1,82 @@
+div.topnav {
+  font-family: Helvetica;
+}
+div.title {
+  font-family: Helvetica;
+  text-align: center;
+  font-size: 20px;
+}
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Navigation dots */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  color: black;
+}
+
+.active {
+  background-color: #717171;
+}
+
+div.topnav {
+    color: black;
+  overflow: hidden;
+background: black;
+  position: relative;
+   border: 5px black;
+   padding: 5px;
+  margin: 5px;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 5px 35px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+

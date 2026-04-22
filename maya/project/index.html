@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="home1.css">
+<style>
+
+</style>
+</head>
+<body>
+    
+ <div class="title">
+
+ 
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="earth.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="earth3.html">2050 Without Climate Change Action</a>
+      <a href="slideshow.html">Inspirational Quotes</a>
+       <a href="earth.html">2050 With Climate Change Action</a>
+      
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+<div class="content">
+  <h1>A Glimpse of Earth in 2050</h1>
+  <p>Imagining Earth in 2050 is both exciting and terrifying. Over the next few decades, we will see substantial changes thanks to modern technology, social shifts, and our fight against climate change. By 2050, our cities might be higher technology, greener, and more sustainable. Imagine a world with flying cars, medical advancements that increase the quality of life, or even new animal species developed by scientists. However, this cannot happen if we do not manage our limited resources better, deal with over consumption, and watch our climate as sea levels and temperatures rise. In order to see a successful future, we must adapt to or fix the effects of climate change. 
+This article digs into the potential realities of life on Earth in 2050. In this article we will explore what Earth will be like with attempts of battling climate change and without; some inspirational quotes to motivate you into starting your journey to save our environment. Join us as we explore the potential future of our world, seeing how it might change in ways both familiar and new, certain and uncertain.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+
+</body>
+</html>

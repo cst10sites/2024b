@@ -1,0 +1,115 @@
+div.content {
+  padding: 35px;
+  margin: 20px;
+}
+div {
+  font-family: helvetica;
+}
+
+div. {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 900px;
+  padding: 20px;
+  margin: 5px;
+}
+
+div.topnav {
+    color: black;
+  overflow: hidden;
+background: black;
+  position: relative;
+   border: 5px black;
+   padding: 5px;
+  margin: 5px;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 5px 35px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.content {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  /* background-color: white; */
+
+}
+div.title {
+  color: black;
+  text-align: center;
+  font-size: 25px;
+
+}
+
+
+.img1, .img2, .img3 {
+  position: relative;
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.img1 {
+  background-image: url("hurricane.jpg");
+  min-height: 100%;
+}
+
+.img2 {
+  background-image: url("glacier.jpg");
+  min-height: 100%;
+}
+
+.img3 {
+  background-image: url("air2.jpg");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: black;
+  color: black;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+div.intro {
+  color: #777;
+}
+
+
+
+

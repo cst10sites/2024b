@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--table.html-->
+<meta charset="UTF-8">
+<title>assignment 3</title>
+
+<link rel="icon" href="favicon.ico">
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="head.html">Head Tags</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+<h1>HTML/CSS Guide</h1>
+<h2>Common HTML Tags inside Body</h2>
+  <table style="width: 50%;">
+      <!--tr table row, th table header w/ style attribute(first), td table data (others)-->
+      <tr><!--top row-->
+        <th style="width: 33.3333333333%;">Tag</th>
+        <th style="width: 33.3333333333%;">Definition</th>
+        <th style="width: 33.3333333333%;">Examples</th>
+      </tr>
+
+      <tr>
+        <td>&lt;p&gt;&lt;/p&gt;</td>
+        <td>This tag starts a paragraph.</td>
+        <td>The dog is happy. 
+        The dog is sad.</td>
+      </tr>
+      <tr>
+        <td>&lt;h1&gt;&lt;/h1&gt;</td>
+        <td>This makes a header with various sizes ranging from h1-h6.</td>
+        <td><h3>This header is the third biggest size.(h3)</h3>
+      </tr>
+      <tr>
+        <td>&lt;a href="link"&gt;...&lt;/a&gt;</td>
+        <td>This makes a hyprlink that will bring you to another page.</td>
+        <td><p>Click <a href="https://www.pinterest.com/">here</a> to access Pinterest.</p>
+      </tr>
+      <tr>
+        <td>&lt;br&gt; and &lt;hr&gt;</td>
+        <td>"hr" adds a horizontal line to your page. "br" makes a line break on your page.</td>
+        <td>Hi<hr> Hello<br> bye</td>
+      </tr>
+      <tr>
+      <td>&lt;img src="link" alt="pic&lt;</td>
+      <td>This tag adds an image</td>
+      <td><img alt ="jpg" style="width: 200px;" src="icecream.jpg"></td>
+    </tr>
+    <tr>
+      <td>&lt;ol&gt;&lt;/ol&gt;, &lt;ul&gt;&lt;/ul&gt;</td>
+      <td>&lt;ol&gt;&lt;/ol&gt;=ordered list and  &lt;ul&gt;&lt;/ul&gt;=unordered list</td>
+      <td><ol><li>Summer</li><li>Winter</li><li>spring</li><li>fall</li></ol>
+        <hr><ul><li>dogs</li><li>cats</li><li>fish</li></ul></td>
+    </tr>
+    <tr>
+      <td>&frac(num);</td>
+      <td>Makes a fraction</td>
+      <td>&frac12; &frac14; &frac13;</td>
+    </tr>
+    <tr>
+      <td>&lt;strong&gt;&lt;/strong&gt;</td>
+      <td>Makes words bold</td>
+      <td>Hi I <strong>LOVE</strong> icecream.</td>
+    </tr>
+    <tr>
+      <td>&lt;i&gt;&lt;/i&gt;</td>
+      <td>This tag italicizez words</td>
+      <td><i>I love summer.</i>
+    </tr>
+    <tr>
+      <td>&amp;nbsp;</td>
+      <td>This tag makes a space between words</td>
+      <td>This makes &nbsp; &nbsp; spaces           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; between words</td>
+    </tr>
+  </table>
+
+
+  <!--JavaScript will be explored later-->
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+</body>
+</html>

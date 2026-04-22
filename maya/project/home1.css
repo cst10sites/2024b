@@ -1,0 +1,95 @@
+div.content {
+  padding: 35px;
+  margin: 20px;
+}
+div {
+  font-family: helvetica;
+}
+
+div. {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 900px;
+  padding: 20px;
+  margin: 5px;
+}
+
+div.topnav {
+    color: black;
+  overflow: hidden;
+background: black;
+  position: relative;
+   border: 5px black;
+   padding: 5px;
+  margin: 5px;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 5px 35px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+

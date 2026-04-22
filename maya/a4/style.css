@@ -1,0 +1,10 @@
+
+body {
+  font-family: Arial, Helvetica;
+  margin: 100px 300px;
+  background-color: beige;
+  background-size:100% auto; /* stretch bg to fit*/
+}
+h2 {
+  color: red;
+}
