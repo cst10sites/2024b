@@ -1,0 +1,136 @@
+
+@font-face {
+  font-family: pikmin2Font;
+  src: url(pikminFont.ttf);
+}
+body.homepage {
+	background-image: url("background.jpg");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+
+
+
+	
+}
+body.quiz {
+  background-image: url("quizB.jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+body.book {
+	background-color: whitesmoke;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	
+
+
+	
+
+
+  	
+
+}
+div.louie {
+	padding: 0px 150px;
+	font-family: pikmin2Font;
+	
+	color: darkblue;
+	-webkit-text-stroke-width: 0.3px;
+  	-webkit-text-stroke-color: gold;
+	
+}
+
+div.content {
+	padding: 0px 150px;
+	font-family: pikmin2Font;
+	
+	color: black;
+	-webkit-text-stroke-width: 0.3px;
+  	-webkit-text-stroke-color: green;
+	
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color: green;
+  position: relative;
+  font-family: pikmin2Font;
+  margin: 50px;
+}
+
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 17px;
+  
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div.topnavlouie {
+  overflow: hidden;
+  background-color: darkblue;
+  position: relative;
+  font-family: pikmin2Font;
+  margin: 50px;
+}
+
+
+div.topnavlouie #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnavlouie a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 17px;
+  
+}
+
+div.topnavlouie a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnavlouie a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+img.right {
+	float: right;
+}
+#left {
+	float: left;
+}

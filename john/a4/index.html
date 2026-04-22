@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--create style.css and change to href="style.css"-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <h2>HTML/CSS Quiz</h2>
+    <form>
+      <!--ask at least one question related to HTML/CSS/JS-->
+      <label>What tag is used to define a linebreak.</label>
+      <br>
+      <input type="radio" name="group" id="correctAnswer">
+      <!--name="group" allow us to select ONE within "group"-->
+      <label>&lt;br&gt;</label>
+      <br>
+      <input type="radio" name="group">
+      <label>&lt;break&gt;</label>
+      <br>
+      <input type="radio" name="group">
+      <label>&lt;linebreak&gt;</label>
+      <br>
+      <input type="radio" name="group">
+      <label>&lt;enter&gt;</label>
+      <br>
+      <input type="button" value="Submit" onclick="checkAns();">
+      <input type="reset">
+    </form>
+    <br>
+    <form>
+      <label>What is the correct HTML element to define emphasized text?</label>
+      <!-- reminder: need id and value attributes for JavaScript-->
+      <select id="optionHTML">
+        <option value="1">&lt;italic&gt;</option>
+        <option value="2">&lt;em&gt;</option>
+        <option value="3">&lt;emphasize&gt;</option>
+        <option value="4">&lt;it&gt;</option>
+      </select>
+      <br>
+      <input type="button" value="OK" onclick="checkQuiz();">
+      <input type="reset">
+    </form>
+    <hr>
+    <h2>Cookie Clicker</h2>
+    <!--possibly replace quiz.html with index.html-->
+    <p>Click <a href="Cookie.html">here</a> to play the cookie clicker. </p>
+    <script>
+      function checkAns() {
+        var correctAnsSelected = document.getElementById('correctAnswer').checked;
+        if (correctAnsSelected == true) {
+          alert("Correct!");
+        } else {
+          alert("Incorrect, try again!");
+        }
+      }
+
+      function checkQuiz() {
+        var opt = document.getElementById("optionHTML").value;
+        if (opt == "2") {
+          alert("Correct!")
+        } else {
+          alert("Incorrect, better luck next time!")
+        }
+      }
+    </script>
+  </body>
+</html>

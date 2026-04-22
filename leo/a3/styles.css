@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, Helvetica;
+  margin: 0px 100px;
+  background-image: url("background.jpg");
+  background-size: 100% auto; /* stretch bg to fit */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color: seagreen;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  /* background-color: white; */
+  
+}
+
+table, th, td {
+  border: 2px solid darkblue;
+
+
+background: rgba(32, 178, 170, 0.5); 
+}

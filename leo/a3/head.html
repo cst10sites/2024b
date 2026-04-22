@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 3</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="index.html">Tags inside &lt;body&gt;</a>
+      </li>
+      <li>
+        <a href="head.html">Tags outside &lt;body&gt;</a>
+      </li>
+    </ul>
+    <h1>HTML guide</h1>
+    <h2>Common HTML tags outside &lt;body&gt;</h2>
+    <table style="width: 100%;">
+      <!--tr table row, th table header w/ style attribute(first), td table data (others)-->
+      <tr>
+        <!--top row-->
+        <th style="width: 33%;">Tag</th>
+        <th style="width: 33%;">Definition</th>
+        <th style="width: 33%;">Example(s)</th>
+      </tr>
+      <tr>
+        <td>&lt;!DOCTYPE html&gt;</td>
+        <td>A "declaration" to the browser about what type the document is</td>
+        <td>No examples</td>
+      </tr>
+      <tr>
+        <td>&lt;html lang="en"&gt;</td>
+        <td>Specifies the language of the webpage</td>
+        <td>This page is set to "en", which means English. This tag helps browsers know that this page is in English</td>
+      </tr>
+      <tr>
+        <td>&lt;meta charset="UTF-8"&gt;</td>
+        <td>Specifies the character encoding in the HTML document, almost all webpages use UTF-8.</td>
+        <td>No examples</td>
+      </tr>
+      <tr>
+        <td>&lt;title&gt;...&lt;/title&gt;</td>
+        <td>Defines the title of the webpage, it is shown in the webpage's tab in the browser.</td>
+        <td>
+          <img src="screenshot.png" alt="first screenshot">
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;style&gt;...&lt;/style&gt;</td>
+        <td>Section that describes the internal CSS of the page</td>
+        <td> &lt;style&gt; body { background-color: black; } &lt;/style&gt; </td>
+      <tr>
+        <td>&lt;link rel="stylesheet" href="styles.css"&gt;</td>
+        <td>Tag that points to an external CSS file</td>
+        <td>The homepage and this page point to a common style.css file that controls the look of these pages.</td>
+      </tr>
+      <tr>
+        <td>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</td>
+        <td>Tag that adds a favicon</td>
+        <td>
+          <img src="screenshot2.png" alt="second screenshot">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

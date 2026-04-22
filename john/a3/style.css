@@ -1,0 +1,27 @@
+body {
+  font-family: "Comic Sans Ms";
+  margin: 0px 100px;
+  background-size: 100% auto; /* stretch bg to fit */
+   
+  text-align: center;
+  background-color: beige;
+}
+div {
+  padding: 25px;
+  color: white;
+  /* background-color: white; */
+}
+table, th, td {
+  border: 2px solid darkcyan;
+  font-family: "Comic Sans Ms";
+}
+table{
+  border-collapse: collapse;
+}
+th, td {
+  padding: 25px;
+  text-align: left;
+}
+div{
+  background-color: blue;
+}

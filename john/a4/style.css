@@ -1,0 +1,15 @@
+body {
+	background-color: beige;
+	margin: 100px;
+	font-family: "Comic Sans Ms";
+	color: darkgreen;
+}
+input[type=button], input[type=reset] {
+	padding: 5px; 
+	font-family: "Comic Sans Ms";
+	color: darkgreen;
+	border-width: 4px;
+	background-color: beige;
+	border-radius: 10px;
+	font-weight: bold;
+}
