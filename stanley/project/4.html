@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="quiz.ico">
+		<!--create style.css and change to href="style.css"-->
+		<style>
+			body {
+				background-color: #c1c8ca;
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			}
+
+			.c {
+				background-color: #eae2dc;
+			}
+		</style>
+	</head>
+	<body onload="showRandomNumber()">
+		<div class="c">
+			<div class="joemama">
+				<form>
+					<label># of Questions:</label>
+					<br>
+					<input type="radio" name="group" id="ha" onclick="showRandomNumber()">
+					<label>5</label>
+					<br>
+					<input type="radio" name="group" id="mil" onclick="showRandomNumber()">
+					<label>10</label>
+					<br>
+					<input type="radio" name="group" id="curr" onclick="showRandomNumber()">
+					<label>20</label>
+					<br>
+					<input type="radio" name="group" id="egg" onclick="showRandomNumber()">
+					<label>50</label>
+				</form>
+			</div>
+			<h1>Perimeter</h1>
+			<h2 id="545"></h2>
+			<button id="gee" type="submit" onclick="next2()" style="font-size:30px;">New</button>
+			<h2 id="er"></h2>
+			<img id="fortnie" alt="jpg" style="width:400px;" src="w.jpg">
+			<br>
+			<a id="fie" style="font-size:30px;">Perimeter = </a>
+			<input onkeydown="joe()" class="am" type="number" id="je" style="font-size: 35px; width:80px; ">
+			<a id="8" style="font-size: 30px;">units</a>
+			<button id="fei" onclick="finish()" style="font-size:20px">OK</button>
+			<h2 id="3"></h2>
+			<p>Click <a href="../project/index.html" target="_blank">here</a> to go back to the main page! </p>
+		</div>
+		<script>
+			var th;
+			var fi;
+			var se;
+			var xer = 0;
+			var max = 0;
+			var score = 0;
+			//const a = Math.floor(Math.random() * 101);
+			//const b = Math.floor(Math.random() * 101);
+			//var c = a-b
+			function next2() {
+				showRandomNumber()
+			}
+
+			function showRandomNumber() {
+				//const fi = Math.floor(Math.random() * 89);
+				//const se = Math.floor(Math.random() * 89);
+				//const th=180-fi-se
+				document.getElementById("gee").style.visibility = "hidden";
+				document.getElementById("545").innerHTML = "";
+				document.getElementById("je").style.visibility = "visible";
+				document.getElementById("fie").style.visibility = "visible";
+				document.getElementById("fei").style.visibility = "visible";
+				document.getElementById("fortnie").style.visibility = "visible";
+				document.getElementById("8").style.visibility = "visible";
+				document.getElementById("er").style.visibility = "visible";
+				var five = document.getElementById("ha").checked;
+				var ten = document.getElementById("mil").checked;
+				var twenty = document.getElementById("curr").checked;
+				var fifty = document.getElementById("egg").checked;
+				if (five == true) {
+					if (max != 5 && max != 0) {
+						xer = 0
+					}
+					max = 5
+				}
+				if (ten == true) {
+					if (max != 10 && max != 0) {
+						xer = 0
+					}
+					max = 10
+				}
+				if (twenty == true) {
+					if (max != 20 && max != 0) {
+						xer = 0
+					}
+					max = 20
+				}
+				if (fifty == true) {
+					if (max != 50 && max != 0) {
+						xer = 0
+					}
+					max = 50
+				}
+				fi = Math.floor(Math.random() * 50) + 1;
+				se = Math.floor(Math.random() * 50) + 1;
+				th = Math.floor(Math.random() * 50) + 1;
+				document.getElementById("er").innerHTML = "a = " + fi + " b = " + se + " c = " + th + " ";
+				joe();
+			}
+
+			function finish() {
+				const ans = document.getElementById('je').value;
+				var ee = th + se + fi
+				if (ee == ans) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber();
+						document.getElementById("je").value = " ";
+					}, 1000)
+					xer += 1;
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("er").innerHTML = " ";
+							document.getElementById("je").style.visibility = "hidden";
+							document.getElementById("fie").style.visibility = "hidden";
+							document.getElementById("fei").style.visibility = "hidden";
+							document.getElementById("fortnie").style.visibility = "hidden";
+							document.getElementById("er").style.visibility = "hidden";
+							document.getElementById("8").style.visibility = "hidden";
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+						}
+					}, 1000)
+					return;
+				} else {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Incorrect!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber();
+						document.getElementById("je").value = " ";
+					}, 1000)
+					xer += 1;
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("er").innerHTML = " ";
+							document.getElementById("je").style.visibility = "hidden";
+							document.getElementById("fie").style.visibility = "hidden";
+							document.getElementById("fei").style.visibility = "hidden";
+							document.getElementById("fortnie").style.visibility = "hidden";
+							document.getElementById("er").style.visibility = "hidden";
+							document.getElementById("8").style.visibility = "hidden";
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+						}
+					}, 1000)
+					return;
+				}
+			}
+
+			function next() {
+				location.reload();
+			}
+
+			function joe(e) {
+				document.getElementById('je').onkeypress = function(e) {
+					if (e.key == "Enter") {
+						const ans = document.getElementById('je').value;
+						var d = th + se + fi
+						if (d == ans) {
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = "Correct!"
+							}, 100)
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = " "
+							}, 1000)
+							setTimeout(function() {
+								showRandomNumber();
+								document.getElementById("je").value = " ";
+							}, 1000)
+							xer += 1;
+							score += 1
+							setTimeout(function() {
+								if (xer == max) {
+									document.getElementById("545").innerHTML = "Score: " + score;
+									document.getElementById("er").innerHTML = " ";
+									document.getElementById("je").style.visibility = "hidden";
+									document.getElementById("fie").style.visibility = "hidden";
+									document.getElementById("fei").style.visibility = "hidden";
+									document.getElementById("fortnie").style.visibility = "hidden";
+									document.getElementById("er").style.visibility = "hidden";
+									document.getElementById("8").style.visibility = "hidden";
+									document.getElementById("gee").style.visibility = "visible";
+									xer = 0;
+								}
+							}, 1000)
+							return;
+						} else {
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = "Incorrect!"
+							}, 100)
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = " "
+							}, 1000)
+							setTimeout(function() {
+								showRandomNumber();
+								document.getElementById("je").value = " ";
+							}, 1000)
+							xer += 1;
+							setTimeout(function() {
+								if (xer == max) {
+									document.getElementById("545").innerHTML = "Score: " + score;
+									document.getElementById("er").innerHTML = " ";
+									document.getElementById("je").style.visibility = "hidden";
+									document.getElementById("fie").style.visibility = "hidden";
+									document.getElementById("fei").style.visibility = "hidden";
+									document.getElementById("fortnie").style.visibility = "hidden";
+									document.getElementById("er").style.visibility = "hidden";
+									document.getElementById("8").style.visibility = "hidden";
+									document.getElementById("gee").style.visibility = "visible";
+									xer = 0;
+								}
+							}, 1000)
+							return;
+						}
+					}
+				}
+			}
+			fd()
+		</script>
+	</body>
+</html>

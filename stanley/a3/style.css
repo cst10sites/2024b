@@ -1,0 +1,50 @@
+body {
+  font-family: arial, Helvetica;
+  margin: 0px 100px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/67/Golden_sunrise.jpg");
+  background-size: 100% auto;
+}
+
+div.topnav {
+  overflow: hidden;
+  background-color: lightgrey;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none;
+  /* to hide by default */
+  /* display: block to show by default */
+}
+
+div.topnav a {
+  color: lightblue;
+  padding: 15px 17px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: lightgrey;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+table,
+th,
+td {
+  border: 2px solid blue;
+}

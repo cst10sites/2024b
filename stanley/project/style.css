@@ -1,0 +1,90 @@
+body {
+  font-family: arial, Helvetica;
+
+  /*background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/67/Golden_sunrise.jpg");*/
+  background-size: 100% auto;
+  font-size: 20px;
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.861);
+  border-collapse: collapse;
+  border: 1px solid;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+th {
+  font-size: 20px;
+}
+
+td {
+  border: 2px solid;
+  border-color: lightgrey;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+}
+div.joe {
+  color: beige;
+}
+div.one {
+  text-align: center;
+  color: white;
+}
+div.two {
+  text-align: center;
+  color: white;
+}
+div.d {
+  text-align: center;
+  margin: 10px 5px;
+  border-collapse: collapse;
+  border: 2px solid;
+}
+input[type="number"] {
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+}
+.am {
+  width: 200px;
+}
+span {
+  vertical-align: super;
+  font-size: 50%;
+}
+div.c {
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+  border: 2px solid;
+}
+div.y {
+  text-align: left;
+}
+div.u {
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+  border: 2px solid;
+}
+div.jk {
+  text-align: center;
+}
+div.des {
+  color: black;
+}
+div.dess {
+  color: black;
+  background-color: black;
+}
+div.desss {
+  color: black;
+}
+div.joemama {
+  text-align: left;
+}

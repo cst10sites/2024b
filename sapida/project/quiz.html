@@ -1,0 +1,125 @@
+  <meta charset="UTF-8">
+    <title>Electricity</title>
+
+    <style>
+        body {
+            background-color: beige; 
+            margin: 50px 100px;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: black;
+        }
+        h1 {
+            font-size: 3.5em;
+        }
+        nav {
+            margin-bottom: 20px;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+
+    <!-- link to external stylesheet if you create style.css -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+</head>
+<body>
+
+<nav>
+    <a href="intro.html">electricity</a>
+    <a href="second.html">static</a>
+    <a href="current electricity.html">current</a>
+    <a href="game.html">game</a>
+     <a href="quiz.html">quiz</a>
+</nav>
+	
+	<h2>static electricity</h2>
+	<form>
+	<label> what is static electricity</label>
+	<br>
+	<input type="radio" name="group" id="correctAnswer">
+	<label>an imbalance between negative and positive charges in an object</label>
+	<br>
+	<input type="radio" name="group" >
+	<label>the flow of electricity in an electronic circuit, and to the amount of electricity flowing through a circuit</label>
+	<br>
+	<input type="radio" name="group">
+	<label>a type of energy that consists of the movement of electrons between two points when there is a potential difference between them,</label>
+	<br>
+	<input type="radio" name="group">
+	<label>A system of knowledge about the physical, chemical, and biological universe and the things that occur in it</label>
+	<br>
+	<input type="button" value="Submit" onclick="checkRadio();">
+	<input type="reset">
+	</form>
+	
+	<br>
+	<h2>current electricity</h2>
+	<form>
+		<label>what is current electricity</label>
+	<br>
+	<input type="checkbox" id="straw">
+	<label>the study of matter, analysing its structure, properties and behaviour to see what happens when they change in chemical reactions. </label>
+	<br>
+	<input type="checkbox" id="stars">
+	<label>a flow of charged particles, such as electrons or ions, moving through an electrical conductor </label>
+	<br>
+	<input type="checkbox" id="coconut" id="correctAnswer">
+	<label>  a type of energy that consists of the movement of electrons between two points when there is a potential difference between them</label>
+	<br>
+	<input type="checkbox" id="stylesheet" >
+	<label> the study of numbers and how they are related to each other and to the real world.</label>
+	<br>
+	<input type="button" value= "Submit" onclick="checkTwo();">
+	<input type="reset">
+	</form>
+	
+	<br>
+	
+	<hr>
+	
+	<script>
+	
+	function checkRadio() {
+	var correctAnsSelected = document.getElementById('correctAnswer').checked;
+	if (correctAnsSelected == true) {
+	alert("Correct!");
+	}
+	else {
+	alert("Incorrect try again");
+	}
+	
+	}
+	
+	function checkTwo() {
+	var straw = document.getElementById("straw").checked;
+	var stars = document.getElementById("stars").checked;
+	var coconut = document.getElementById("coconut").checked;
+	var stylesheet = document.getElementById("stylesheet").checked;
+	
+	if (straw == false && stars == false && coconut == true && stylesheet == false){
+	alert("Correct!");
+	}
+	else {
+	alert("Incorrect!");
+	}
+	}
+	
+	</script>
+	<script src="https://www.drv.tw/inc/wd.js?s=mrkam-student-websites"></script>
+
+	</body>
+	</html>

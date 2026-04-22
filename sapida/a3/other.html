@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 3</title>
+  <link rel="stylesheet" href="style.css">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<div>
+
+  <!-- navbar -->
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <div id="moreLinks">
+      <a href="../a3/other.html">outside of body tags</a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  <!--content-->
+  <div class="content">
+    <h1>Table</h1>
+    <table style="width: 50%;">
+      <tr>
+        <th style="width: 60%;">headtags</th>
+        <th style="width: 20%;">definition</th>
+        <th style="width: 20%;">example</th>
+      </tr>
+      <tr>
+        <td>&lt;html lang="en"&gt;</td>
+        <td>sets the website's language</td>
+        <td>"en"=english</td>
+      </tr>
+      <tr>
+        <td>&lt;title&gt;</td>
+        <td>changes the document name</td>
+        <td><img alt="title.jpg" style="width: 200px;" src="title.jpg"></td>
+      </tr>
+      <tr>
+        <td>&lt;meta charset="utf-8"&gt;</td>
+        <td>declares it a website</td>
+        <td>no examples</td>
+      </tr>
+      <tr>
+        <td>&lt;style&gt;</td>
+        <td>changes the style</td>
+        <td>no example</td>
+      </tr>
+    
+      <tr>
+        <td>&lt;link&gt;</td>
+        <td>an html link is used to conact different documents to eachother or different websites </td>
+        <td>e.g the home page and thie current page is connected throught link.
+        <p>And this hyperlink takes us to <a href="https://www.chipotle.com">chipotle</a></p></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+  function showHideMenu() {
+    var links = document.getElementById("moreLinks");
+    if (links.style.display == "block") {
+      links.style.display = "none"; // hide
+    } else {
+      links.style.display = "block"; // show
+    }
+  }
+</script>
+
+</body>
+</html>

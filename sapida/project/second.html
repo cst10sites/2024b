@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Electricity</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Navigation Bar */
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+      font-size: 17px;
+      display: inline-block;
+    }
+
+    .topnav a:hover {
+      background-color: darkcyan;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    /* Responsive Navigation */
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    /* Parallax Effect */
+    .parallax {
+      background-image: url('https://t3.ftcdn.net/jpg/05/51/74/76/360_F_551747643_36ieCqWVYf4Lm1rNv3aOMFHNhJ6xQur6.jpg');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Content Styling */
+    .content {
+      padding: 50px 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      text-align: left;
+      margin-top: 80px; /* Adjusted to push content below fixed navbar */
+    }
+
+    .content h1, .content h2, .content h3 {
+      color: darkcyan;
+    }
+
+    .content p, .content ul {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    .content hr {
+      border-color: darkcyan;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="intro.html">electricity</a>
+    <a href="second.html">Static Electricity</a>
+    <a href="current electricity.html ">current electricity</a>
+    <a href="game.html">game</a>
+    <a href="quiz.html">quiz</a>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  <div class="parallax"></div>
+
+  <div class="content">
+    <h1><span style="color: burlywood;">What is Static Electricity?</span></h1>
+    <p>Static electricity is an imbalance of electric charges within or on the surface of a material...</p>
+  </div>
+
+  <div class="parallax" id="advantages"></div>
+
+  <div class="content">
+    <h2><span style="color: burlywood;">Advantages and Disadvantages</span></h2>
+    <h3><span style="color: burlywood;">Advantages:</span></h3>
+    <ul>
+      <li>Used in industrial processes to remove particulate matter from gases...</li>
+      <li>In photocopiers, static electricity attracts toner to paper...</li>
+      <li>Helps evenly distribute paint particles during spray painting...</li>
+    </ul>
+    <hr>
+    <h3 id="disadvantages"><span style="color: burlywood;">Disadvantages:</span></h3>
+    <ul>
+      <li>Can damage sensitive electronic components...</li>
+      <li>In environments with flammable gases, static electricity can ignite fires...</li>
+      <li>Can cause interference with manufacturing processes...</li>
+    </ul>
+  </div>
+
+  <div class="parallax" id="applications"></div>
+
+  <div class="content">
+    <h2><span style="color: burlywood;">Preventive Measures and Practical Applications</span></h2>
+    <p>Static electricity discharge happens when electric charge builds up on an object...</p>
+    <p>Static electricity has various practical applications, such as in photocopiers, laser printers...</p>
+  </div>
+
+  <script>
+    function showHideMenu() {
+      var moreLinks = document.getElementById("myTopnav");
+      if (moreLinks.className === "topnav") {
+        moreLinks.className += " responsive";
+      } else {
+        moreLinks.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>

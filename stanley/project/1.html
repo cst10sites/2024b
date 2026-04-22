@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			body {
+				background-color: #c1c8ca;
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			}
+
+			.d {
+				background-color: #eae2dc;
+			}
+
+			.y {
+				font-family: Georgia, 'Times New Roman', Times, serif;
+			}
+
+			.lo {
+				font-family: Arial, Helvetica, sans-serif
+			}
+		</style>
+	</head>
+	<body onload="showRandomNumber()">
+		<div class="d">
+			<div class="y">
+				<form>
+					<label>Order of Operations:</label>
+					<br>
+					<input type="checkbox" id="ham" onclick="showRandomNumber()">
+					<label>Addition</label>
+					<br>
+					<input type="checkbox" id="milk" onclick="showRandomNumber()">
+					<label>Subtraction</label>
+					<br>
+					<input type="checkbox" id="curry" onclick="showRandomNumber()">
+					<label>Multiplication</label>
+					<br>
+					<input type="checkbox" id="eggs" onclick="showRandomNumber()">
+					<label>Division</label>
+					<br>
+				</form>
+			</div>
+			<br>
+			<div class="joemama">
+				<form>
+					<label># of Questions:</label>
+					<br>
+					<input type="radio" name="group" id="ha" onclick="showRandomNumber()">
+					<label>5</label>
+					<br>
+					<input type="radio" name="group" id="mil" onclick="showRandomNumber()">
+					<label>10</label>
+					<br>
+					<input type="radio" name="group" id="curr" onclick="showRandomNumber()">
+					<label>20</label>
+					<br>
+					<input type="radio" name="group" id="egg" onclick="showRandomNumber()">
+					<label>50</label>
+				</form>
+			</div>
+			<h1>Arithmetic</h1>
+			<h2 id="two"></h2>
+			<h3 id="54"></h3>
+			<h2 id="545"></h2>
+			<h1>
+				<a id="show"></a>
+				<input onkeydown="joe()" class="am" type="number" id="je" style="font-size: 37px; width:80px; ">
+				<button id="jee" onclick="next()" style="font-size:20px">OK</button>
+				<br>
+				<button id="gee" type="submit" onclick="next2()">New</button>
+			</h1>
+			<h2 id="3"></h2>
+			<h2 id="34"></h2>
+			<div class="lo">
+				<p>Click <a href="../project/index.html" target="_blank">here</a> to go back to the main page! </p>
+				<p id="more"></p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+		<script>
+			//const a = Math.floor(Math.random() * 100);
+			//const b = Math.floor(Math.random() * 100);
+			//var c = a-b
+			var c;
+			const er = Math.floor(Math.random() * 4);
+			var xer = 0;
+			var max = 0;
+			var score = 0;
+
+			function showRandomNumber() {
+				document.getElementById("je").style.visibility = "visible";
+				document.getElementById("jee").style.visibility = "visible";
+				document.getElementById("gee").style.visibility = "hidden";
+				document.getElementById("545").innerHTML = "";
+				var addd = document.getElementById("ham").checked;
+				var subb = document.getElementById("milk").checked;
+				var mull = document.getElementById("curry").checked;
+				var divv = document.getElementById("eggs").checked;
+				var five = document.getElementById("ha").checked;
+				var ten = document.getElementById("mil").checked;
+				var twenty = document.getElementById("curr").checked;
+				var fifty = document.getElementById("egg").checked;
+				var all = [];
+				var edf = 0
+				var a = Math.floor(Math.random() * 100);
+				var b = Math.floor(Math.random() * 100);
+				if (addd == true) {
+					all.push("add");
+				}
+				if (subb == true) {
+					all.push("sub");
+				}
+				if (mull == true) {
+					all.push("mul");
+				}
+				if (divv == true) {
+					all.push("div");
+				}
+				if (five == true) {
+					if (max != 5 && max != 0) {
+						xer = 0
+					}
+					max = 5
+				}
+				if (ten == true) {
+					if (max != 10 && max != 0) {
+						xer = 0
+					}
+					max = 10
+				}
+				if (twenty == true) {
+					if (max != 20 && max != 0) {
+						xer = 0
+					}
+					max = 20
+				}
+				if (fifty == true) {
+					if (max != 50 && max != 0) {
+						xer = 0
+					}
+					max = 50
+				}
+				var eri = Math.floor(Math.random() * all.length);
+				if (all[eri] == "add") {
+					edf = 1;
+				}
+				if (all[eri] == "sub") {
+					edf = 2;
+				}
+				if (all[eri] == "mul") {
+					edf = 3;
+				}
+				if (all[eri] == "div") {
+					edf = 4;
+				}
+				var ran = Math.floor(Math.random() * 10) + 1;
+				var ran1 = Math.floor(Math.random() * 10) + 1;
+				var ran2 = Math.floor(Math.random() * 10) - 10;
+				var ran3 = Math.floor(Math.random() * 10) - 10;
+				var ranorj = Math.floor(Math.random() * 2);
+				if (ranorj == 0) {
+					ran = ran2
+				}
+				var ranorj1 = Math.floor(Math.random() * 2);
+				if (ranorj == 0) {
+					ran1 = ran3
+				}
+				if (edf == 1) {
+					//add
+					c = a + b
+					document.getElementById("show").innerHTML = a + " + " + b + " =";
+					joe();
+					document.getElementById("more").innerHTML = " <br> "
+					document.getElementById("54").innerHTML = "";
+					document.getElementById("je").style.visibility = "visible";
+					document.getElementById("jee").style.visibility = "visible";
+				} else if (edf == 2) {
+					//sub
+					c = a - b
+					document.getElementById("show").innerHTML = a + " - " + b + " =";
+					joe();
+					document.getElementById("more").innerHTML = " <br> "
+					document.getElementById("54").innerHTML = "";
+					document.getElementById("je").style.visibility = "visible";
+					document.getElementById("jee").style.visibility = "visible";
+				} else if (edf == 3) {
+					//mul
+					a = ran
+					b = ran1
+					c = a * b
+					document.getElementById("show").innerHTML = a + " × " + b + " =";
+					joe();
+					document.getElementById("more").innerHTML = " <br> "
+					document.getElementById("54").innerHTML = "";
+					document.getElementById("je").style.visibility = "visible";
+					document.getElementById("jee").style.visibility = "visible";
+				} else if (edf == 4) {
+					//div
+					b = ran
+					a = ran * ran1
+					c = ran1
+					document.getElementById("show").innerHTML = a + " ÷ " + b + " =";
+					joe();
+					document.getElementById("more").innerHTML = " <br> "
+					document.getElementById("54").innerHTML = "";
+					document.getElementById("je").style.visibility = "visible";
+					document.getElementById("jee").style.visibility = "visible";
+				} else {
+					document.getElementById("54").innerHTML = "Please check a box!";
+					document.getElementById("show").innerHTML = " ";
+					joe();
+					document.getElementById("je").style.visibility = "hidden";
+					document.getElementById("jee").style.visibility = "hidden";
+				}
+			}
+
+			function next() {
+				var x = c
+				const ans = document.getElementById('je').value;
+				if (x == ans) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber();
+						document.getElementById("je").value = " ";
+					}, 1000)
+					xer += 1;
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("show").innerHTML = " ";
+							document.getElementById("je").style.visibility = "hidden";
+							document.getElementById("jee").style.visibility = "hidden";
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+						}
+					}, 1000)
+					return;
+				} else {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Incorrect!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber();
+						document.getElementById("je").value = " ";
+					}, 1000)
+					xer += 1;
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("show").innerHTML = " ";
+							document.getElementById("je").style.visibility = "hidden";
+							document.getElementById("jee").style.visibility = "hidden";
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+						}
+					}, 1000)
+					return;
+				}
+			}
+
+			function next2() {
+				showRandomNumber()
+			}
+
+			function joe() {
+				var x = c
+				document.getElementById('je').onkeypress = function(e) {
+					if (e.key == "Enter") {
+						const ans = document.getElementById('je').value;
+						if (x == ans) {
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = "Correct!"
+							}, 100)
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = " "
+							}, 1000)
+							setTimeout(function() {
+								showRandomNumber();
+								document.getElementById("je").value = " ";
+							}, 1000)
+							xer += 1;
+							score += 1
+							setTimeout(function() {
+								if (xer == max) {
+									document.getElementById("545").innerHTML = "Score: " + score;
+									document.getElementById("show").innerHTML = " ";
+									document.getElementById("je").style.visibility = "hidden";
+									document.getElementById("jee").style.visibility = "hidden";
+									document.getElementById("gee").style.visibility = "visible";
+									xer = 0;
+								}
+							}, 1000)
+							return;
+						} else {
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = "Incorrect!"
+							}, 100)
+							setTimeout(function() {
+								document.getElementById('3').innerHTML = " "
+							}, 1000)
+							setTimeout(function() {
+								showRandomNumber();
+								document.getElementById("je").value = " ";
+							}, 1000)
+							xer += 1;
+							setTimeout(function() {
+								if (xer == max) {
+									document.getElementById("545").innerHTML = "Score: " + score;
+									document.getElementById("show").innerHTML = " ";
+									document.getElementById("je").style.visibility = "hidden";
+									document.getElementById("jee").style.visibility = "hidden";
+									document.getElementById("gee").style.visibility = "visible";
+									xer = 0;
+								}
+							}, 1000)
+							return;
+						}
+					}
+				}
+			}
+			showRandomNumber();
+			joe();
+			jo();
+		</script>
+	</body>
+</html>

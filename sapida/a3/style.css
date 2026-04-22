@@ -1,0 +1,52 @@
+/* Apply border to table elements */
+table,
+th,
+td {
+  border: 2px solid navy;
+}
+
+/* Apply font and margin to the body */
+body {
+  font-family: Arial, Helvetica;
+  margin: 0 100px; /* Adjusted margin */
+  background-image: url("https://t3.ftcdn.net/jpg/00/72/09/24/360_F_72092487_i8zv2O13vNWvuhkUW5vZAd0df4Te5u3e.jpg");
+  background-size: 80% auto; /* Stretched background to fit */
+}
+
+/* Styling for the navigation bar */
+div.topnav {
+  overflow: hidden;
+  background-color: navy;
+  position: relative;
+}
+
+div.topnav #moreLinks {
+  display: none; /* Hidden by default */
+}
+
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+div.topnav a:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Styling for the content area */
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.5);
+}

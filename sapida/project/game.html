@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electricity</title>
+
+    <style>
+        body {
+            background-color: white; 
+            margin: 50px 100px;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: black;
+        }
+        h1 {
+            font-size: 3.5em;
+        }
+        nav {
+            margin-bottom: 20px;
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+
+    <!-- link to external stylesheet if you create style.css -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+</head>
+<body>
+
+<nav>
+    <a href="intro.html">Home</a>
+    <a href="second.html">static</a>
+    <a href="current electricity.html">current</a>
+    <a href="game.html">game</a>
+     <a href="quiz.html">quiz</a>
+</nav>
+
+<h2>Lightning Clicker Game</h2>
+<input type="image" alt="lightning" src="lightning.jpg" width="400" height="400" onclick="updateCPS();">
+<button onclick="window.location.reload();">Reset</button>
+<p> Clicks per second: <span id="cpsDisplay"></span></p>
+<p> Time elapsed: <span id="timeDisplay"></span>s</p>
+<p> Clicks: <span id="clickDisplay"></span></p>
+<hr>
+<script>
+    // global variables
+    var nClicks = 0;
+    var startTime = new Date().getTime();
+
+    function updateCPS() {
+        if (nClicks == 0) {
+            // first click
+            startTime = new Date().getTime();
+            nClicks++;
+        } else {
+            // subsequent clicks
+            var currentTime = new Date();
+            var timeElapsed = (currentTime - startTime) / 1000;
+            nClicks++;
+            document.getElementById("clickDisplay").innerHTML = nClicks;
+        }
+    }
+
+    setInterval(updateTime, 100);
+
+    function updateTime() {
+        if (nClicks >= 1) {
+            var currentTime = new Date();
+            var timeElapsed = (currentTime - startTime) / 1000;
+            var timee = timeElapsed.toFixed(1);
+            var cps = nClicks / timeElapsed;
+            var cpss = cps.toFixed(2);
+            document.getElementById("timeDisplay").innerHTML = timee;
+            document.getElementById("cpsDisplay").innerHTML = cpss;
+        }
+    }
+</script>
+
+<!-- Include any external scripts here -->
+<!-- <script src="script.js"></script> -->
+
+</body>
+</html>

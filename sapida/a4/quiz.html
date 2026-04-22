@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4</title>
+	<style>
+	body {
+	background-color: lightpink; 
+	margin: 50px 100px;
+	font-family: arial;
+	}
+	h2{
+	color: black;
+	}
+	h1{
+	font-size:3.5em;
+	}
+	</style>
+
+	</head>
+	<body>
+	
+	<h2>HTML Quiz</h2>
+	<form>
+	<label> Who's Mr Kam's "favourite" student </label>
+	<br>
+	<input type="radio" name="group">
+	<label>jake</label>
+	<br>
+	<input type="radio" name="group" id="correctAnswer">
+	<label>james</label>
+	<br>
+	<input type="radio" name="group">
+	<label>alex</label>
+	<br>
+	<input type="radio" name="group">
+	<label>yoyo</label>
+	<br>
+	<input type="button" value="Submit" onclick="checkRadio();">
+	<input type="reset">
+	</form>
+	
+	<br>
+	
+	<form>
+	<label>what does CSS stand for</label>
+	<br>
+	<input type="checkbox" id="straw">
+	<label>cookies strawbery straw </label>
+	<br>
+	<input type="checkbox" id="stars">
+	<label>connection straight to stars </label>
+	<br>
+	<input type="checkbox" id="coconut">
+	<label>waterfull coconut </label>
+	<br>
+	<input type="checkbox" id="stylesheet"   id="correctAnswer">
+	<label>Cascading Style Sheets</label>
+	<br>
+	<input type="button" value= "Submit" onclick="checkTwo();">
+	<input type="reset">
+	</form>
+	
+	<br>
+	
+	<hr>
+	<h2>Cookie Clicker</h2>
+	<p>Click <a href="index.html">here</a> To play a cookie clicker!</p>
+
+	
+	<script>
+	
+	function checkRadio() {
+	var correctAnsSelected = document.getElementById('correctAnswer').checked;
+	if (correctAnsSelected == true) {
+	alert("Correct!");
+	}
+	else {
+	alert("Incorrect try again");
+	}
+	
+	}
+	
+	function checkTwo() {
+	var straw = document.getElementById("straw").checked;
+	var stars = document.getElementById("stars").checked;
+	var coconut = document.getElementById("coconut").checked;
+	var stylesheet = document.getElementById("stylesheet").checked;
+	
+	if (straw == false && stars == false && coconut == false && stylesheet == true){
+	alert("Correct!");
+	}
+	else {
+	alert("Incorrect!");
+	}
+	}
+	
+	</script>
+	<script src="https://www.drv.tw/inc/wd.js?s=mrkam-student-websites"></script>
+
+	</body>
+	</html>

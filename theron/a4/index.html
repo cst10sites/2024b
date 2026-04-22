@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--create style.css and change to href="style.css"-->
+	</head>
+	<body>
+		<h2>Cookie Clicker</h2>
+		<p id="ctDisplay"></p>
+		<p id="cpsDisplay"></p>
+		<input type="image" alt="cookie" width="300" height="300" src="https://pngimg.com/d/cookie_PNG13648.png" onclick="updateCPS();">
+		<p id="coDisplay"></p>
+		<button onclick="reset();">reset</button>
+		<hr>
+		<p>Quiz  here<a href="index.html"> not here!</a> here</p>
+		<script>
+			// global variables
+			var nClicks = 0;
+			var startTime = new Date().getTime();
+
+			function updateCPS() {
+				if (nClicks == 0) {
+					startTime = new Date();
+					nClicks += 1;
+				} else {
+					nClicks += 1;
+				}
+				window.setInterval(constant, 1);
+			}
+
+			function constant() {
+				var currentTime = new Date();
+				var timeElapsed = (currentTime - startTime) / 1000;
+				var cps = nClicks / timeElapsed;
+				cps = cps.toFixed(2)
+				document.getElementById("cpsDisplay").innerHTML = "CPS: " + cps;
+				document.getElementById("coDisplay").innerHTML = nClicks + " cookies";
+				document.getElementById("ctDisplay").innerHTML = timeElapsed.toFixed(2);
+			}
+			//}
+			function reset() {
+				location.reload();
+			}
+				
+
+		</script>
+	</body>
+</html>

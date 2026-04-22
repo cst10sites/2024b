@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Quizzer</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			body {
+				background-color: #c1c8ca;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content" style="background-color: #eae2dc;">
+			<h1>Quizzer</h1>
+			<p>Welcome to Quizzer! Click on the options below to test your knowledge! </p>
+			<div class="jk">
+				<table style="width: 30%;">
+					<tr>
+						<th style="width:50%">Integers</th>
+						<th style="width:50%">Triangles</th>
+					</tr>
+					<tr>
+						<td onclick="joke()"><img alt="jpg" style="width:70px;" src="arith.jpg" onclick="joke()">
+							<div id="des"><a onclick="joke()">Arithmetic</a></div>
+						</td>
+						<td onclick="jokee()"><img alt="jpg" style="width:100px;" src="a.jpg" onclick="jokee()">
+							<div id="dess"><a onclick="jokee()">Angles</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td onclick="jokeee()"><img alt="jpg" style="width:70px;" src="square.jpg" onclick="jokeee()">
+							<div id="desss"><a onclick="jokeee()">Exponents</a></div>
+						</td>
+						<td onclick="jokeeee()"><img alt="jpg" style="width:70px;" src="r.png" onclick="jokeeee()">
+							<div id="dessss"><a onclick="jokeeee()">Perimeter</a></div>
+						</td>
+					</tr>
+				</table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+		</div>
+		<script>
+			function showHideMenu() {
+				var links = document.getElementById("moreLinks");
+				if (links.style.display == "block") {
+					links.style.display = "none"; // hide
+				} else {
+					links.style.display = "block"; // show
+				}
+			}
+
+			function joke() {
+				window.location = "../project/1.html"
+			}
+
+			function jokee() {
+				window.location = "../project/3.html"
+			}
+
+			function jokeee() {
+				window.location = "../project/2.html"
+			}
+
+			function jokeeee() {
+				window.location = "../project/4.html"
+			}
+
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>current Electricity</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Navigation Bar */
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+      font-size: 17px;
+      display: inline-block;
+    }
+
+    .topnav a:hover {
+      background-color: darkcyan;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    /* Responsive Navigation */
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    /* Parallax Effect */
+    .parallax {
+      background-image: url('https://east-westelectric.com/wp-content/uploads/2023/01/Exploding-Lightbulb-1.png');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Content Styling */
+    .content {
+      padding: 50px 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      text-align: left;
+      margin-top: 80px; /* Adjusted to push content below fixed navbar */
+    }
+
+    .content h1, .content h2, .content h3 {
+      color: darkcyan;
+    }
+
+    .content p, .content ul {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      padding-left: 20px;
+    }
+
+    .content hr {
+      border-color: darkcyan;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="intro.html">Home</a>
+    <a href="second.html">Static Electricity</a>
+    <a href="current electricity.html">current electricity</a>
+    <a href="game.html">game</a>
+    <a href="quiz.html">quiz</a>
+    <a class="icon" onclick="showHideMenu()">...</a>
+  </div>
+
+  <div class="parallax"></div>
+
+  <div class="content">
+    <h1><span style="color: brown;">What is current Electricity?</span></h1>
+    <p>Current electricity refers to the flow of electric charge through a conductor. It is the movement of electrons along a path,<p>
+  </div>
+
+  <div class="parallax" id="advantages"></div>
+
+  <div class="content">
+    <h2><span style="color: brown;">Advantages and Disadvantages</span></h2>
+    <h3><span style="color: brown;">Advantages:</span></h3>
+    <ul>
+      <li>Can be easily converted into various forms of energy like heat, light, and mechanical energy.</li>
+      <li>Operates with high efficiency in energy conversion, reducing waste.</li>
+      <li>Allows for instantaneous control and adjustment of power output, crucial for many applications.</li>
+    </ul>
+    <hr>
+    <h3 id="disadvantages"><span style="color: brown;">Disadvantages:</span></h3>
+    <ul>
+      <li>Energy loss during transmission over long distances due to resistance in power lines.</li>
+      <li>Improper handling can lead to severe injuries or fatalities from electric shock.</li>
+      <li>Depending on the energy source, can contribute to pollution, habitat destruction, and greenhouse gas emissions.</li>
+    </ul>
+  </div>
+
+  <div class="parallax" id="applications"></div>
+
+  <div class="content">
+    <h2><span style="color: brown;">Preventive Measures and Practical Applications</span></h2>
+    <p>Current electricity is crucial for diverse applications but poses risks like transmission losses, safety hazards, and environmental impacts. Preventive measures include safety protocols and maintenance. It powers generation, transportation, communication, industry, and homes, supporting modern life and technology.</p>
+    <p></p>
+  </div>
+
+  <script>
+    function showHideMenu() {
+      var moreLinks = document.getElementById("myTopnav");
+      if (moreLinks.className === "topnav") {
+        moreLinks.className += " responsive";
+      } else {
+        moreLinks.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>

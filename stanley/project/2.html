@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="quiz.ico">
+		<!--create style.css and change to href="style.css"-->
+		<style>
+			body {
+				background-color: #c1c8ca;
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			}
+
+			.u {
+				background-color: #eae2dc;
+			}
+
+			.dr {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+	</head>
+	<body onload="showRandomNumber()">
+		<div class="u">
+			<div class="jeee">
+				<div class="joemama">
+					<form>
+						<label># of Questions:</label>
+						<br>
+						<input type="radio" name="group" id="ha" onclick="showRandomNumber()">
+						<label>5</label>
+						<br>
+						<input type="radio" name="group" id="mil" onclick="showRandomNumber()">
+						<label>10</label>
+						<br>
+						<input type="radio" name="group" id="curr" onclick="showRandomNumber()">
+						<label>20</label>
+						<br>
+						<input type="radio" name="group" id="egg" onclick="showRandomNumber()">
+						<label>50</label>
+					</form>
+				</div>
+				<h1>Exponents</h1>
+			</div>
+			<h2 id="545"></h2>
+			<div id="hide">
+				<h2 id="4"></h2>
+				<form>
+					<input type="radio" name="group" id="c">
+					<!--name="group" allow us to select ONE within "group"-->
+					<label id="among">
+						<a id="show"></a>
+						<sup>
+							<a id="how"></a>
+						</sup>
+					</label>
+					<br>
+					<input type="radio" name="group" id="co">
+					<label>
+						<a id="ow"></a>
+						<sup>
+							<a id="w"></a>
+						</sup>
+					</label>
+					<br>
+					<input type="radio" name="group" id="cor">
+					<label>
+						<a id="sw"></a>
+						<sup>
+							<a id="hsw"></a>
+						</sup>
+					</label>
+					<br>
+					<input type="radio" name="group" id="corr">
+					<label>
+						<a id="ew"></a>
+						<sup>
+							<a id="we"></a>
+						</sup>
+					</label>
+					<br>
+					<input id="sud" type="button" value="OK" style="font-size:20px" onclick="checkRado();">
+				</form>
+			</div>
+			<button id="gee" type="submit" onclick="next2()">New</button>
+			<h2 id="3"></h2>
+			<div class="dr">
+				<p>Click <a href="../project/index.html" target="_blank">here</a> to go back to the main page! </p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+		<script>
+			var xer = 0;
+			var max = 0;
+			var score = 0;
+			var k = Math.floor(Math.random() * 101) + 1;
+			var l = Math.floor(Math.random() * 11) + 1;
+
+			function next2() {
+				showRandomNumber()
+			}
+
+			function checkRado() {
+				document.getElementById("sud").style.visibility = "hidden";
+				var first = document.getElementById("c").checked;
+				var secon = document.getElementById("co").checked;
+				var third = document.getElementById("cor").checked;
+				var fourt = document.getElementById("corr").checked;
+				var show = document.getElementById("show").innerHTML;
+				var how = document.getElementById("how").innerHTML;
+				var ow = document.getElementById("ow").innerHTML;
+				var w = document.getElementById("w").innerHTML;
+				var sw = document.getElementById("sw").innerHTML;
+				var hsw = document.getElementById("hsw").innerHTML;
+				var ew = document.getElementById("ew").innerHTML;
+				var we = document.getElementById("we").innerHTML;
+				xer += 1
+				if (first == true && show == k && how == l) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber()
+					}, 1000)
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+							document.getElementById("hide").style.visibility = "hidden";
+							document.getElementById("sud").style.visibility = "hidden";
+						}
+					}, 1000)
+					return;
+				}
+				if (secon == true && ow == k && w == l) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber()
+					}, 1000)
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+							document.getElementById("hide").style.visibility = "hidden";
+							document.getElementById("sud").style.visibility = "hidden";
+						}
+					}, 1000)
+					return;
+				}
+				if (third == true && sw == k && hsw == l) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber()
+					}, 1000)
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+							document.getElementById("hide").style.visibility = "hidden";
+							document.getElementById("sud").style.visibility = "hidden";
+						}
+					}, 1000)
+					return;
+				}
+				if (fourt == true && ew == k && we == l) {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Correct!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber()
+					}, 1000)
+					score += 1
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+							document.getElementById("hide").style.visibility = "hidden";
+							document.getElementById("sud").style.visibility = "hidden";
+						}
+					}, 1000)
+					return;
+				} else {
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = "Incorrect!"
+					}, 100)
+					setTimeout(function() {
+						document.getElementById('3').innerHTML = " "
+					}, 1000)
+					setTimeout(function() {
+						showRandomNumber()
+					}, 1000)
+					setTimeout(function() {
+						if (xer == max) {
+							document.getElementById("545").innerHTML = "Score: " + score;
+							document.getElementById("gee").style.visibility = "visible";
+							xer = 0;
+							document.getElementById("hide").style.visibility = "hidden";
+							document.getElementById("sud").style.visibility = "hidden";
+						}
+					}, 1000)
+					return;
+				}
+			}
+
+			function showRandomNumber() {
+				document.getElementById("hide").style.visibility = "visible";
+				document.getElementById("sud").style.visibility = "visible";
+				k = Math.floor(Math.random() * 101) + 1;
+				l = Math.floor(Math.random() * 11) + 1;
+				document.getElementById("c").checked = false
+				document.getElementById("co").checked = false
+				document.getElementById("cor").checked = false
+				document.getElementById("corr").checked = false
+				var among = Array(l).join(k + " " + "×" + " ");
+				var amongs = k
+				var a = k
+				var b = Math.floor(Math.random() * 10);
+				var h = k
+				var d = Math.floor(Math.random() * 10);
+				var f = k
+				var g = Math.floor(Math.random() * 10);
+				var i = k
+				var j = Math.floor(Math.random() * 10);
+				document.getElementById("gee").style.visibility = "hidden";
+				document.getElementById("545").innerHTML = "";
+				document.getElementById("show").innerHTML = a;
+				document.getElementById("how").innerHTML = b;
+				document.getElementById("ow").innerHTML = h;
+				document.getElementById("w").innerHTML = d;
+				document.getElementById("sw").innerHTML = f;
+				document.getElementById("hsw").innerHTML = g;
+				document.getElementById("ew").innerHTML = i;
+				document.getElementById("we").innerHTML = j;
+				document.getElementById("4").innerHTML = among + amongs;
+				var five = document.getElementById("ha").checked;
+				var ten = document.getElementById("mil").checked;
+				var twenty = document.getElementById("curr").checked;
+				var fifty = document.getElementById("egg").checked;
+				//document.getElementById("3").innerHTML = l;
+				var rando = Math.floor(Math.random() * 4) + 1;
+				if (rando == 1) {
+					document.getElementById("show").innerHTML = k;
+					document.getElementById("how").innerHTML = l;
+				}
+				if (rando == 2) {
+					document.getElementById("ow").innerHTML = k;
+					document.getElementById("w").innerHTML = l;
+				}
+				if (rando == 3) {
+					document.getElementById("sw").innerHTML = k;
+					document.getElementById("hsw").innerHTML = l;
+				}
+				if (rando == 4) {
+					document.getElementById("ew").innerHTML = k;
+					document.getElementById("we").innerHTML = l;
+				}
+				if (five == true) {
+					if (max != 5 && max != 0) {
+						xer = 0
+					}
+					max = 5
+				}
+				if (ten == true) {
+					if (max != 10 && max != 0) {
+						xer = 0
+					}
+					max = 10
+				}
+				if (twenty == true) {
+					if (max != 20 && max != 0) {
+						xer = 0
+					}
+					max = 20
+				}
+				if (fifty == true) {
+					if (max != 50 && max != 0) {
+						xer = 0
+					}
+					max = 50
+				}
+			}
+			//return repeated.replace(","," ");
+		</script>
+	</body>
+</html>

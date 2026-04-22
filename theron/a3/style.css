@@ -1,0 +1,22 @@
+/* style.css */
+
+body {
+  font-family: Arial, Helvetica;
+  margin: 25px 125px;
+  background-image: url("bgphoto.png");
+  background-size: 100% auto; /* stretch bg to fit */
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+table, th, td {
+  border: 2px solid black;
+}

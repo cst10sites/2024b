@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 3</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div>
+			<!-- navbar -->
+			<div class="topnav">
+				<a href="index.html">Home</a>
+				<div id="moreLinks">
+					<a href="../l2/index.html" target="_blank">Lesson 1</a>
+					<a href="../l2/index.html" target="_blank">Lesson 2</a>
+					<a href="../l3/index.html" target="_blank">Lesson 3</a>
+					<a href="../l4/index.html" target="_blank">Lesson 4</a>
+				</div>
+				<a class="icon" onclick="showHideMenu()">...</a>
+			</div>
+			<div class="joe">
+			<h1>HTML/CSS Guide</h1>
+			<h2>Common HTML Tags inside &lt;body&gt;</h2>
+			</div class="joe">
+			<div class="content">
+				<h1>Homepage</h1>
+				<p>Welcome to the homepage! Click <a href="head.html">here</a> to go to head.html. </p>
+				<h1>Table</h1>
+				<table style="width:100%">
+					<tr>
+						<th style="width:60%">&lt;body&gt; tags</th>
+						<th style="width:20%">Defenition</th>
+						<th style="width:20%">Examples</th>
+					</tr>
+					<tr>
+						<td>&lt;p&gt;&lt;/p&gt;</td>
+						<td>paragraph</td>
+						<td>
+							<p>This is a paragraph.</p>
+							<br>
+							<p>This is another paragraph.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;h1&gt;&lt;/h1&gt; <br>... <br>&lt;h6&gt;&lt;/h6&gt; </td>
+						<td>Headings</td>
+						<td>
+							<h1>This is a heading</h1>
+						</td>
+					<tr>
+						<td>&lt;strong&gt;&lt;/strong&gt;</td>
+						<td>bold</td>
+						<td>
+							<strong>This is strong.</strong>
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;hr&gt;</td>
+						<td>Horizontal rule</td>
+						<td>This is a line.
+							<hr>This is another line.
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;img src="link" alt="pic"&gt;</td>
+						<td>image</td>
+						<td>
+							<img alt="kfc logo" style="width: 100%;" src="https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo.png">
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;a href="link" <br>... <br>&gt;&lt;a&gt; </td>
+						<td>hyperlink to another page</td>
+						<td>Click <a href="https://www.bing.com/images/search?q=carbon+hydroxide+formula&form=HDRSC4&first=1" target="_blank">Here</a> for more </td>
+					</tr>
+					<tr>
+						<td>&lt;ol&gt; <br>&lt;li&gt;...&lt;/li&gt; <br>&lt;/ol&gt; </td>
+						<td>Ordered List</td>
+						<td>My three favorite drinks: <ol>
+								<li>Water</li>
+								<li>Hot Water</li>
+								<li>Cold Water</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;ul&gt; <br>&lt;li&gt;...&lt;/li&gt; <br>&lt;/ul&gt; </td>
+						<td>Unordered list</td>
+						<td>Requirements for Hot water: <ul>
+								<li>Water</li>
+								<li>Heat</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;sup&gt;&lt;sup&gt;</td>
+						<td>Superscript</td>
+						<td>E=mc <sup>2</sup>
+						</td>
+					</tr>
+					<tr>
+						<td>&lt;em&gt;&lt;/em&gt;</td>
+						<td>Emphasis</td>
+						<td>
+							<em>This is emphasized.</em>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script>
+			function showHideMenu() {
+				var links = document.getElementById("moreLinks");
+				if (links.style.display == "block") {
+					links.style.display = "none"; // hide
+				} else {
+					links.style.display = "block"; // show
+				}
+			}
+		</script>
+	</body>
+</html>

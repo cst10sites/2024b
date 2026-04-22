@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Arial, Helvetica;
+            margin: 0px 100px;
+            background-image: url("https://i.pinimg.com/originals/73/36/35/7336357a0bc62990a97b11cd60c80642.jpg");
+            background-size: 100% auto; /* stretch bg to fit */
+        }
+    </style>
+</head>
+<body>
+    <h1>Email and Forms</h1>
+    <!--Review-->
+    <h2>Email Link</h2>
+    <p>Click <a href="mailto:email@address.com">here</a> to send an email!</p>
+    <p>Click <a href="cookies.html">here</a> to play the cookie clicker game</p>
+
+    <h2>Quiz 1</h2>
+
+    <h3>Radio Buttons</h3>
+    <!--Example 2-->
+    <form>
+        <label>How do you create an image in HTML:</label>
+        <br>
+        <input type="radio" name="group" id="correctAnswer">
+        <!--name="group" allow us to select ONE within "group"-->
+        <label>&lt;img src="pic_trulli.jpg" alt="Italian Trulli"&gt;</label>
+        <br>
+        <input type="radio" name="group">
+        <label>&lt;img alt="Italian" src="cool.jpg"&gt;</label>
+        <br>
+        <input type="radio" name="group">
+        <label>Ethan is dumb</label>
+        <br>
+        <input type="button" value="Submit" onclick="checkRadio();">
+        <input type="reset">
+    </form>
+
+    <!--JavaScript-->
+    <script>
+        // Example 2: radio button
+        function checkRadio() {
+            var correctAnsSelected = document.getElementById('correctAnswer').checked; // true or false
+
+            if (correctAnsSelected) {
+                alert("Good job! This is correct!");
+            } else {
+                alert("You should try again!");
+            }
+        }
+    </script>
+</body>
+</html>

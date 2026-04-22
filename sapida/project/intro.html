@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="home1.css">
+<style>
+
+table,
+th,
+td {
+  border: 2px solid darkcyan;
+}
+ 
+/* Apply font and margin to the body */
+ 
+ 
+/* Styling for the navigation bar */
+div.topnav {
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+ 
+div.topnav #moreLinks {
+  display: none; /* Hidden by default */
+}
+ 
+div.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;s
+}
+ 
+div.topnav a:hover {
+  color: black;
+  background-color: black;
+}
+ 
+div.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+ 
+/* Styling for the content area */
+div.content {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.5);
+}
+ 
+
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+ 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+ 
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+ 
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+ 
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+ 
+ 
+</style>
+</head>
+<body>
+   
+ <div class="title">
+ 
+ 
+ 
+<video autoplay muted loop id="myVideo">
+  <source src="lightning.mp4" type="video/mp4">
+</video>
+ 
+</div>
+ 
+<div class="topnav">
+    <a href="intro.html">electricity</a>
+    <div id="moreLinks">
+      <a href="second.html">static electricity</a>
+      <a href="current electricity.html">current electricity</a>
+      <a href="game.html"> lightning game </a>
+      <a href="quiz.html">electricity quiz </a>
+    </div>
+    <a class="icon" onclick="showHideMenu()">...</a>
+    </div>
+ 
+<div class="content">
+  <h3>electricity</h3>
+  <p>Electricity is a fundamental form of energy resulting from the movement of charged particles, usually electrons. It is generated primarily through various means such as burning fossil fuels (coal, oil, natural gas), nuclear reactions, hydroelectric dams, wind turbines, solar panels, and more recently, through tidal and geothermal sources. Once generated, electricity can be transmitted over long distances through power lines and utilized in countless applications.Electricity as a concept has been known since ancient times, but practical applications began in the late 19th century. Key figures include Michael Faraday, who discovered electromagnetic induction, and Thomas Edison and Nikola Tesla, who pioneered the development of electrical systems. Edison is credited with inventing the first commercially practical incandescent light bulb in 1879, which was a major milestone in the widespread adoption of electricity for lighting.</p>
+ 
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+ 
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+ 
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<script>
+function showHideMenu() {
+  var links = document.getElementById("moreLinks");
+  if (links.style.display == "block") {
+    links.style.display = "none"; // hide
+  } else {
+    links.style.display = "block"; // show
+  }
+}
+</script>
+ 
+</body>
+</html>
